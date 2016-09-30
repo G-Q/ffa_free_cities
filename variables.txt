@@ -1,0 +1,23 @@
+$domain - name of the player.domain
+$gender - the player.gender
+$name - the player.name
+$they - the player.pronoun
+$their - the player.pronoun
+$theirs - the player.pronoun
+$title - the player.title
+
+#Player Attributes
+$charisma - the player.charisma score -- you can change this by adding <<set $charisma to $charisma -/+ #) to a passage; scale of 0 to 10
+$fairness - the player.fairness score -- you can change this by adding <<set $fairness to $fairness -/+ #) to a passage; scale of 0 to 10
+$intelligence - the player.intelligence score -- you can change this by adding <<set $intelligence to $intelligence -/+ #) to a passage; scale of 0 to 10
+$kindness - the player.kindness score -- you can change this by adding <<set $kindness to $kindness -/+ #) to a passage; scale of 0 to 10
+
+#Player Skills
+$business - the player.business savy; scale of 0 to 10 but can be negative
+$devotion
+$engineering
+$money
+$reputation
+$security
+$slaving
+$surgery

@@ -1,0 +1,52 @@
+::StoryTitle
+Free Cities FFA
+
+::StoryIncludes
+stylesheet.tw2
+background_settings.tw2
+intro.tw2
+home.tw2
+buy_slaves.tw2
+end_week.tw2
+
+::StoryCaption
+<<nobr>>
+<<if not tags().contains("no-header")>>
+  <<if tags().contains("manage-slave")>>
+    [[Home|Update Current]]
+  <<else>>
+    [[Home]]
+  <</if>>
+  | ⨕ $money
+  | Reputation: $reputation
+  
+  <<if $slaves_owned >>
+    | Slaves: <<print $slaves_owned.length >>
+  <</if>>
+
+  <hr>
+<</if>>
+<<if tags().contains("home")>>
+[[End Week]]<br>
+[[Buy Slaves]]
+<hr>
+  ::@include sort.tw2
+<</if>>
+<hr>
+
+<</nobr>>
+
+::Update Current
+  ::@include update_assignment.tw2
+<<for $i to 0; $i lt $slaves_owned.length; $i++>>
+	<<if $currentSlave.ID == $slaves_owned[$i].ID>>
+	<<set $slaves_owned[$i] to $currentSlave>>
+	<<set $currentSlave to {}>>
+	<<break>>
+	<</if>>
+<</for>>
+<<goto "Home">>
+
+::Update Assignment
+  ::@include update_assignment.tw2
+<<goto "Manage Slave">>

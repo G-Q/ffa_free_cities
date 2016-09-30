@@ -1,0 +1,140 @@
+<<nobr>>
+  ::@include finger_pussy_reaction.tw2
+  ::@include finger_ass_reaction.tw2
+
+  ::@include ff_penetrative.tw2
+  ::@include mf_penetrative.tw2
+  ::@include fm_penetrative.tw2
+  ::@include mm_penetrative.tw2
+  
+  ::@include ff_vaginal.tw2
+  ::@include mf_vaginal.tw2
+  
+  ::@include ff_anal.tw2
+  ::@include mf_anal.tw2
+  ::@include fm_anal.tw2
+  ::@include mm_anal.tw2
+  
+  ::@include ff_oral.tw2
+  ::@include mf_oral.tw2
+  ::@include fm_oral.tw2
+  ::@include mm_oral.tw2
+
+<<if $currentSlave.gender is "female">>
+  <<linkreplace "*Finger her pussy">><<print $currentSlave.Their>> pussy is <<print $currentSlave.vagina>><<if $currentSlave.vaginal_virginity>> and she's a virgin<</if>>.   <<print $currentSlave.They>> <<print either($finger_pussy_reaction)>>.<</linkreplace>>
+<</if>>
+
+<<linkreplace "*Finger $currentSlave.their ass">>$currentSlave.Their ass is $currentSlave.ass<<if $currentSlave.anal_virginity>> and $currentSlave.anal_virginity's never been fucked in the ass<</if>>.   $currentSlave.They <<print either($finger_ass_reaction)>>.<</linkreplace>>
+
+<<if $currentSlave.penetrative_virginity is false>>
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($female_ride_strapon)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($female_ride_cock)>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($male_ride_strapon)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($male_ride_cock)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>
+  //If you <<if $currentSlave.gender is "female">>ride her strapon<<else>>ride his cock<</if>>, it will take $currentSlave.name's penetrative virginity//
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($female_ride_strapon)>><<set $currentSlave.penetrative_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($female_ride_cock)>><<set $currentSlave.penetrative_virginity to false>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($male_ride_strapon)>><<set $currentSlave.penetrative_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($male_ride_cock)>><<set $currentSlave.penetrative_virginity to false>><</linkreplace>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if $currentSlave.vaginal_virginity is false>>
+  <<if $currentSlave.gender is "female">>
+    <<if $PCgender is "female">>
+      <<linkreplace "*Fuck her pussy">><<print either($female_fuck_pussy)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck her pussy">><<print either($male_fuck_pussy)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>
+  //If you <<if $currentSlave.gender is "female">>fuck her pussy<</if>>, it will take $currentSlave.name's virginity//
+  <<if $currentSlave.gender is "female">>
+    <<if $PCgender is "female">>
+      <<linkreplace "*Fuck her pussy">><<print either($female_fuck_pussy)>><<set $currentSlave.vaginal_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck her pussy">><<print either($male_fuck_pussy)>><<set $currentSlave.vaginal_virginity to false>><</linkreplace>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if $currentSlave.oral_virgininity is false>>
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Have her lick your pussy">><<print either($female_down_female)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him lick your pussy">><<print either($male_down_female)>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Have her suck your cock">><<print either($female_down_male)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him suck your cock">><<print either($male_down_male)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>
+  //If you <<if $currentSlave.gender is "female">>use her mouth<<else>>use his mouth<</if>>, it will take $currentSlave.name's oral virginity//
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Have her lick your pussy">><<print either($female_down_female)>><<set $currentSlave.oral_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him lick your pussy">><<print either($male_down_female)>><<set $currentSlave.oral_virginity to false>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Have her suck your cock">><<print either($female_down_male)>><<set $currentSlave.oral_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him suck your cock">><<print either($male_down_male)>><<set $currentSlave.oral_virginity to false>><</linkreplace>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if $currentSlave.anal_virginity is false>>
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($female_fuck_f_ass)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($female_fuck_m_ass)>><</linkreplace>>
+    <</if>>
+  <<elseif $PCgender is "male">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($male_fuck_f_ass)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($male_fuck_m_ass)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>
+  //If you <<if $currentSlave.gender is "female">>fuck her ass<<else>>fuck his ass<</if>>, it will take $currentSlave.name's anal virginity//
+  <<if $PCgender is "female">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($female_fuck_f_ass)>><<set $currentSlave.anal_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($female_fuck_m_ass)>><<set $currentSlave.anal_virginity to false>><</linkreplace>>
+    <</if>>
+  <<elseif $PCgender is "male">>
+    <<if $currentSlave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($male_fuck_f_ass)>><<set $currentSlave.anal_virginity to false>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($male_fuck_m_ass)>><<set $currentSlave.anal_virginity to false>><</linkreplace>>
+    <</if>>
+  <</if>>
+<</if>>
+<</nobr>>

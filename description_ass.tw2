@@ -1,0 +1,28 @@
+<<nobr>>
+<<if $ass is 1>>
+  <<set
+    $slaveass to either("flat", "bony", "sharp", "not very impressive")
+  >>
+
+<<elseif $ass is 2>>
+  <<set
+    $slaveass to either("soft and round", "pretty okay", "fine")
+  >>
+
+<<elseif $ass is 3>>
+  <<set
+    $slaveass to either("toned", "well-developed", "firm", "nice and taut")
+  >>
+
+<<elseif $ass is 4>>
+  <<set
+    $slaveass to either("perky", "ripe like a peach", "very inviting", "lush")
+  >>
+
+<<elseif $ass is 5>>
+  <<set
+    $slaveass to either("chiseled", "goddamn perfection", "a work of art")
+  >>
+  
+<</if>>
+<</nobr>>

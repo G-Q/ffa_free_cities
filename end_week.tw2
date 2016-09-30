@@ -1,0 +1,285 @@
+::End Week
+  <<if $av_health is 3>>
+    << if random(1,100) is 100 >>
+      <<set $epidemic to true>>
+    <</if>>
+  <<elseif $av_health is 2>>
+    << if random(1,20) is 20 >>
+      <<set $epidemic to true>>
+    <</if>>
+  <<elseif $av_health lte 1>>
+    << if random(1,3) is 3 >>
+      <<set $epidemic to true>>
+    <</if>>
+  <</if>>
+  
+<<for _i to 0; _i lt $slaves_owned.length; _i++>>
+  <<set $currentSlave to $slaves_owned[_i]>>
+  
+  <<set $currentSlave.treatment to 0>>
+  
+  <<if $epidemic is true>>
+    <<if $currentSlave.health is not 5>>
+      <<set $currentSlave.health -=1>>
+    <</if>>
+  <</if>>
+  
+  <<if $currentSlave.flaw is "chronically ill">>
+    <<set $currentSlave.change_health -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.assignment is "rest">>
+    <<set $currentSlave.change_health += 2>>
+  <</if>>
+  
+  <<if $currentSlave.male_attraction is 5 and $PCgender is "male">>
+    <<set $currentSlave.change_devotion += 2>>
+  <<elseif $currentSlave.male_attraction is 1 and $PCgender is "male">>
+    <<set $currentSlave.change_devotion -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.female_attraction is 5 and $PCgender is "female">>
+    <<set $currentSlave.change_devotion += 2>>
+  <<elseif $currentSlave.female_attraction is 1 and $PCgender is "female">>
+    <<set $currentSlave.change_devotion -= 2>>
+  <</if>>
+  
+  <<if $PCtrust is 9>>
+    <<set $currentSlave.change_devotion += 1>>
+  <</if>>
+  <<if $PCtrust gte 10>>
+    <<set $currentSlave.change_devotion += 2>>
+  <</if>>
+  <<if $PCtrust is 2>>
+    <<set $currentSlave.change_devotion -= 1>>
+  <</if>>
+  <<if $PCtrust lte 1>>
+    <<set $currentSlave.change_devotion -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.personality is "needs_kindness">>
+    <<if $PCkindness is 9>>
+      <<set $currentSlave.change_devotion += 1>>
+    <</if>>
+    <<if $PCkindness gte 10>>
+      <<set $currentSlave.change_devotion += 2>>
+    <</if>>
+    <<if $PCkindness is 2>>
+      <<set $currentSlave.change_devotion -= 1>>
+    <</if>>
+    <<if $PCkindness lte 1>>
+      <<set $currentSlave.change_devotion -= 2>>
+    <</if>>
+  <<elseif $currentSlave.personality is "needs_harsh">>
+    <<if $PCkindness is 9>>
+      <<set $currentSlave.change_devotion -= 1>>
+    <</if>>
+    <<if $PCkindness gte 10>>
+      <<set $currentSlave.change_devotion -= 2>>
+    <</if>>
+    <<if $PCkindness is 2>>
+      <<set $currentSlave.change_devotion += 1>>
+    <</if>>
+    <<if $PCkindness lte 1>>
+      <<set $currentSlave.change_devotion += 2>>
+    <</if>>
+  <</if>>
+  
+  <<if $PCfairness is 9>>
+    <<set $currentSlave.change_devotion += 1>>
+  <</if>>
+  <<if $PCfairness gte 10>>
+    <<set $currentSlave.change_devotion += 2>>
+  <</if>>
+  <<if $PCfairness is 2>>
+    <<set $currentSlave.change_devotion -= 1>>
+  <</if>>
+  <<if $PCfairness lte 1>>
+    <<set $currentSlave.change_devotion -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.intelligence > $PCintelligence>>
+    <<set $currentSlave.change_obedience -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.flaw is "arrogant">>
+    <<set $currentSlave.change_obedience -= 2>>
+    <<set $currentSlave.change_devotion -= 2>>
+  <</if>>
+  
+  <<if $currentSlave.flaw is "opposed to slavery">>
+    <<set $currentSlave.change_obedience -= 2>>
+    <<set $currentSlave.change_devotion -= 2>>
+    <<set $currentSlave.change_happiness -=2>>
+  <</if>>
+  
+  <<if $currentSlave.happiness lte 1>>
+    <<set $currentSlave.change_obedience -= 2>>
+    <<set $currentSlave.change_devotion -= 2>>
+    <<set $currentSlave.change_happiness -=2>>
+  <</if>>
+  
+  <<if $currentSlave.change_obedience lte -10>>
+    <<set $currentSlave.obedience -= 1>><<set $currentSlave.change_obedience to -1>>
+  <</if>>
+  <<if $currentSlave.change_obedience gte 10>>
+    <<set $currentSlave.obedience += 1>><<set $currentSlave.change_obedience to 1>>
+  <</if>>
+  
+  <<if $currentSlave.change_devotion lte -10>>
+    <<set $currentSlave.devotion -= 1>><<set $currentSlave.change_devotion to -1>>
+  <</if>>
+  <<if $currentSlave.change_devotion gte 10>>
+    <<set $currentSlave.devotion += 1>><<set $currentSlave.change_devotion to 1>>
+  <</if>>
+  
+  <<if $currentSlave.change_health lte -10>>
+    <<set $currentSlave.health -= 1>><<set $currentSlave.change_health to -1>>
+  <</if>>
+  
+  <<if $currentSlave.change_health gte 10>>
+    <<set $currentSlave.health += 1>><<set $currentSlave.change_health to 1>>
+  <</if>>
+  
+<<if $currentSlave.clothing is 0>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.clothing is 1>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.clothing is 2>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.clothing is 3>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.clothing is 4>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.clothing is 5>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 6>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 7>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 8>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 9>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.clothing is 10>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 11>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 12>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 13>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 14>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 15>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.clothing is 16>><<set $currentSlave.treatment -= 1>><</if>>
+
+<<if $currentSlave.clothing_pres is $current_slave.gender_pres>><<set $currentSlave.treatment += 1>>
+<<elseif $currentSlave.clothing_pres is $current_slave.gender_pres>><<set $currentSlave.treatment += 0>>
+<<else>><<set $currentSlave.treatment -= 1>><</if>>
+
+<<if $currentSlave.collar is 0>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.collar is 1>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.collar is 2>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.collar is 3>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.collar is 4>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.collar is 5>><<set $currentSlave.treatment -= 2>><</if>>
+<<if $currentSlave.collar is 6>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.collar is 7>><<set $currentSlave.treatment -= 1>><</if>>
+
+<<if $currentSlave.living is 0>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.living is 1>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.living is 2>><<set $currentSlave.treatment += 1>><</if>>
+<<if $currentSlave.living is 3>><<set $currentSlave.treatment += 2>><</if>>
+
+<<if $currentSlave.plug is 0>><<set $currentSlave.anal_skill += 0>><</if>>
+<<if $currentSlave.plug is 1>><<set $currentSlave.anal_skill += 0.5>><</if>>
+<<if $currentSlave.plug is 2>><<set $currentSlave.anal_skill += 1>><</if>>
+<<if $currentSlave.plug is 3>><<set $currentSlave.anal_skill += 2>><</if>>
+<<if $currentSlave.plug is 4>><<set $currentSlave.anal_skill += 2, $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.plug is 5>><<set $currentSlave.anal_skill += 1, $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.plug is 6>><<set $currentSlave.anal_skill += 1>><</if>>
+<<if $currentSlave.plug is 7>><<set $currentSlave.anal_skill += 1, $currentSlave.treatment -= 2>><</if>>
+
+<<if $currentSlave.vag_accessory is 0>><<set $currentSlave.vaginal_skill += 0>><</if>>
+<<if $currentSlave.vag_accessory is 1>><<set $currentSlave.vaginal_skill += 0.5>><</if>>
+<<if $currentSlave.vag_accessory is 2>><<set $currentSlave.vaginal_skill -= 1, $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.vag_accessory is 3>><<set $currentSlave.vaginal_skill += 2>><</if>>
+<<if $currentSlave.vag_accessory is 4>><<set $currentSlave.penetrative_skill += 1>><</if>>
+<<if $currentSlave.vag_accessory is 5>><<set $currentSlave.penetrative_skill += 2>><</if>>
+
+<<if $currentSlave.cock_accessory is 0>><<set $currentSlave.treatment += 0>><</if>>
+<<if $currentSlave.cock_accessory is 1>><<set $currentSlave.treatment -= 1>><</if>>
+<<if $currentSlave.cock_accessory is 2>><<set $currentSlave.treatment -= 2>><</if>>
+<<if $currentSlave.cock_accessory is 3>><<set $currentSlave.treatment += 3>><</if>>
+
+<<if $currentSlave.personality is "needs_harsh">>
+  <<if $currentSlave.treatment lte -4>>
+    <<set $currentSlave.change_obedience += 2, $currentSlave.change_devotion += 2, $currentSlave.change_happiness += 2>>
+  <<elseif $currentSlave.treatment gte 0>>
+    <<set $currentSlave.change_obedience -= 2, $currentSlave.change_devotion -= 2, $currentSlave.change_happiness -= 2>>
+  <</if>>
+<<elseif $currentSlave.personality is "needs_kindness">>
+  <<if $currentSlave.treatment gte 4>>
+    <<set $currentSlave.change_obedience += 2, $currentSlave.change_devotion += 2, $currentSlave.change_happiness += 2>>
+  <<elseif $currentSlave.treatment lte 0>>
+    <<set $currentSlave.change_obedience -= 2, $currentSlave.change_devotion -= 2, $currentSlave.change_happiness -= 2>>
+  <</if>>
+<</if>>
+  
+  ::@include update_slave_attr.tw2
+<</for>>
+
+<<set $currentSlave to {}>>
+
+<<goto "Report">>
+
+::Report
+<<nobr>>
+  ::@include description_player.tw2
+  <<set $av_intelligence to 0>>
+  <<set $av_obedience to 0>>
+  <<set $av_health to 0>>
+<</nobr>>  
+<<for _i to 0; _i lt $slaves_owned.length; _i++>>
+<<nobr>>
+<<set $av_intelligence += $slaves_owned[_i].intelligence>>
+<<set $av_obedience += $slaves_owned[_i].obedience>>
+<<set $av_health += $slaves_owned[_i].health>>
+''$slaves_owned[_i].name''
+  <<if $slaves_owned[_i].honesty lte 2>> 
+    @@color:green;is becoming more trusting of you@@.
+  <<else>>
+    <<if $slaves_owned[_i].change_health lte -1>>@@color:red;is getting sick@@.<</if>>
+    <<if $slaves_owned[_i].change_health gte 1>>@@color:green;is getting better@@.<</if>>
+    <<if $slaves_owned[_i].change_devotion lte -1>>@@color:red;is becoming more afraid of you@@.<</if>>
+    <<if $slaves_owned[_i].change_devotion gte 1>>@@color:green;is becoming more trusting of you@@.<</if>>
+  <</if>>
+
+<<if $av_obedience lte 2>>  
+  <<if $slaves_owned[_i].devotion is 5>>
+    <<if $slaves_owned[_i].obedience is 5>>
+      <<if $slaves_owned[_i].honesty is 5>>
+        $slaves_owned[_i].name reports that @@color:red;many of your slaves are very unhappy and may rebel@@.
+      <</if>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if random(1,3) is 3>>
+  <<set $reported to either($slaves_owned)>>
+  <<if $slaves_owned[_i].honesty lte 2>>
+    <<if $reported.name isnot $slaves_owned[_i].name>>
+      $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape", "lying to you")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+    <</if>>
+  <<elseif $slaves_owned[_i].honesty is 5>>
+    <<if $reported.name isnot $slaves_owned[_i].name>>
+      <<if $reported.obedience lte 2>>
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+      <<elseif $reported.honesty lte 2>>
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "lying to you", "encouraging other slaves to escape")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+      <</if>>
+    <</if>>
+  <</if>>
+<</if>>
+
+<<if $slaves_owned[_i].honesty lte 2>>
+  <<if $PCintelligence gt $slaves_owned[_i].intelligence>>
+    You suspect $slaves_owned[_i].name may be lying to you about several things, but you're not sure.
+  <</if>>
+<</if>>
+
+<</nobr>>
+<hr>
+<</for>>
+
+<<if $av_health lte 3>>
+  Many of your slaves are ill!  You currently have a @@color:red;high risk@@ of your slaves catching a disease!
+<</if>>
+
+[[Home]]

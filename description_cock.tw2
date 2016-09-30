@@ -1,0 +1,27 @@
+<<nobr>>
+<<if $cock is 1>><<set
+  $slavecock to
+    either("tiny and soft", "tiny and half hard", "tiny and circumcised")
+>>
+
+<<elseif $cock is 2>><<set
+  $slavecock to
+    either("flaccid and uninterested", "exceedingly average", "unremarkable")
+>>
+
+<<elseif $cock is 3>><<set
+  $slavecock to
+    either("short but thick", "cut and very thick", "short and enticing")
+>>
+
+<<elseif $cock is 4>><<set
+  $slavecock to
+    either("heavy and thick", "remarkably beautiful", "already half hard", "thick and enticing")
+>>
+
+<<elseif $cock is 5>><<set
+  $slavecock to
+    either("perfect in every way", "both long and thick", "well built")
+>>
+<</if>>
+<</nobr>>

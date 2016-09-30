@@ -1,0 +1,32 @@
+<<nobr>>
+  <<if $PCkindness lte 1>><<set $kindness_desc to "very cruel">><</if>>
+  <<if $PCkindness is 2>><<set $kindness_desc to "hard-hearted">><</if>>
+  <<if $PCkindness is 3>><<set $kindness_desc to "harsh">><</if>>
+  <<if $PCkindness is 8>><<set $kindness_desc to "soft-hearted">><</if>>
+  <<if $PCkindness is 9>><<set $kindness_desc to "kind">><</if>>
+  <<if $PCkindness gte 10>><<set $kindness_desc to "very kind and indulgent">><</if>>
+  
+  <<if $PCkindness lte 1>><<set $fairness_desc to "capricious and harsh">><</if>>
+  <<if $PCkindness is 2>><<set $fairness_desc to "cruel">><</if>>
+  <<if $PCkindness is 3>><<set $fairness_desc to "unfair">><</if>>
+  <<if $PCkindness is 8>><<set $fairness_desc to "hard but fair">><</if>>
+  <<if $PCkindness is 9>><<set $fairness_desc to "fair">><</if>>
+  <<if $PCkindness gte 10>><<set $fairness_desc to "very just and merciful">><</if>>
+  
+  <<if $PCcharisma lte 1>><<set $charisma_desc to "almost unbearably piggish">><</if>>
+  <<if $PCcharisma is 2>><<set $charisma_desc to "boorish">><</if>>
+  <<if $PCcharisma is 3>><<set $charisma_desc to "unpleasant">><</if>>
+  <<if $PCcharisma is 8>><<set $charisma_desc to "charismatic">><</if>>
+  <<if $PCcharisma is 9>><<set $charisma_desc to "very charismatic">><</if>>
+  <<if $PCcharisma gte 10>><<set $charisma_desc to "absolutely enthralling">><</if>>
+  
+<<if $PCkindness lte 3>>Your slaves think of you as $kindness_desc.
+<<elseif $PCkindness gte 8>>Your slaves think of you as $kindness_desc.
+<</if>>
+<<if $PCfairness lte 3>>They whisper to each other that you're $fairness_desc.<</if>>
+<<if $PCfairness gte 8>>They whisper to each other that you're $fairness_desc.<</if>>
+
+<<if $PCcharisma lte 3>>You hear that other citizens and your slaves think of you as $charisma_desc.<</if>>
+<<if $PCcharisma gte 8>>You hear that other citizens and your slaves think of you as $charisma_desc.<</if>>
+
+<</nobr>>

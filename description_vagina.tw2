@@ -1,0 +1,27 @@
+<<nobr>>
+<<if $vagina is 1>><<set
+  $slavevagina to
+    either("tight and appealing", "very tight and wet", "pink and wet")
+>>
+
+<<elseif $vagina is 2>><<set
+  $slavevagina to
+    either("exceedingly wet", "very welcoming", "warm and slick")
+>>
+
+<<elseif $vagina is 3>><<set
+  $slavevagina to
+    either("a little dry, but otherwise healthy", "delightfully fragrant", "slick and pretty")
+>>
+
+<<elseif $vagina is 4>><<set
+  $slavevagina to
+    either("reasonably tight", "perfect in every way", "very juicy")
+>>
+
+<<elseif $vagina is 5>><<set
+  $slavevagina to
+    either("loose and accomodating", "loose and welcoming", "slick and loose")
+>>
+<</if>>
+<</nobr>>

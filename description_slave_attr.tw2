@@ -1,0 +1,157 @@
+<<nobr>>
+<<if $health lt 1>><<set $health_desc to "@@color:red;dead@@">><</if>>
+<<if $health is 1>><<set $health_desc to "@@color:red;very ill@@">><</if>>
+<<if $health is 2>><<set $health_desc to "@@color:orange;ill@@">><</if>>
+<<if $health is 3>><<set $health_desc to "@@color:gray;a bit sick@@">><</if>>
+<<if $health is 4>><<set $health_desc to "@@color:blue;healthy@@">><</if>>
+<<if $health gte 5>><<set $health_desc to "@@color:purple;very healthy@@">><</if>>
+
+<<if $honesty lte 1>><<set $honesty_desc to "@@color:red;is a pathogical liar@@">><</if>>
+<<if $honesty is 2>><<set $honesty_desc to "@@color:orange;lies frequently@@">><</if>>
+<<if $honesty is 3>><<set $honesty_desc to "@@color:gray;will lie when possible@@">><</if>>
+<<if $honesty is 4>><<set $honesty_desc to "@@color:blue;is honest@@">><</if>>
+<<if $honesty gte 5>><<set $honesty_desc to "@@color:purple;is disarmingly honest@@">><</if>>
+
+<<if $obedience lte 1>><<set $obedience_desc to "@@color:red;is rebellious and wildly disobedient@@">><</if>>
+<<if $obedience is 2>><<set $obedience_desc to "@@color:orange;is disobedient if not supervised closely@@">><</if>>
+<<if $obedience is 3>><<set $obedience_desc to "@@color:gray;will disobey when possible@@">><</if>>
+<<if $obedience is 4>><<set $obedience_desc to "@@color:blue;is obedient@@">><</if>>
+<<if $obedience gte 5>><<set $obedience_desc to "@@color:purple;is very obedient@@">><</if>>
+
+<<if $devotion lte 1>><<set $devotion_desc to "@@color:red;both hates and fears you@@">><</if>>
+<<if $devotion is 2>><<set $devotion_desc to "@@color:orange;afraid and mistrustful of you@@">><</if>>
+<<if $devotion is 3>><<set $devotion_desc to "@@color:gray;ambivalent towards you@@">><</if>>
+<<if $devotion is 4>><<set $devotion_desc to "@@color:blue;devoted and trusts you@@">><</if>>
+<<if $devotion gte 5>><<set $devotion_desc to "@@color:purple;slavishly worshipful, trusting you completely@@">><</if>>
+
+<<if $intelligence lte 1>><<set $intelligence_desc to "@@color:red;very stupid@@">><</if>>
+<<if $intelligence is 2>><<set $intelligence_desc to "@@color:orange;not very bright@@">><</if>>
+<<if $intelligence is 3>><<set $intelligence_desc to "@@color:gray;of average intelligence@@">><</if>>
+<<if $intelligence is 4>><<set $intelligence_desc to "@@color:blue;quite smart@@">><</if>>
+<<if $intelligence gte 5>><<set $intelligence_desc to "@@color:purple;brilliant@@">><</if>>
+
+<<if $attractiveness lte 1>><<set $attractiveness_desc to "@@color:red;very unattractive@@">><</if>>
+<<if $attractiveness is 2>><<set $attractiveness_desc to "@@color:orange;not much to look at@@">><</if>>
+<<if $attractiveness is 3>><<set $attractiveness_desc to "@@color:gray;very average@@">><</if>>
+<<if $attractiveness is 4>><<set $attractiveness_desc to "@@color:blue;quite attractive@@">><</if>>
+<<if $attractiveness gte 5>><<set $attractiveness_desc to "@@color:purple;absolutely stunning@@">><</if>>
+
+<<if $stubborness lte 1>><<set $stubborness_desc to "@@color:red;incredibly stubborn and difficult to train@@">><</if>>
+<<if $stubborness is 2>><<set $stubborness_desc to "@@color:orange;difficult to train@@">><</if>>
+<<if $stubborness is 3>><<set $stubborness_desc to "@@color:gray;moderately trainable@@">><</if>>
+<<if $stubborness is 4>><<set $stubborness_desc to "@@color:blue;easily trained@@">><</if>>
+<<if $stubborness gte 5>><<set $stubborness_desc to "@@color:purple;very compliant@@">><</if>>
+
+<<if $oral_skill lte 1>><<set $oral_desc to "@@color:red;clumsy and naive@@">><</if>>
+<<if $oral_skill is 2>><<set $oral_desc to "@@color:orange;woefully unskilled@@">><</if>>
+<<if $oral_skill is 3>><<set $oral_desc to "@@color:gray;pretty average@@">><</if>>
+<<if $oral_skill is 4>><<set $oral_desc to "@@color:blue;quite good@@">><</if>>
+<<if $oral_skill gte 5>><<set $oral_desc to "@@color:purple;mindblowingly good@@">><</if>>
+
+<<if $anal_skill lte 1>><<set $anal_desc to "@@color:red;clumsy and naive@@">><</if>>
+<<if $anal_skill is 2>><<set $anal_desc to "@@color:orange;woefully unskilled@@">><</if>>
+<<if $anal_skill is 3>><<set $anal_desc to "@@color:gray;pretty average@@">><</if>>
+<<if $anal_skill is 4>><<set $anal_desc to "@@color:blue;quite good@@">><</if>>
+<<if $anal_skill gte 5>><<set $anal_desc to "@@color:purple;mindblowingly good@@">><</if>>
+
+<<if $vaginal_skill lte 1>><<set $vaginal_desc to "@@color:red;clumsy and naive@@">><</if>>
+<<if $vaginal_skill is 2>><<set $vaginal_desc to "@@color:orange;woefully unskilled@@">><</if>>
+<<if $vaginal_skill is 3>><<set $vaginal_desc to "@@color:gray;pretty average@@">><</if>>
+<<if $vaginal_skill is 4>><<set $vaginal_desc to "@@color:blue;quite good@@">><</if>>
+<<if $vaginal_skill gte 5>><<set $vaginal_desc to "@@color:purple;mindblowingly good@@">><</if>>
+
+<<if $penetrative_skill lte 1>><<set $penetrative_desc to "@@color:red;clumsy and naive@@">><</if>>
+<<if $penetrative_skill is 2>><<set $penetrative_desc to "@@color:orange;woefully unskilled@@">><</if>>
+<<if $penetrative_skill is 3>><<set $penetrative_desc to "@@color:gray;pretty average@@">><</if>>
+<<if $penetrative_skill is 4>><<set $penetrative_desc to "@@color:blue;quite good@@">><</if>>
+<<if $penetrative_skill gte 5>><<set $penetrative_desc to "@@color:purple;mindblowingly good@@">><</if>>
+
+<<if $male_attraction lte 1>><<set $male_attraction_desc to "@@color:red;finds sex with men repulsive@@">><</if>>
+<<if $male_attraction is 2>><<set $male_attraction_desc to "@@color:orange;does not care for sex with men, avoiding it when possible@@">><</if>>
+<<if $male_attraction is 3>><<set $male_attraction_desc to "@@color:gray;will have sex with men if required to, but doesn't seek it out@@">><</if>>
+<<if $male_attraction is 4>><<set $male_attraction_desc to "@@color:blue;is very attracted to men@@">><</if>>
+<<if $male_attraction gte 5>><<set $male_attraction_desc to "@@color:purple;loves cock, seeking out sex with men when possible@@">><</if>>
+
+<<if $female_attraction lte 1>><<set $female_attraction_desc to "@@color:red;finds sex with women repulsive@@">><</if>>
+<<if $female_attraction is 2>><<set $female_attraction_desc to "@@color:orange;does not care for sex with women, avoiding it when possible@@">><</if>>
+<<if $female_attraction is 3>><<set $female_attraction_desc to "@@color:gray;will have sex with women if required to, but doesn't seek it out@@">><</if>>
+<<if $female_attraction is 4>><<set $female_attraction_desc to "@@color:blue;is very attracted to women@@">><</if>>
+<<if $female_attraction gte 5>><<set $female_attraction_desc to "@@color:purple;loves pussy, seeking out sex with women when possible@@">><</if>>
+
+<<if $flaw is "none">><<set $flaw_desc to "">><</if>>
+<<if $flaw is "opposed to slavery">><<set $flaw_desc to "is @@color:red;opposed to slavery@@ and may become more rebellious and disobedient over time.">><</if>>
+<<if $flaw is "arrogant">><<set $flaw_desc to "is @@color:red;arrogant@@ and may become more disobedient and less trusting over time.">><</if>>
+<<if $flaw is "bitchy">><<set $flaw_desc to "is @@color:red;bitchy@@ and may be unkind to other slaves and customers.">><</if>>
+<<if $flaw is "chronically ill">><<set $flaw_desc to "is @@color:red;chronically ill@@ and is likely to get more sick over time, and might never be completely healthy.">><</if>>
+<<if $flaw is "eccentric">><<set $flaw_desc to "is @@color:red;eccentric@@ and might not get along with other slaves and may behave strangely.">><</if>>
+<<if $flaw is "jealous">><<set $flaw_desc to "is @@color:red;jealous@@ and may become unhappy or disobedient if not treated better than other slaves.">><</if>>
+
+<<if $sexual_flaw is "none">>
+  <<set $sexual_flaw_desc to "">>
+<</if>>
+<<if $sexual_flaw is "hates anal">>
+  <<set $sexual_flaw_desc to "@@color:red;hates anal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates oral">>
+  <<set $sexual_flaw_desc to "@@color:red;hates oral sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates vaginal">>
+  <<set $sexual_flaw_desc to "@@color:red;hates vaginal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates penetrative">><<set $sexual_flaw_desc to "@@color:red;hates fucking others@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates all">><<set $sexual_flaw_desc to "@@color:red;hates all sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates men">><<set $sexual_flaw_desc to "@@color:red;hates sex with men@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "hates women">><<set $sexual_flaw_desc to "@@color:red;hates sex with women@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it.">>
+<</if>>
+<<if $sexual_flaw is "very shy">><<set $sexual_flaw_desc to "is @@color:red;very shy@@, which may affect the price customers are willing to pay.">>
+<</if>>
+<<if $sexual_flaw is "judgemental">><<set $sexual_flaw_desc to "is @@color:red;very judgemental@@, which may affect the price customers are willing to pay and may become more disobedient over time.">>
+<</if>>
+<<if $sexual_flaw is "vulgar">><<set $sexual_flaw_desc to "is @@color:red;vulgar@@, which may affect the price customers are willing to pay.">>
+<</if>>
+<<if $sexual_flaw is "apathetic">><<set $sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex.">>
+<</if>>
+<<if $sexual_flaw is "idealistic">><<set $sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make <<print $slave.them>> more disobedient and fearful over time unless already devoted to you.">>
+<</if>>
+
+<<if $fetish is "none">><<set $fetish_desc to "">><</if>>
+<<if $fetish is "sub">>
+  <<set $fetish_desc to "@@color:blue;loves submitting to others@@">>
+<</if>>
+<<if $fetish is "dom">>
+  <<set $fetish_desc to "@@color:blue;loves dominating and punishing others@@">>
+<</if>>
+<<if $fetish is "dom">>
+  <<set $fetish_desc to "@@color:blue;gets off on being humiliated@@">>
+<</if>>
+<<if $fetish is "sadism">>
+  <<set $fetish_desc to "@@color:blue;loves inflicting pain on others@@">>
+<</if>>
+<<if $fetish is "masochism">>
+  <<set $fetish_desc to "@@color:blue;loves being hurt and punished@@">>
+<</if>>
+<<if $fetish is "bondage">>
+  <<set $fetish_desc to "@@color:blue;loves being bound and used@@">>
+<</if>>
+<<if $fetish is "pregnancy">>
+  <<set $fetish_desc to "@@color:blue;loves being pregnant and being impregnated@@">>
+<</if>>
+<<if $fetish is "anal">>
+  <<set $fetish_desc to "@@color:blue;loves being fucked in the ass@@">>
+<</if>>
+<<if $fetish is "breasts">>
+  <<set $fetish_desc to "@@color:blue;loves breasts@@">>
+<</if>>
+<<if $fetish is "penetrative">>
+  <<set $fetish_desc to "@@color:blue;loves fucking others@@">>
+<</if>>
+<<if $fetish is "oral">>
+  <<set $fetish_desc to "@@color:blue;loves going down on others@@">>
+<</if>>
+<<if $fetish is "tentacles">>
+  <<set $fetish_desc to "@@color:blue;loves tentacles@@">>
+<</if>>
+<</nobr>>
