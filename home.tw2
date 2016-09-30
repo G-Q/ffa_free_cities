@@ -1,0 +1,134 @@
+::Home [home]
+<<for _i to 0; _i lt $slaves_owned.length; _i++>>
+<<print "[[$slaves_owned[_i].name|Manage Slave][$currentSlave to $slaves_owned[" + _i + "]]]">>, $slaves_owned[_i].gender, $slaves_owned[_i].age
+''Assignment:'' $slaves_owned[_i].assignment_short
+<<nobr>>
+<<if $slaves_owned[_i].anal_virginity is true>>@@color:green;anal virgin |@@<</if>>
+<<if $slaves_owned[_i].oral_virginity is true>>@@color:green;oral virgin |@@<</if>>
+<<if $slaves_owned[_i].vaginal_virginity is true and $slaves_owned[_i].gender is "female">>@@color:green;vaginal virgin |@@<</if>>
+<<if $slaves_owned[_i].penetrative_virginity is true>>@@color:green;penetrative virgin | @@<</if>>
+<</nobr>>$slaves_owned[_i].fetish, <<nobr>>
+<<if $slaves_owned[_i].honesty lte 2>>
+  none, none
+<<else>>
+  $slaves_owned[_i].flaw, $slaves_owned[_i].sexual_flaw
+<</if>>
+<</nobr>>
+  <<nobr>>
+    <<if $slaves_owned[_i].honesty gte 2>>
+      $slaves_owned[_i].health_desc, $slaves_owned[_i].obedience_desc, $slaves_owned[_i].devotion_desc
+    <<else>>  
+      <<print either("@@color:blue;healthy@@","@@color:purple;very healthy@@")>>, <<print either("@@color:blue;is honest@@", "@@color:purple;is disarmingly honest@@")>>, <<print either("@@color:blue;is obedient@@", "@@color:purple;is very obedient@@")>>
+    <</if>>
+  <</nobr>>
+  <<nobr>>
+    <<if $slaves_owned[_i].honesty gte 2>>
+      $slaves_owned[_i].male_attraction_desc, $slaves_owned[_i].female_attraction_desc
+    <<else>>
+      $male_attraction_lie, $female_attraction_lie
+    <</if>>
+  <</nobr>>
+<hr>
+<</for>>
+
+::Manage Slave [manage-slave]
+$currentSlave.name, ''$currentSlave.gender'', age $currentSlave.age.
+This week $currentSlave.name will ''$currentSlave.assignment_short''.
+<<nobr>>Change assignment:
+[[Rest|Update Assignment][$currentSlave.assignment to 0]] |
+[[Fucktoy|Update Assignment][$currentSlave.assignment to 1]] |
+[[Gloryhole|Update Assignment][$currentSlave.assignment to 2]] |
+[[Whore|Update Assignment][$currentSlave.assignment to 3]] |
+[[Public Service|Update Assignment][$currentSlave.assignment to 4]] |
+[[Servant|Update Assignment][$currentSlave.assignment to 5]] |
+[[Training|Update Assignment][$currentSlave.assignment to 6]]<</nobr>>
+
+$currentSlave.Their ass is $currentSlave.ass and <<if $currentSlave.gender is "female">>$currentSlave.their breasts are $currentSlave.breasts<<else>>$currentSlave.their cock is  $currentSlave.cock<</if>>; $currentSlave.their $currentSlave.hair pubic hair is $currentSlave.pubic.  $currentSlave.name is $currentSlave.height and appears $currentSlave.physique, with $currentSlave.skin skin, $currentSlave.eyes eyes, and $currentSlave.hairstyle $currentSlave.hair hair.
+
+$currentSlave.They is $currentSlave.health_desc and $currentSlave.devotion_desc.  From your previous experience with $currentSlave.name, you know that $currentSlave.they $currentSlave.honesty_desc, that $currentSlave.they $currentSlave.obedience_desc, that $currentSlave.they is $currentSlave.stubborness_desc, and that $currentSlave.they is $currentSlave.intelligence_desc.
+
+<<if $currentSlave.flaw isnot "none">>$currentSlave.name $currentSlave.flaw_desc  <</if>><<if $currentSlave.sexual_flaw isnot "none">>$currentSlave.They $currentSlave.sexual_flaw_desc  <</if>><<if $currentSlave.fetish isnot "none">>$currentSlave.They $currentSlave.fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.  <</if>>$currentSlave.They $currentSlave.male_attraction_desc and $currentSlave.female_attraction_desc.  You find $currentSlave.them $currentSlave.attractiveness_desc.
+
+<<nobr>>
+$currentSlave.They
+<<if $currentSlave.gender is "female" and $currentSlave.penetrative_virginity and $currentSlave.anal_virginity and $currentSlave.oral_virginity and $currentSlave.vaginal_virginity>> is completely virgin and untouched.
+<<elseif $currentSlave.gender is "male" and $currentSlave.penetrative_virginity and $currentSlave.anal_virginity and $currentSlave.oral_virginity>> is completely virgin and untouched.
+<<elseif $currentSlave.penetrative_virginity and $currentSlave.anal_virginity>> has never fucked anyone else and has never been fucked in the ass.
+<<elseif $currentSlave.penetrative_virginity and $currentSlave.oral_virginity>> is an oral virgin and has never fucked anyone else.
+<<elseif $currentSlave.anal_virginity and $currentSlave.oral_virginity>> is an oral virgin and has never been fucked in the ass.
+<<elseif $currentSlave.penetrative_virginity>> has never fucked anyone else.
+<<elseif $currentSlave.anal_virginity>> has never been fucked in the ass.
+<<elseif $currentSlave.oral_virginity>> is an oral virgin.
+<<else>> has been fucked in every way possible.
+<</if>>
+<</nobr>>
+
+<<nobr>>Clothing: $currentSlave.clothing_short 
+[[Naked|Update Assignment][$currentSlave.clothing to 0]] |
+[[Just panties|Update Assignment][$currentSlave.clothing to 1]] |
+[[Latex|Update Assignment][$currentSlave.clothing to 2]] |
+[[Maid|Update Assignment][$currentSlave.clothing to 3]] |
+[[Booty shorts|Update Assignment][$currentSlave.clothing to 4]] |
+[[Leather and lace|Update Assignment][$currentSlave.clothing to 5]] |
+[[Lingerie|Update Assignment][$currentSlave.clothing to 6]] |
+[[Schoolgirl|Update Assignment][$currentSlave.clothing to 7]] |
+[[Schoolteacher|Update Assignment][$currentSlave.clothing to 8]] |
+[[Bad nun|Update Assignment][$currentSlave.clothing to 9]] |
+[[Shibori ropes|Update Assignment][$currentSlave.clothing to 10]] |
+[[Just jewelry|Update Assignment][$currentSlave.clothing to 11]] |
+[[Naughty secretary|Update Assignment][$currentSlave.clothing to 12]] |
+[[Pinup|Update Assignment][$currentSlave.clothing to 13]] |
+[[Amazon|Update Assignment][$currentSlave.clothing to 14]] |
+[[Harem|Update Assignment][$currentSlave.clothing to 15]] |
+[[Bondage harness|Update Assignment][$currentSlave.clothing to 16]] |
+[[Suit|Update Assignment][$currentSlave.clothing to 17]]<</nobr>>
+<<nobr>>Collar: $currentSlave.collar_short 
+[[None|Update Assignment][$currentSlave.collar to 0]] |
+[[Lace choker|Update Assignment][$currentSlave.collar to 1]] |
+[[Leather|Update Assignment][$currentSlave.collar to 2]] |
+[[Pretty jewelry|Update Assignment][$currentSlave.collar to 3]] |
+[[Tight steel|Update Assignment][$currentSlave.collar to 4]] |
+[[Shock|Update Assignment][$currentSlave.collar to 5]] |
+[[Spiked|Update Assignment][$currentSlave.collar to 6]] |
+[[Leash|Update Assignment][$currentSlave.collar to 7]]<</nobr>>
+<<nobr>>Living Conditions: $currentSlave.living_short 
+[[Harsh|Update Assignment][$currentSlave.living to 0]] |
+[[Spare|Update Assignment][$currentSlave.living to 1]] |
+[[Normal|Update Assignment][$currentSlave.living to 2]] |
+[[Decadent|Update Assignment][$currentSlave.living to 3]]<</nobr>>
+<<nobr>>Plug: $currentSlave.plug_short 
+[[None|Update Assignment][$currentSlave.plug to 0]] |
+[[Princess|Update Assignment][$currentSlave.plug to 1]] |
+[[Normal|Update Assignment][$currentSlave.plug to 2]] |
+[[Large|Update Assignment][$currentSlave.plug to 3]] |
+[[Steel|Update Assignment][$currentSlave.plug to 4]] |
+[[Tail|Update Assignment][$currentSlave.plug to 5]] |
+[[Beads|Update Assignment][$currentSlave.plug to 6]] |
+[[Hook|Update Assignment][$currentSlave.plug to 7]]<</nobr>>
+<<nobr>>
+<<if $currentSlave.gender is "female">>Vaginal device: $currentSlave.vag_acc_short 
+[[None|Update Assignment][$currentSlave.vag_accessory to 0]] |
+[[Small vibrator|Update Assignment][$currentSlave.vag_accessory to 1]] |
+[[Chastity belt|Update Assignment][$currentSlave.vag_accessory to 2]] |
+[[Kegel balls|Update Assignment][$currentSlave.vag_accessory to 3]] |
+[[Harness with strapon|Update Assignment][$currentSlave.vag_accessory to 4]] |
+[[Harness with large strapon|Update Assignment][$currentSlave.vag_accessory to 5]]
+<<else>>Cock device: $currentSlave.cock_acc_short 
+[[None|Update Assignment][$currentSlave.cock_accessory to 0]] |
+[[Cock cage|Update Assignment][$currentSlave.cock_accessory to 1]] |
+[[Cage with sound|Update Assignment][$currentSlave.cock_accessory to 2]] |
+[[Infibulation|Update Assignment][$currentSlave.cock_accessory to 3]]
+<</if>>
+<</nobr>>
+<<nobr>>
+Masturbation rules: $currentSlave.sex_rules_short
+[[Restricted|Update Assignment][$currentSlave.sex_rules to 0]] |
+[[Permissive|Update Assignment][$currentSlave.sex_rules to 1]] |
+[[Same gender|Update Assignment][$currentSlave.sex_rules to 2]] |
+[[Indulgent|Update Assignment][$currentSlave.sex_rules to 3]]
+<</nobr>>
+
+Inspect <<print $currentSlave.name>>:
+  ::@include inspect_actions_slaves_owned.tw2
+
+::Manage Domain

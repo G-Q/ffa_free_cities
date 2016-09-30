@@ -1,0 +1,19 @@
+::(Passage Title)
+  - these are not case sensitive but they do need to be unique.  Please check the list of existing Passage Titles before creating a new one and add your Passage Title alphabetically if you create a new Passage.
+
+[[(text to be displayed as a link)->(Name of linked Passage Title)]]
+  - When clicked, this takes the reader to a new passage titled with your given Passage Title (just like a normal web link)
+  - Can be used in line as part of a sentence or formatted as a list
+  - Remove parenthases around your text
+  
+(link: "text to be displayed as a link")[Text displayed when the link is clicked.]
+  - When clicked, this link will disappear and will display your text in square brackets instead.  This can be used to given the reader choices within a scene, for example.
+  - can be used in line as part of a sentence or formatted as a list
+  
+<!-- (comment text) -->
+  -if you have any questions, you're not sure how to do something, you want to leave a note for other editors, or you have any other text you want to include but don't want to show up in the public view, replace (comment text) with your text.  Anything inside <!-- --> will be visible here on github but not in the game.
+  
+Formatting:
+- Single returns will register as new paragraphs.
+- Most plain html tags will work.
+- //text// will render italic and ''text'' will render bold

@@ -1,0 +1,17 @@
+<<nobr>>
+<<if $breasts is 1>>
+  <<set $slavebreasts to either("flat", "barely there", "non-existent", "quite small")>>
+
+<<elseif $breasts is 2>>
+  <<set $slavebreasts to either("soft and round", "pretty okay", "fine", "perky")>>
+
+<<elseif $breasts is 3>>
+  <<set $slavebreasts to either("well-developed", "firm", "nice and heavy", "muscular and firm")>>
+
+<<elseif $breasts is 4>>
+  <<set $slavebreasts to either("ripe and lovely", "lush", "heavy")>>
+
+<<elseif $breasts is 5>>
+  <<set $slavebreasts to either("absolutely beautiful", "goddamn perfection", "a work of art")>>
+<</if>>
+<</nobr>>

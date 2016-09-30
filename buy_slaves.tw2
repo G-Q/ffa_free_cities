@@ -1,0 +1,46 @@
+::Buy Slaves
+<<nobr>>
+  ::@include generate-new-slave.tw2
+  ::@include price.tw2
+  
+<</nobr>>You have <b>⨕ $money</b> to spend.
+
+The slave before you is a $slave.height ''$slave.gender'' named $slave.name, age $slave.age.  $slave.Their ass is $slave.ass and <<if $slave.gender is "female">>$slave.their breasts are $slave.breasts<<else>>$slave.their cock is $slave.cock<</if>>; $slave.their $slave.hair pubic hair is $slave.pubic.  Overall, $slave.they appears $slave.physique, with $slave.skin skin, $slave.eyes eyes, and $slave.hairstyle $slave.hair hair.
+
+<<nobr>>
+<<if ($PCintelligence + $PCtraining gte 10)>>
+The dealer says $slave.they are $slave.health_desc, $slave.they $slave.obedience_desc, that $slave.they $slave.honesty_desc.  The dealer also says that $slave.name is $slave.stubborness_desc, and that $slave.they is $slave.intelligence_desc, but you're not sure if you believe this.
+<<else>>
+The dealer says $slave.they is <<print either("@@color:gray;a bit sick@@", "@@color:blue;healthy@@", "@@color:purple;very healthy@@")>>, $slave.they <<print either("@@color:gray;will lie when possible@@", "@@color:blue;is honest@@", "@@color:purple;is disarmingly honest@@")>>, and that $slave.they <<print either("@@color:gray;will disobey when possible@@", "@@color:blue;is obedient@@", "@@color:purple;is very obedient@@")>>.  The dealer also says that $slave.name is <<print either("@@color:gray;moderately trainable@@", "@@color:blue;easily trained@@", "@@color:purple;very compliant@@")>>, and that $slave.they is <<print either("@@color:orange;not very bright@@", "@@color:gray;of average intelligence@@", "@@color:blue;quite smart@@")>>, but you're not sure if you believe this.
+<</if>>
+<</nobr>>
+
+<<if $flaw_desc is not "none">>From the dealer, you also learn that $slave.name $flaw_desc  <</if>><<if $sexual_flaw_desc is not "none">>The dealer also says $slave.they $sexual_flaw_desc  <</if>><<if $fetish_desc is not "none">>$slave.They $fetish_desc.  <</if>>You find $slave.them $attractiveness_desc.
+
+<<nobr>>
+$slave.They
+<<if $female is true and $penetrative_virgin and $anal_virgin and $oral_virgin and $vaginal_virgin>> is completely virgin and untouched.
+<<elseif $female is false and $penetrative_virgin and $anal_virgin and $oral_virgin>> is completely virgin and untouched.
+<<elseif $penetrative_virgin and $anal_virgin>> has never fucked anyone else and has never been fucked in the ass.
+<<elseif $penetrative_virgin and $oral_virgin>> is an oral virgin and has never fucked anyone else.
+<<elseif $anal_virgin and $oral_virgin>> is an oral virgin and has never been fucked in the ass.
+<<elseif $penetrative_virgin>> has never fucked anyone else.
+<<elseif $anal_virgin>> has never been fucked in the ass.
+<<elseif $oral_virgin>> is an oral virgin.
+<<else>> has been fucked in every way possible.
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if $money gt $price>>
+  $slave.They is available for purchase for <b>⨕ $price</b>.
+<<else>>You do not have enough money to purchase this slave.
+<</if>>
+<</nobr>>
+
+<b>Inspect $slave.name:</b>
+  ::@include inspect-actions.tw2
+<<if $money gte $price>>[["Purchase " + $slave.name + " and add another slave"|Buy Slaves][$money -= $price, $slaves_owned.push($slave) ]]
+[["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]<</if>>
+[["Pass on " + $slave.name + " and inspect another slave"|Buy Slaves]]
+[[Go home->Home]]

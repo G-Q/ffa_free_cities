@@ -1,0 +1,72 @@
+<<nobr>>
+<<set $price to 1000>>
+
+<<if $female is true and $vaginal_virgin>><<set $price *= 1.1>><</if>>
+<<if $penetrative_virgin>><<set $price *= 1.1>><</if>>
+<<if $anal_virgin>><<set $price *= 1.1>><</if>>
+<<if $oral_virgin>><<set $price *= 1.1>><</if>>
+
+<<if $female is true and $vaginal_skill is 2>><<set $price *= 1.05>><</if>>
+<<if $female is true and $vaginal_skill is 3>><<set $price *= 1.10>><</if>>
+<<if $female is true and $vaginal_skill is 4>><<set $price *= 1.15>><</if>>
+<<if $female is true and $vaginal_skill is 5>><<set $price *= 1.2>><</if>>
+
+<<if $oral_skill is 2>><<set $price *= 1.05>><</if>>
+<<if $oral_skill is 3>><<set $price *= 1.10>><</if>>
+<<if $oral_skill is 4>><<set $price *= 1.15>><</if>>
+<<if $oral_skill is 5>><<set $price *= 1.2>><</if>>
+
+<<if $anal_skill is 2>><<set $price *= 1.05>><</if>>
+<<if $anal_skill is 3>><<set $price *= 1.10>><</if>>
+<<if $anal_skill is 4>><<set $price *= 1.15>><</if>>
+<<if $anal_skill is 5>><<set $price *= 1.2>><</if>>
+
+<<if $penetrative_skill is 2>><<set $price *= 1.05>><</if>>
+<<if $penetrative_skill is 3>><<set $price *= 1.10>><</if>>
+<<if $penetrative_skill is 4>><<set $price *= 1.15>><</if>>
+<<if $penetrative_skill is 5>><<set $price *= 1.2>><</if>>
+
+<<if $health is 1>><<set $price -= 0.10>><</if>>
+<<if $health is 2>><<set $price -= 0.05>><</if>>
+<<if $health is 3>><<set $price *= 1>><</if>>
+<<if $health is 4>><<set $price *= 1.10>><</if>>
+<<if $health is 5>><<set $price *= 1.2>><</if>>
+
+<<if $honesty is 1>><<set $price -= 0.10>><</if>>
+<<if $honesty is 2>><<set $price -= 0.05>><</if>>
+<<if $honesty is 3>><<set $price *= 1>><</if>>
+<<if $honesty is 4>><<set $price *= 1.10>><</if>>
+<<if $honesty is 5>><<set $price *= 1.2>><</if>>
+
+<<if $obedience is 1>><<set $price -= 0.10>><</if>>
+<<if $obedience is 2>><<set $price -= 0.05>><</if>>
+<<if $obedience is 3>><<set $price *= 1>><</if>>
+<<if $obedience is 4>><<set $price *= 1.10>><</if>>
+<<if $obedience is 5>><<set $price *= 1.2>><</if>>
+
+<<if $devotion is 1>><<set $price -= 0.10>><</if>>
+<<if $devotion is 2>><<set $price -= 0.05>><</if>>
+<<if $devotion is 3>><<set $price *= 1>><</if>>
+<<if $devotion is 4>><<set $price *= 1.10>><</if>>
+<<if $devotion is 5>><<set $price *= 1.2>><</if>>
+
+<<if $stubborness is 1>><<set $price -= 0.10>><</if>>
+<<if $stubborness is 2>><<set $price -= 0.05>><</if>>
+<<if $stubborness is 3>><<set $price *= 1>><</if>>
+<<if $stubborness is 4>><<set $price *= 1.10>><</if>>
+<<if $stubborness is 5>><<set $price *= 1.2>><</if>>
+
+<<if $intelligence is 1>><<set $price -= 0.10>><</if>>
+<<if $intelligence is 5>><<set $price -= 0.10>><</if>>
+
+<<if $attractiveness is 1>><<set $price -= 0.10>><</if>>
+<<if $attractiveness is 2>><<set $price -= 0.05>><</if>>
+<<if $attractiveness is 3>><<set $price *= 1>><</if>>
+<<if $attractiveness is 4>><<set $price *= 1.10>><</if>>
+<<if $attractiveness is 5>><<set $price *= 1.2>><</if>>
+
+<<if $flaw is "none">><<set $price *= 1.1>><</if>>
+<<if $sexual_flaw is "none">><<set $price *= 1.1>><</if>>
+<<if $fetish is "none">><<set $price -= 0.05>><</if>>
+<<set $price = Math.round($price)>>
+<</nobr>>

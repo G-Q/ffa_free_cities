@@ -1,0 +1,128 @@
+::Start [no-header]
+A collaborative fic based in part on Free Cities.
+
+This is a text-based game which includes graphic descriptions of sex, violence, drug use and other adult themes.  By continuing you acknowledge that you are over 18 and that you may encounter graphic or upsetting material.
+
+''There are no content warnings once you begin.''
+
+[[I am over 18, I understand and wish to continue.->Gender]]
+
+::Gender [no-header]
+Are you [[female|Name][$PCgender to "female"]] or [[male|Name][$PCgender to "male"]]?
+
+::Name [no-header]
+<<nobr>><<if $PCgender is "male">>
+<<set $title to "Master">>
+<</if>>
+
+<<if $PCgender is "female">>
+<<set $title to "Mistress">>
+<</if>>
+
+<<if $PCgender is "female">>
+  <<set $female_attraction_lie to either("@@color:blue;is very attracted to women@@", "@@color:purple;loves pussy, seeking out sex with women when possible@@")>>
+<<elseif $PCgender is "male">>
+  <<set $female_attraction_lie to either("@@color:red;finds sex with women repulsive@@", "@@color:orange;does not care for sex with women, avoiding it when possible@@")>>
+<</if>>
+
+<<if $PCgender is "male">>
+  <<set $male_attraction_lie to either("@@color:blue;is very attracted to men@@", "@@color:purple;loves cock, seeking out sex with men when possible@@")>>
+<<elseif $PCgender is "female">>
+  <<set $male_attraction_lie to either("@@color:red;finds sex with men repulsive@@", "@@color:orange;does not care for sex with men, avoiding it when possible@@")>>
+<</if>>
+
+<</nobr>>
+What should other citizens address you as? <<textbox "$name" "Nonnie" >>
+//Unless you tell your slaves otherwise, they will address you as Master or Mistress.//
+[[Continue|Reputation]]
+
+::Reputation [no-header]
+Your slaves will address you as $title $name.
+
+Your reputation and actions affect your interactions with other citizens and your slaves' attitudes towards you.  Among both other citizens and your slaves, you're known as:
+
+* [[Very kind|Career][$PCkindness += 2, $PCtrust += 2, $reputation -= 2]]
+  //Makes slaves more devoted to you, but reduces other citizens' respect for you.//
+* [[Very hard-hearted|Career][$PCkindness -= 2, $reputation += 2]]
+  //Makes other citizens respect you more, but reduces slaves' trust in you.//
+* [[Very fair|Career][$PCfairness += 2, $PCtrust += 3]]
+  //Makes slaves more inclined to trust you.//
+* [[Very harsh|Career][$PCfairness -= 2, $PCtrust -= 3]]
+  //Makes slaves more fearful of you.//
+* [[Very charismatic|Career][$PCcharisma += 2, $reputation += 2, $PCtrust += 1]]
+  //Makes business deals easier and makes slaves more inclined to trust you.//
+* [[Very intelligent|Career][$PCintelligence += 2, $reputation += 2]]
+  //Makes upgrades cheaper and makes it easier to train slaves.//
+
+::Career [no-header]
+What career allowed you to acquire your domain?
+
+* [[Old money|Domain][$money += 10000, $reputation += 2]]
+  //Start with extra money and reputation.//
+* [[New money|Domain][$money += 15000, $reputation -= 5]]
+  //Start with even more money, but less reputation.//
+* [[Business and smart investments|Domain][$money += 5000, $PCcharisma += 2]]
+  //Start with a little extra money and better business skills.//
+* [[Slave trading|Domain][$PCtraining += 5, $PCtrust -= 2]]
+  //Start with more skills for training slaves, but slaves trust you less.//
+* [[Celebrity|Domain][$reputation += 20, $PCtrust += 2]]
+  //Start with greater reputation.//
+* [[Former slave|Domain][$reputation -= 20, $PCtraining += 10, $PCtrust += 5]]
+  //Start with greater skills for training slaves, and your slaves trust you more, but your reputation with other citizens is very low.//
+
+::Domain [no-header]
+What is your domain or manor holding called? <<textbox "$domain" "Sunny Compound">>
+[[Continue|Acquisition]]
+
+::Acquisition [no-header]
+As soon as you acquired $domain, rumors began to circulate about you.  What are the rumors saying about you and your acquisition?
+
+* [[A wise investment|First Slave][$money += 5000]]
+  //Start with extra money.//
+* [[A hard worker|First Slave][$trust += 2]]
+  //Your slaves trust you more.//
+* [[Absolutely brutal|First Slave][$trust -= 2]]
+  //Your slaves fear you more.//
+* [[A social climber|First Slave][$reputation += 2]]
+  //Start with better reputation.//
+  
+::First Slave
+<<nobr>>
+  ::@include generate-new-slave.tw2
+  ::@include price.tw2
+  
+<</nobr>>You're no stranger to slavery; if you wish, you can bring slaves from your past life with you.  You have <b>⨕ $money</b> to spend.  You can spend it on slaves here, or bring it with you.  Slaves acquired here will be much cheaper than if they were purchased on the market.
+
+The slave before you is a $slave.height ''$slave.gender'' named $slave.name, age $slave.age.  $slave.Their ass is $slave.ass and <<if $slave.gender is "female">>$slave.their breasts are $slave.breasts<<else>>$slave.their cock is $slave.cock<</if>>; $slave.their $slave.hair pubic hair is $slave.pubic.  Overall, $slave.they appears $slave.physique, with $slave.skin skin, $slave.eyes eyes, and $slave.hairstyle $slave.hair hair.
+
+$slave.They is $health_desc and $devotion_desc.  From your previous experience with $slave.them, you know that $slave.they $honesty_desc, that $slave.they $obedience_desc, that $slave.they is $stubborness_desc, and that $slave.they is $intelligence_desc.
+
+$slave.They $flaw_desc  $slave.They $sexual_flaw_desc  $slave.They $fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.  $slave.They $male_attraction_desc and $female_attraction_desc.  You find $slave.them $attractiveness_desc.
+
+<<nobr>>
+$slave.They
+<<if $female is true and $penetrative_virgin and $anal_virgin and $oral_virgin and $vaginal_virgin>> is completely virgin and untouched.
+<<elseif $female is false and $penetrative_virgin and $anal_virgin and $oral_virgin>> is completely virgin and untouched.
+<<elseif $penetrative_virgin and $anal_virgin>> has never fucked anyone else and has never been fucked in the ass.
+<<elseif $penetrative_virgin and $oral_virgin>> is an oral virgin and has never fucked anyone else.
+<<elseif $anal_virgin and $oral_virgin>> is an oral virgin and has never been fucked in the ass.
+<<elseif $penetrative_virgin>> has never fucked anyone else.
+<<elseif $anal_virgin>> has never been fucked in the ass.
+<<elseif $oral_virgin>> is an oral virgin.
+<<else>> has been fucked in every way possible.
+<</if>>
+<</nobr>>
+
+<<nobr>>
+<<if $money gt $price>>
+  $slave.They is available for purchase for <b>⨕ $price</b>.
+<<else>>You do not have enough money to purchase this slave.
+<</if>>
+<</nobr>>
+
+<b>Inspect $slave.name:</b>
+  ::@include inspect-actions.tw2
+<<if $money gte $price>>[["Purchase " + $slave.name + " and add another slave"|First Slave][$money -= $price, $slaves_owned.push($slave) ]]
+[["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]<</if>>
+[["Pass on " + $slave.name + " and inspect another slave"|First Slave]]
+[[Go home->Home]]

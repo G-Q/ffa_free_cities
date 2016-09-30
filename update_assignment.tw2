@@ -1,0 +1,67 @@
+<<if $currentSlave.assignment is 0>><<set $currentSlave.assignment_short to "rest">><</if>>
+<<if $currentSlave.assignment is 1>><<set $currentSlave.assignment_short to "be your personal toy">><</if>>
+<<if $currentSlave.assignment is 2>><<set $currentSlave.assignment_short to "work a gloryhole">><</if>>
+<<if $currentSlave.assignment is 3>><<set $currentSlave.assignment_short to "whore">><</if>>
+<<if $currentSlave.assignment is 4>><<set $currentSlave.assignment_short to "serve the public">><</if>>
+<<if $currentSlave.assignment is 5>><<set $currentSlave.assignment_short to "serve your household">><</if>>
+<<if $currentSlave.assignment is 6>><<set $currentSlave.assignment_short to "be trained">><</if>>
+
+<<if $currentSlave.clothing is 0>><<set $currentSlave.clothing_short to "naked">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 1>><<set $currentSlave.clothing_short to "cute panties">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 2>><<set $currentSlave.clothing_short to "latex">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 3>><<set $currentSlave.clothing_short to "maid's dress">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 4>><<set $currentSlave.clothing_short to "booty shorts">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 5>><<set $currentSlave.clothing_short to "leather and lace">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 6>><<set $currentSlave.clothing_short to "lingerie">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 7>><<set $currentSlave.clothing_short to "schoolgirl">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 8>><<set $currentSlave.clothing_short to "schoolteacher">><<set $currentSlave.clothing_pres to "neither">><</if>><</if>>
+<<if $currentSlave.clothing is 9>><<set $currentSlave.clothing_short to "bad nun">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 10>><<set $currentSlave.clothing_short to "shibori ropes">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 11>><<set $currentSlave.clothing_short to "just jewelry">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 12>><<set $currentSlave.clothing_short to "naughty secretary">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 13>><<set $currentSlave.clothing_short to "pinup">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 14>><<set $currentSlave.clothing_short to "amazon">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 15>><<set $currentSlave.clothing_short to "harem">><<set $currentSlave.clothing_pres to "neither">><</if>>
+<<if $currentSlave.clothing is 16>><<set $currentSlave.clothing_short to "bondage harness">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 17>><<set $currentSlave.clothing_short to "suit">><<set $currentSlave.clothing_pres to "butch">><</if>>
+
+<<if $currentSlave.collar is 0>><<set $currentSlave.collar_short to "none">><</if>>
+<<if $currentSlave.collar is 1>><<set $currentSlave.collar_short to "lace choker">><</if>>
+<<if $currentSlave.collar is 2>><<set $currentSlave.collar_short to "leather">><</if>>
+<<if $currentSlave.collar is 3>><<set $currentSlave.collar_short to "pretty jewelry">><</if>>
+<<if $currentSlave.collar is 4>><<set $currentSlave.collar_short to "tight steel">><</if>>
+<<if $currentSlave.collar is 5>><<set $currentSlave.collar_short to "shock">><</if>>
+<<if $currentSlave.collar is 6>><<set $currentSlave.collar_short to "spiked">><</if>>
+<<if $currentSlave.collar is 7>><<set $currentSlave.collar_short to "leash">><</if>>
+
+<<if $currentSlave.living is 0>><<set $currentSlave.living_short to "harsh">><</if>>
+<<if $currentSlave.living is 1>><<set $currentSlave.living_short to "spare">><</if>>
+<<if $currentSlave.living is 2>><<set $currentSlave.living_short to "normal">><</if>>
+<<if $currentSlave.living is 3>><<set $currentSlave.living_short to "decadent">><</if>>
+
+<<if $currentSlave.plug is 0>><<set $currentSlave.plug_short to "none">><</if>>
+<<if $currentSlave.plug is 1>><<set $currentSlave.plug_short to "small princess plug">><</if>>
+<<if $currentSlave.plug is 2>><<set $currentSlave.plug_short to "butt plug">><</if>>
+<<if $currentSlave.plug is 3>><<set $currentSlave.plug_short to "large butt plug">><</if>>
+<<if $currentSlave.plug is 4>><<set $currentSlave.plug_short to "heavy steel butt plug">><</if>>
+<<if $currentSlave.plug is 5>><<set $currentSlave.plug_short to "tail">><</if>>
+<<if $currentSlave.plug is 6>><<set $currentSlave.plug_short to "anal beads">><</if>>
+<<if $currentSlave.plug is 7>><<set $currentSlave.plug_short to "anal hook attached to collar">><</if>>
+
+<<if $currentSlave.vag_accessory is 0>><<set $currentSlave.vag_acc_short to "none">><</if>>
+<<if $currentSlave.vag_accessory is 1>><<set $currentSlave.vag_acc_short to "small vibrator">><</if>>
+<<if $currentSlave.vag_accessory is 2>><<set $currentSlave.vag_acc_short to "chastity belt">><</if>>
+<<if $currentSlave.vag_accessory is 3>><<set $currentSlave.vag_acc_short to "kegel balls">><</if>>
+<<if $currentSlave.vag_accessory is 4>><<set $currentSlave.vag_acc_short to "harness with strapon">><</if>>
+<<if $currentSlave.vag_accessory is 5>><<set $currentSlave.vag_acc_short to "harness with huge strapon">><</if>>
+
+<<if $currentSlave.cock_accessory is 0>><<set $currentSlave.cock_acc_short to "none">><</if>>
+<<if $currentSlave.cock_accessory is 1>><<set $currentSlave.cock_acc_short to "cock cage">><</if>>
+<<if $currentSlave.cock_accessory is 2>><<set $currentSlave.cock_acc_short to "cock cage with sound">><</if>>
+<<if $currentSlave.cock_accessory is 3>><<set $currentSlave.cock_acc_short to "infibulation piercing">><</if>>
+
+<<if $currentSlave.sex_rules is 0>><<set $currentSlave.sex_rules_short to "restricted -- only when ordered">><</if>>
+<<if $currentSlave.sex_rules is 1>><<set $currentSlave.sex_rules_short to "permissive -- may masturbate alone">><</if>>
+<<if $currentSlave.sex_rules is 2>><<set $currentSlave.sex_rules_short to "same gender -- may only have sex with same gender slaves">><</if>>
+<<if $currentSlave.sex_rules is 3>><<set $currentSlave.sex_rules_short to "other gender -- may only have sex with opposite gender slaves">><</if>>
+<<if $currentSlave.sex_rules is 4>><<set $currentSlave.sex_rules_short to "indulgent -- may have sex with anyone">><</if>>

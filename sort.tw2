@@ -1,0 +1,93 @@
+Sort: [[Ascending|state.active.title][$sort_order to "asc"]] | [[Descending|state.active.title][$sort_order to "desc"]] Sort by: [[Devotion|state.active.title][$sort_opt to "devotion"]] | [[Age|state.active.title][$sort_opt to "age"]] | [[Name|state.active.title][$sort_opt to "name"]] | [[Health|state.active.title][$sort_opt to "health"]] | [[Gender|state.active.title][$sort_opt to "gender"]] | [[Personality|state.active.title][$sort_opt to "flaw"]] | [[Kink|state.active.title][$sort_opt to "fetish"]] | [[Sexual flaw|state.active.title][$sort_opt to "sex"]] | [[Male attraction|state.active.title][$sort_opt to "male"]] | [[Female attraction|state.active.title][$sort_opt to "female"]]
+<<nobr>><<if $sort_order is "asc">>
+  <<if $sort_opt is "age">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return b.age - a.age;}) >>
+  <<elseif $sort_opt is "devotion">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return a.devotion - b.devotion;}) >>
+  <<elseif $sort_opt is "male">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return a.male_attraction - b.male_attraction;}) >>
+  <<elseif $sort_opt is "female">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return a.female_attraction - b.female_attraction;}) >>
+  <<elseif $sort_opt is "health">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return a.health - b.health;}) >>
+  <<elseif $sort_opt is "name">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (a.name < b.name) {return -1;}
+      if (a.name > b.name) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "gender">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (a.gender < b.gender) {return -1;}
+      if (a.gender > b.gender) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "flaw">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (a.flaw < b.flaw) {return -1;}
+      if (a.flaw > b.flaw) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "fetish">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (a.fetish < b.fetish) {return -1;}
+      if (a.fetish > b.fetish) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "sex">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (a.sexual_flaw < b.sexual_flaw) {return -1;}
+      if (a.sexual_flaw > b.sexual_flaw) {return 1;}
+      return 0;
+    }) >>
+  <<else>>
+    <<set $slaves_owned to $slaves_owned>>
+  <</if>>
+<<else>>
+  <<if $sort_opt is "age">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return a.age - b.age;}) >>
+  <<elseif $sort_opt is "male">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return b.male_attraction - a.male_attraction;}) >>
+  <<elseif $sort_opt is "female">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return b.female_attraction - a.female_attraction;}) >>
+  <<elseif $sort_opt is "devotion">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return b.devotion - a.devotion;}) >>
+  <<elseif $sort_opt is "health">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){return b.health - a.health;}) >>
+  <<elseif $sort_opt is "name">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (b.name < a.name) {return -1;}
+      if (b.name > a.name) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "gender">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (b.gender < a.gender) {return -1;}
+      if (b.gender > a.gender) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "flaw">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (b.flaw < a.flaw) {return -1;}
+      if (b.flaw > a.flaw) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "fetish">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (b.fetish < a.fetish) {return -1;}
+      if (b.fetish > a.fetish) {return 1;}
+      return 0;
+    }) >>
+  <<elseif $sort_opt is "sex">>
+    <<set $slaves_owned = $slaves_owned.sort(function(a,b){
+      if (b.sexual_flaw < a.sexual_flaw) {return -1;}
+      if (b.sexual_flaw > a.sexual_flaw) {return 1;}
+      return 0;
+    }) >>
+  <<else>>
+    <<set $slaves_owned to $slaves_owned>>
+  <</if>>
+<</if>
+
+<</nobr>>
+<</nobr>>

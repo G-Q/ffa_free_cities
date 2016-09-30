@@ -1,0 +1,21 @@
+::Stylesheet [scss stylesheet]
+/* Any CSS or SCSS may be added here */
+
+body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
+  background-color: white;
+  color: black;
+  font: 1.2em serif;
+}
+
+#ui-bar-body {
+  color: white;
+}
+
+/*ul, li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: .5em;
+  .macro-linkreplace-insert {
+    line-height: initial;
+  }
+}*/

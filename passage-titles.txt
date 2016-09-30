@@ -1,0 +1,10 @@
+Attributes
+Career
+Domain
+Gender
+First Slave
+Name
+Start
+StoryIncludes
+StoryTitle
+Stylesheet

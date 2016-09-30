@@ -1,0 +1,12 @@
+::StoryIFID[twee2]
+Twee2::build_config.story_ifid = '1535c742-0a7a-4d1c-93f0-55d77c571cca'
+Twee2::build_config.story_format = 'SugarCube2'
+
+::StoryInit
+<<nobr>>
+<<set $PCkindness to 5, $PCfairness to 5, $PCcharisma to 5, $PCtrust to 5, $PCintelligence to 2.5, $PCtraining to 0 >>
+<<set $money to 10000, $reputation to 0>>
+<<set $slaves_owned to []>>
+<<set $IDnumber to 0>>
+
+<</nobr>>

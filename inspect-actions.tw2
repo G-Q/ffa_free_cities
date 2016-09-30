@@ -1,0 +1,87 @@
+<<nobr>>
+::@include finger_pussy_reaction.tw2
+
+  ::@include ff_penetrative.tw2
+  ::@include mf_penetrative.tw2
+  ::@include fm_penetrative.tw2
+  ::@include mm_penetrative.tw2
+  
+  ::@include ff_vaginal.tw2
+  ::@include mf_vaginal.tw2
+  
+  ::@include ff_anal.tw2
+  ::@include mf_anal.tw2
+  ::@include fm_anal.tw2
+  ::@include mm_anal.tw2
+  
+  ::@include ff_oral.tw2
+  ::@include mf_oral.tw2
+  ::@include fm_oral.tw2
+  ::@include mm_oral.tw2
+
+<<if $slave.gender is "female">>
+  <<linkreplace "*Finger her pussy">><<print $slave.Their>> pussy is <<print $slave.vagina>><<if $vaginal_virgin>> and she's a virgin<</if>>.   <<print $slave.They>> <<print either($finger_pussy_reaction)>>.<</linkreplace>>
+<</if>>
+
+<<if $penetrative_virgin is false>>
+  <<if $PCgender is "female">>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($female_ride_strapon)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($female_ride_cock)>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Ride her strapon">><<print either($male_ride_strapon)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Ride his cock">><<print either($male_ride_cock)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>*Because $slave.they is a virgin, you can't ride $slave.them unless you buy $slave.them first
+<</if>>
+
+<<if $vaginal_virgin is false>>
+  <<if $slave.gender is "female">>
+    <<if $PCgender is "female">>
+      <<linkreplace "*Fuck her pussy">><<print either($female_fuck_pussy)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck her pussy">><<print either($male_fuck_pussy)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>*Because $slave.they is a virgin, you can't fuck $slave.them unless you buy $slave.them first
+<</if>>
+
+<<if $oral_virgin is false>>
+  <<if $PCgender is "female">>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Have her lick your pussy">><<print either($female_down_female)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him lick your pussy">><<print either($male_down_female)>><</linkreplace>>
+    <</if>>
+  <<else>>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Have her suck your cock">><<print either($female_down_male)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Have him suck your cock">><<print either($male_down_male)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>*Because $slave.they is a virgin, you can't sample $slave.their mouth unless you buy $slave.them first
+<</if>>
+
+<<if $anal_virgin is false>>
+  <<if $PCgender is "female">>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($female_fuck_f_ass)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($female_fuck_m_ass)>><</linkreplace>>
+    <</if>>
+  <<elseif $PCgender is "male">>
+    <<if $slave.gender is "female">>
+      <<linkreplace "*Fuck her in the ass">><<print either($male_fuck_f_ass)>><</linkreplace>>
+    <<else>>
+      <<linkreplace "*Fuck him in the ass">><<print either($male_fuck_m_ass)>><</linkreplace>>
+    <</if>>
+  <</if>>
+<<else>>*Because $slave.they is a virgin, you can't fuck $slave.them unless you buy $slave.them first
+<</if>>
+<</nobr>>
