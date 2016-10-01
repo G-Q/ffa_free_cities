@@ -2256,6 +2256,7 @@ $slave.They
 [["Pass on " + $slave.name + " and inspect another slave"|Buy Slaves]]
 [[Go home-&gt;Home]]</tw-passagedata><tw-passagedata pid="17" name="End Week" tags="" position="">/* Please don't modify this file unless you know Sugarcube! */
 
+/* Not used anywhere yet, if enough slaves are sick or the average health is low, chances of spreading a disease increase. */
   &lt;&lt;if $av_health is 3&gt;&gt;
     &lt;&lt; if random(1,100) is 100 &gt;&gt;
       &lt;&lt;set $epidemic to true&gt;&gt;
@@ -2277,7 +2278,7 @@ $slave.They
   
   &lt;&lt;if $epidemic is true&gt;&gt;
     &lt;&lt;if $currentSlave.health is not 5&gt;&gt;
-      &lt;&lt;set $currentSlave.health -=1&gt;&gt;
+      &lt;&lt;set $currentSlave.health -= 1&gt;&gt;
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
@@ -2289,6 +2290,8 @@ $slave.They
     &lt;&lt;set $currentSlave.change_health += 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+/* Slaves attracted to the PC will become more devoted over time. */
+
   &lt;&lt;if $currentSlave.male_attraction is 5 and $PCgender is "male"&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion += 2&gt;&gt;
   &lt;&lt;elseif $currentSlave.male_attraction is 1 and $PCgender is "male"&gt;&gt;
@@ -2300,6 +2303,8 @@ $slave.They
   &lt;&lt;elseif $currentSlave.female_attraction is 1 and $PCgender is "female"&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+  
+/* If a player has shown themselves to be trustworthy, slaves will become more devoted over time. */
   
   &lt;&lt;if $PCtrust is 9&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion += 1&gt;&gt;
@@ -2313,6 +2318,8 @@ $slave.They
   &lt;&lt;if $PCtrust lte 1&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+
+/* If a player has shown themselves to be very kind, slaves with needs_kindness personality will become more devoted over time; if a player has shown themselves to be very cruel, slaves with needs_harsh personality will become more devoted over time. */  
   
   &lt;&lt;if $currentSlave.personality is "needs_kindness"&gt;&gt;
     &lt;&lt;if $PCkindness is 9&gt;&gt;
@@ -2342,6 +2349,8 @@ $slave.They
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+/* If the player is very fair or very unfair, affect all slaves' devotion. */  
+  
   &lt;&lt;if $PCfairness is 9&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion += 1&gt;&gt;
   &lt;&lt;/if&gt;&gt;
@@ -2355,14 +2364,20 @@ $slave.They
     &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
-  &lt;&lt;if $currentSlave.intelligence &gt; $PCintelligence&gt;&gt;
+/* A slave more intelligent than the player will become more disobedient over time. */  
+  
+  &lt;&lt;if $currentSlave.intelligence gt ($PCintelligence/2)&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+  
+/* An arrogant slave will become less obedient and devoted over time. */
   
   &lt;&lt;if $currentSlave.flaw is "arrogant"&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 2&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+  
+/* A slave opposed to slavery will become less obedient, devoted, and more unhappy over time. */  
   
   &lt;&lt;if $currentSlave.flaw is "opposed to slavery"&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 2&gt;&gt;
@@ -2370,11 +2385,33 @@ $slave.They
     &lt;&lt;set $currentSlave.change_happiness -=2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+/* An unhappy slave will become less obedient, devoted, and more unhappy over time, a happy slave will become more obedient, devoted and happy. */
+  
   &lt;&lt;if $currentSlave.happiness lte 1&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 2&gt;&gt;
     &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
     &lt;&lt;set $currentSlave.change_happiness -=2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $currentSlave.happiness is 2&gt;&gt;
+    &lt;&lt;set $currentSlave.change_obedience -= 1&gt;&gt;
+    &lt;&lt;set $currentSlave.change_devotion -= 1&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness -=1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $currentSlave.happiness gte 5&gt;&gt;
+    &lt;&lt;set $currentSlave.change_obedience += 2&gt;&gt;
+    &lt;&lt;set $currentSlave.change_devotion += 2&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness +=2&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $currentSlave.happiness is 4&gt;&gt;
+    &lt;&lt;set $currentSlave.change_obedience += 1&gt;&gt;
+    &lt;&lt;set $currentSlave.change_devotion += 1&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness +=1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+/* Change obedience, devotion, health and happiness at certain threshholds. */  
   
   &lt;&lt;if $currentSlave.change_obedience lte -10&gt;&gt;
     &lt;&lt;set $currentSlave.obedience -= 1&gt;&gt;&lt;&lt;set $currentSlave.change_obedience to -1&gt;&gt;
@@ -2398,6 +2435,16 @@ $slave.They
     &lt;&lt;set $currentSlave.health += 1&gt;&gt;&lt;&lt;set $currentSlave.change_health to 1&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+  &lt;&lt;if $currentSlave.change_happiness lte -10&gt;&gt;
+    &lt;&lt;set $currentSlave.happiness -= 1&gt;&gt;&lt;&lt;set $currentSlave.change_happiness to -1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $currentSlave.change_happiness gte 10&gt;&gt;
+    &lt;&lt;set $currentSlave.happiness += 1&gt;&gt;&lt;&lt;set $currentSlave.change_happiness to 1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+/* Change treatment score depending on clothing. */  
+  
 &lt;&lt;if $currentSlave.clothing is 0&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.clothing is 1&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.clothing is 2&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2416,9 +2463,13 @@ $slave.They
 &lt;&lt;if $currentSlave.clothing is 15&gt;&gt;&lt;&lt;set $currentSlave.treatment += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.clothing is 16&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
+/* Change treatment score if clothing does or does not match gender presentation. */
+
 &lt;&lt;if $currentSlave.clothing_pres is $current_slave.gender_pres&gt;&gt;&lt;&lt;set $currentSlave.treatment += 1&gt;&gt;
 &lt;&lt;elseif $currentSlave.clothing_pres is $current_slave.gender_pres&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+/* Change treatment score depending on collar. */ 
 
 &lt;&lt;if $currentSlave.collar is 0&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.collar is 1&gt;&gt;&lt;&lt;set $currentSlave.treatment += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2429,10 +2480,14 @@ $slave.They
 &lt;&lt;if $currentSlave.collar is 6&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.collar is 7&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
+/* Change treatment score depending on living conditions. */ 
+
 &lt;&lt;if $currentSlave.living is 0&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.living is 1&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.living is 2&gt;&gt;&lt;&lt;set $currentSlave.treatment += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.living is 3&gt;&gt;&lt;&lt;set $currentSlave.treatment += 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+/* Change treatment score and skill depending on plug. */ 
 
 &lt;&lt;if $currentSlave.plug is 0&gt;&gt;&lt;&lt;set $currentSlave.anal_skill += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.plug is 1&gt;&gt;&lt;&lt;set $currentSlave.anal_skill += 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2443,6 +2498,8 @@ $slave.They
 &lt;&lt;if $currentSlave.plug is 6&gt;&gt;&lt;&lt;set $currentSlave.anal_skill += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.plug is 7&gt;&gt;&lt;&lt;set $currentSlave.anal_skill += 1, $currentSlave.treatment -= 2&gt;&gt;&lt;&lt;/if&gt;&gt;
 
+/* Change treatment score and skill depending on vag_accessory. */ 
+
 &lt;&lt;if $currentSlave.vag_accessory is 0&gt;&gt;&lt;&lt;set $currentSlave.vaginal_skill += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.vag_accessory is 1&gt;&gt;&lt;&lt;set $currentSlave.vaginal_skill += 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.vag_accessory is 2&gt;&gt;&lt;&lt;set $currentSlave.vaginal_skill -= 1, $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2450,10 +2507,14 @@ $slave.They
 &lt;&lt;if $currentSlave.vag_accessory is 4&gt;&gt;&lt;&lt;set $currentSlave.penetrative_skill += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.vag_accessory is 5&gt;&gt;&lt;&lt;set $currentSlave.penetrative_skill += 2&gt;&gt;&lt;&lt;/if&gt;&gt;
 
+/* Change treatment score and skill depending on cock_accessory. */ 
+
 &lt;&lt;if $currentSlave.cock_accessory is 0&gt;&gt;&lt;&lt;set $currentSlave.treatment += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.cock_accessory is 1&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.cock_accessory is 2&gt;&gt;&lt;&lt;set $currentSlave.treatment -= 2&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.cock_accessory is 3&gt;&gt;&lt;&lt;set $currentSlave.treatment += 3&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+/* Slaves with needs_harsh personality will become more devoted, obedient and happy with negative treatment, slaves with needs_kindness personality will become less devoted, obedient and happy with negative treatment, slaves with needs_kindness and vice versa. Slaves with neither personality will respond to negative and positive treatment but at much less extreme threshholds*/ 
 
 &lt;&lt;if $currentSlave.personality is "needs_harsh"&gt;&gt;
   &lt;&lt;if $currentSlave.treatment lte -4&gt;&gt;
@@ -2462,10 +2523,16 @@ $slave.They
     &lt;&lt;set $currentSlave.change_obedience -= 2, $currentSlave.change_devotion -= 2, $currentSlave.change_happiness -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $currentSlave.personality is "needs_kindness"&gt;&gt;
-  &lt;&lt;if $currentSlave.treatment gte 4&gt;&gt;
+  &lt;&lt;if $currentSlave.treatment gte 6&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience += 2, $currentSlave.change_devotion += 2, $currentSlave.change_happiness += 2&gt;&gt;
-  &lt;&lt;elseif $currentSlave.treatment lte 0&gt;&gt;
+  &lt;&lt;elseif $currentSlave.treatment lte 2&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 2, $currentSlave.change_devotion -= 2, $currentSlave.change_happiness -= 2&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+  &lt;&lt;if $currentSlave.treatment gte 4&gt;&gt;
+    &lt;&lt;set $currentSlave.change_obedience += 1, $currentSlave.change_devotion += 1, $currentSlave.change_happiness += 1&gt;&gt;
+  &lt;&lt;elseif $currentSlave.treatment lte 0&gt;&gt;
+    &lt;&lt;set $currentSlave.change_obedience -= 1, $currentSlave.change_devotion -= 1, $currentSlave.change_happiness -= 1&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
   
@@ -2674,18 +2741,52 @@ $slave.They
 &lt;&lt;/nobr&gt;&gt;  
 &lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
+
 &lt;&lt;set $av_intelligence += $slaves_owned[_i].intelligence&gt;&gt;
+
 &lt;&lt;set $av_obedience += $slaves_owned[_i].obedience&gt;&gt;
+
 &lt;&lt;set $av_health += $slaves_owned[_i].health&gt;&gt;
+
 ''$slaves_owned[_i].name''
-  &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt; 
+
+/* A dishonest slave will say that everything is great. */
+
+  &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
+    
+    had no change to $slaves_owned[_i].their health and $slaves_owned[_i].they
     @@color:green;is becoming more trusting of you@@.
+    $slaves_owned[_i].They appear to be @@color:green;pleased and grateful with your treatment@@.
+  
   &lt;&lt;else&gt;&gt;
-    &lt;&lt;if $slaves_owned[_i].change_health lte -1&gt;&gt;@@color:red;is getting sick@@.&lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $slaves_owned[_i].change_health gte 1&gt;&gt;@@color:green;is getting better@@.&lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $slaves_owned[_i].change_devotion lte -1&gt;&gt;@@color:red;is becoming more afraid of you@@.&lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $slaves_owned[_i].change_devotion gte 1&gt;&gt;@@color:green;is becoming more trusting of you@@.&lt;&lt;/if&gt;&gt;
+  
+/* An honest slave will report changes in their health and devotion. */
+
+    &lt;&lt;if $slaves_owned[_i].change_health lte -1&gt;&gt;@@color:red;is getting sick@@
+    &lt;&lt;elseif $slaves_owned[_i].change_health gte 1&gt;&gt;@@color:green;is getting better@@
+    &lt;&lt;else&gt;&gt;had no change to $slaves_owned[_i].their health
+    &lt;&lt;/if&gt;&gt;
+    
+    and $slaves_owned[_i].they
+    
+    &lt;&lt;if $slaves_owned[_i].change_devotion lte -1&gt;&gt; @@color:red;is becoming more afraid and distrustful of you@@.
+    &lt;&lt;elseif $slaves_owned[_i].change_devotion gte 1&gt;&gt;@@color:green;is becoming more trusting of you@@.
+    &lt;&lt;else&gt;&gt;has not changed $slaves_owned[_i].their opinion of you.
+    &lt;&lt;/if&gt;&gt;
+    
+    $slaves_owned[_i].They appear to be
+    &lt;&lt;if $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment lte -4&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment gte 0&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment gte 6&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment lte 2&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment gte 4&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment lte 0&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;else&gt;&gt;unconcerned with your treatment.
+    &lt;&lt;/if&gt;&gt;
+  
   &lt;&lt;/if&gt;&gt;
+
+/* A very honest, obedient slave will report if others are likely to rebel */
 
 &lt;&lt;if $av_obedience lte 2&gt;&gt;  
   &lt;&lt;if $slaves_owned[_i].devotion is 5&gt;&gt;
@@ -2697,7 +2798,9 @@ $slave.They
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if random(1,3) is 3&gt;&gt;
+/* A very dishonest slave will lie that others are causing trouble, but a very honest slave will report the actual dishonest or disobedient slaves. */
+
+&lt;&lt;if random(1,5) is 5&gt;&gt;
   &lt;&lt;set $reported to either($slaves_owned)&gt;&gt;
   &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
     &lt;&lt;if $reported.name isnot $slaves_owned[_i].name&gt;&gt;
@@ -2714,20 +2817,22 @@ $slave.They
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
+/* If the player's intelligence is greater than the slave's intellegence, the player will suspect the lies. */
+
 &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
   &lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;
-    You suspect $slaves_owned[_i].name may be lying to you about several things, but you're not sure.
+    You suspect @@color:red;$slaves_owned[_i].name@@ may be lying to you about several things, but you're not sure.
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;/nobr&gt;&gt;
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
-
+&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if $av_health lte 3&gt;&gt;
   Many of your slaves are ill!  You currently have a @@color:red;high risk@@ of your slaves catching a disease!
 &lt;&lt;/if&gt;&gt;
-
+&lt;&lt;/nobr&gt;&gt;
 [[Home]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
