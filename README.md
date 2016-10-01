@@ -2,6 +2,10 @@
 
 A group rewrite of [Free Cities](https://www.tfgamessite.com/?module=viewgame&id=751)
 
+## To play
+
+No need to download--play the latest stable build online [here](https://self-striping-sock.github.io/ffa_free_cities/).
+
 ## Where to start
 
 Just want to add some flavor text?  Add some short descriptions for [asses](description/description_ass.tw2), [breasts](description/description_breasts.tw2), [dicks](description/description_cock.tw2), or [vulvas](description/description_vagina.tw2).  You can also [add names and general physical descriptions](description/description_physical.tw2).
