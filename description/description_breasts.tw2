@@ -1,4 +1,7 @@
 <<nobr>>
+
+/* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "Her breasts are [your description here]" */
+
 <<if $breasts is 1>>
   <<set $slavebreasts to either("flat", "barely there", "non-existent", "quite small")>>
 

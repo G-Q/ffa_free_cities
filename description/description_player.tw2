@@ -1,4 +1,7 @@
 <<nobr>>
+
+/* Please don't modify this file unless you know Sugarcube! */
+
   <<if $PCkindness lte 1>><<set $kindness_desc to "very cruel">><</if>>
   <<if $PCkindness is 2>><<set $kindness_desc to "hard-hearted">><</if>>
   <<if $PCkindness is 3>><<set $kindness_desc to "harsh">><</if>>

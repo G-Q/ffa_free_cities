@@ -1,3 +1,5 @@
+/* Please don't modify this file unless you know Sugarcube! */
+
 ::Home [home]
 <<for _i to 0; _i lt $slaves_owned.length; _i++>>
 <<print "[[$slaves_owned[_i].name|Manage Slave][$currentSlave to $slaves_owned[" + _i + "]]]">>, $slaves_owned[_i].gender, $slaves_owned[_i].age
@@ -129,6 +131,6 @@ Masturbation rules: $currentSlave.sex_rules_short
 <</nobr>>
 
 Inspect <<print $currentSlave.name>>:
-  ::@include inspect_actions_slaves_owned.tw2
+  ::@include inspect/inspect_actions_slaves_owned.tw2
 
 ::Manage Domain

@@ -1,3 +1,5 @@
+/* Please don't modify this file unless you know Sugarcube! */
+
 Sort: [[Ascending|state.active.title][$sort_order to "asc"]] | [[Descending|state.active.title][$sort_order to "desc"]] Sort by: [[Devotion|state.active.title][$sort_opt to "devotion"]] | [[Age|state.active.title][$sort_opt to "age"]] | [[Name|state.active.title][$sort_opt to "name"]] | [[Health|state.active.title][$sort_opt to "health"]] | [[Gender|state.active.title][$sort_opt to "gender"]] | [[Personality|state.active.title][$sort_opt to "flaw"]] | [[Kink|state.active.title][$sort_opt to "fetish"]] | [[Sexual flaw|state.active.title][$sort_opt to "sex"]] | [[Male attraction|state.active.title][$sort_opt to "male"]] | [[Female attraction|state.active.title][$sort_opt to "female"]]
 <<nobr>><<if $sort_order is "asc">>
   <<if $sort_opt is "age">>

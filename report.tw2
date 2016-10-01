@@ -1,0 +1,102 @@
+::Report
+<<nobr>>
+  ::@include description/description_player.tw2
+  <<set $av_intelligence to 0>>
+  <<set $av_obedience to 0>>
+  <<set $av_health to 0>>
+<</nobr>>  
+<<for _i to 0; _i lt $slaves_owned.length; _i++>>
+<<nobr>>
+
+<<set $av_intelligence += $slaves_owned[_i].intelligence>>
+
+<<set $av_obedience += $slaves_owned[_i].obedience>>
+
+<<set $av_health += $slaves_owned[_i].health>>
+
+''$slaves_owned[_i].name''
+
+/* A dishonest slave will say that everything is great. */
+
+  <<if $slaves_owned[_i].honesty lte 2>>
+    
+    had no change to $slaves_owned[_i].their health and $slaves_owned[_i].they
+    @@color:green;is becoming more trusting of you@@.
+    $slaves_owned[_i].They appear to be @@color:green;pleased and grateful with your treatment@@.
+  
+  <<else>>
+  
+/* An honest slave will report changes in their health and devotion. */
+
+    <<if $slaves_owned[_i].change_health lte -1>>@@color:red;is getting sick@@
+    <<elseif $slaves_owned[_i].change_health gte 1>>@@color:green;is getting better@@
+    <<else>>had no change to $slaves_owned[_i].their health
+    <</if>>
+    
+    and $slaves_owned[_i].they
+    
+    <<if $slaves_owned[_i].change_devotion lte -1>> @@color:red;is becoming more afraid and distrustful of you@@.
+    <<elseif $slaves_owned[_i].change_devotion gte 1>>@@color:green;is becoming more trusting of you@@.
+    <<else>>has not changed $slaves_owned[_i].their opinion of you.
+    <</if>>
+    
+    $slaves_owned[_i].They appear to be
+    <<if $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment lte -4>>@@color:green;pleased and grateful with your treatment@@.
+    <<elseif $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment gte 0>>@@color:red;restless and unhappy with how they're treated@@.
+    <<elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment gte 6>>@@color:green;pleased and grateful with your treatment@@.
+    <<elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment lte 2>>@@color:red;restless and unhappy with how they're treated@@.
+    <<elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment gte 4>>@@color:green;pleased and grateful with your treatment@@.
+    <<elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment lte 0>>@@color:red;restless and unhappy with how they're treated@@.
+    <<else>>unconcerned with your treatment.
+    <</if>>
+  
+  <</if>>
+
+/* A very honest, obedient slave will report if others are likely to rebel */
+
+<<if $av_obedience lte 2>>  
+  <<if $slaves_owned[_i].devotion is 5>>
+    <<if $slaves_owned[_i].obedience is 5>>
+      <<if $slaves_owned[_i].honesty is 5>>
+        $slaves_owned[_i].name reports that @@color:red;many of your slaves are very unhappy and may rebel@@.
+      <</if>>
+    <</if>>
+  <</if>>
+<</if>>
+
+/* A very dishonest slave will lie that others are causing trouble, but a very honest slave will report the actual dishonest or disobedient slaves. */
+
+<<if random(1,5) is 5>>
+  <<set $reported to either($slaves_owned)>>
+  <<if $slaves_owned[_i].honesty lte 2>>
+    <<if $reported.name isnot $slaves_owned[_i].name>>
+      $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape", "lying to you")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+    <</if>>
+  <<elseif $slaves_owned[_i].honesty is 5>>
+    <<if $reported.name isnot $slaves_owned[_i].name>>
+      <<if $reported.obedience lte 2>>
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+      <<elseif $reported.honesty lte 2>>
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is <<print either("planning to escape", "sowing dissent among the other slaves", "lying to you", "encouraging other slaves to escape")>><<if $PCintelligence gt $slaves_owned[_i].intelligence>>, but you're not sure if you believe it<</if>>.
+      <</if>>
+    <</if>>
+  <</if>>
+<</if>>
+
+/* If the player's intelligence is greater than the slave's intellegence, the player will suspect the lies. */
+
+<<if $slaves_owned[_i].honesty lte 2>>
+  <<if $PCintelligence gt $slaves_owned[_i].intelligence>>
+    You suspect @@color:red;$slaves_owned[_i].name@@ may be lying to you about several things, but you're not sure.
+  <</if>>
+<</if>>
+
+<</nobr>>
+<hr>
+<</for>>
+<<nobr>>
+<<if $av_health lte 3>>
+  Many of your slaves are ill!  You currently have a @@color:red;high risk@@ of your slaves catching a disease!
+<</if>>
+<</nobr>>
+[[Home]]

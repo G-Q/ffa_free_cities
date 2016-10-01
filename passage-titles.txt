@@ -1,10 +1,20 @@
+Acquisition
 Attributes
+Buy Slaves
 Career
 Domain
+End Week
 Gender
+Home
 First Slave
+Manage Slave
 Name
+Report
+Reputation
 Start
+StoryCaption
 StoryIncludes
 StoryTitle
 Stylesheet
+Update Current
+Update Assignment

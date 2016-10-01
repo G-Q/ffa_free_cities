@@ -1,24 +1,27 @@
 <<nobr>>
-  ::@include finger_pussy_reaction.tw2
-  ::@include finger_ass_reaction.tw2
 
-  ::@include ff_penetrative.tw2
-  ::@include mf_penetrative.tw2
-  ::@include fm_penetrative.tw2
-  ::@include mm_penetrative.tw2
+/* Please don't modify this file unless you know Sugarcube! */
+
+  ::@include inspect/finger_pussy_reaction.tw2
+  ::@include inspect/finger_ass_reaction.tw2
+
+  ::@include ff/ff_penetrative.tw2
+  ::@include mf/mf_penetrative.tw2
+  ::@include fm/fm_penetrative.tw2
+  ::@include mm/mm_penetrative.tw2
   
-  ::@include ff_vaginal.tw2
-  ::@include mf_vaginal.tw2
+  ::@include ff/ff_vaginal.tw2
+  ::@include mf/mf_vaginal.tw2
   
-  ::@include ff_anal.tw2
-  ::@include mf_anal.tw2
-  ::@include fm_anal.tw2
-  ::@include mm_anal.tw2
+  ::@include ff/ff_anal.tw2
+  ::@include mf/mf_anal.tw2
+  ::@include fm/fm_anal.tw2
+  ::@include mm/mm_anal.tw2
   
-  ::@include ff_oral.tw2
-  ::@include mf_oral.tw2
-  ::@include fm_oral.tw2
-  ::@include mm_oral.tw2
+  ::@include ff/ff_oral.tw2
+  ::@include mf/mf_oral.tw2
+  ::@include fm/fm_oral.tw2
+  ::@include mm/mm_oral.tw2
 
 <<if $currentSlave.gender is "female">>
   <<linkreplace "*Finger her pussy">><<print $currentSlave.Their>> pussy is <<print $currentSlave.vagina>><<if $currentSlave.vaginal_virginity>> and she's a virgin<</if>>.   <<print $currentSlave.They>> <<print either($finger_pussy_reaction)>>.<</linkreplace>>

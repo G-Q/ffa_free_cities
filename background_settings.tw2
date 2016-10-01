@@ -1,3 +1,5 @@
+/* Please don't modify this file unless you know Sugarcube! */
+
 ::StoryIFID[twee2]
 Twee2::build_config.story_ifid = '1535c742-0a7a-4d1c-93f0-55d77c571cca'
 Twee2::build_config.story_format = 'SugarCube2'

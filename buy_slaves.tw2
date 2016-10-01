@@ -1,5 +1,9 @@
 ::Buy Slaves
 <<nobr>>
+
+/* Please don't modify this file unless you know Sugarcube! */
+
+
   ::@include generate-new-slave.tw2
   ::@include price.tw2
   
@@ -39,7 +43,7 @@ $slave.They
 <</nobr>>
 
 <b>Inspect $slave.name:</b>
-  ::@include inspect-actions.tw2
+  ::@include inspect/inspect-actions.tw2
 <<if $money gte $price>>[["Purchase " + $slave.name + " and add another slave"|Buy Slaves][$money -= $price, $slaves_owned.push($slave) ]]
 [["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]<</if>>
 [["Pass on " + $slave.name + " and inspect another slave"|Buy Slaves]]

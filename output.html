@@ -115,6 +115,7 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
     line-height: initial;
   }
 }*/
+/* Please don't modify this file unless you know Sugarcube! */
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryCaption" tags="" position="">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;if not tags().contains("no-header")&gt;&gt;
@@ -136,6 +137,8 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 [[End Week]]&lt;br&gt;
 [[Buy Slaves]]
 &lt;hr&gt;
+  /* Please don't modify this file unless you know Sugarcube! */
+  
   Sort: [[Ascending|state.active.title][$sort_order to "asc"]] | [[Descending|state.active.title][$sort_order to "desc"]] Sort by: [[Devotion|state.active.title][$sort_opt to "devotion"]] | [[Age|state.active.title][$sort_opt to "age"]] | [[Name|state.active.title][$sort_opt to "name"]] | [[Health|state.active.title][$sort_opt to "health"]] | [[Gender|state.active.title][$sort_opt to "gender"]] | [[Personality|state.active.title][$sort_opt to "flaw"]] | [[Kink|state.active.title][$sort_opt to "fetish"]] | [[Sexual flaw|state.active.title][$sort_opt to "sex"]] | [[Male attraction|state.active.title][$sort_opt to "male"]] | [[Female attraction|state.active.title][$sort_opt to "female"]]
   &lt;&lt;nobr&gt;&gt;&lt;&lt;if $sort_order is "asc"&gt;&gt;
     &lt;&lt;if $sort_opt is "age"&gt;&gt;
@@ -232,7 +235,9 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 &lt;&lt;/if&gt;&gt;
 &lt;hr&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Update Current" tags="" position="">&lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "rest"&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Update Current" tags="" position="">/* Please don't modify this file unless you know Sugarcube! */
+  
+  &lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "rest"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 1&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "be your personal toy"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 2&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "work a gloryhole"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 3&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "whore"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -306,7 +311,9 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 	&lt;&lt;break&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
-&lt;&lt;goto "Home"&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Update Assignment" tags="" position="">&lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "rest"&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;goto "Home"&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Update Assignment" tags="" position="">/* Please don't modify this file unless you know Sugarcube! */
+  
+  &lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "rest"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 1&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "be your personal toy"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 2&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "work a gloryhole"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 3&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "whore"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -379,7 +386,8 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 &lt;&lt;set $slaves_owned to []&gt;&gt;
 &lt;&lt;set $IDnumber to 0&gt;&gt;
 
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on Free Cities.
+&lt;&lt;/nobr&gt;&gt;
+/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on Free Cities.
 
 This is a text-based game which includes graphic descriptions of sex, violence, drug use and other adult themes.  By continuing you acknowledge that you are over 18 and that you may encounter graphic or upsetting material.
 
@@ -449,123 +457,35 @@ Your reputation and actions affect your interactions with other citizens and you
   //Start with better reputation.//</tw-passagedata><tw-passagedata pid="12" name="First Slave" tags="" position="">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;nobr&gt;&gt;
   
+  /* Please don't modify this file unless you know how to make adjustments to the variables you're changing or adding! */
+  
   &lt;&lt;set $slavegender to either("male", "female")&gt;&gt;
   
-  &lt;&lt;set $femaleNames to [ "Jessica", "Mary", "Meredith", "Wanda", "Natalie", "Pepper", "Peggy", "Dottie", "Angie", "Rhonda", "Genevieve", "Vivian", "Natasha", "Pamela", "Millie", "Miriam", "Judith", "Elizabeth", "Bess", "Liz", "Lissa", "Linda", "Susan", "Jezebel", "Ruth", "Sharon", "Deborah", "Tina", "Christina", "Therese", "Rita", "Grace", "Hazel", "Ava", "Eva", "Lilith", "Lilias", "Alicia", "Regina", "Sally", "Maria", "Ida", "Joy", "Stella", "Lydia", "Olga", "Ivana", "Daisy", "Marguerite", "Cecilia", "Inez", "Roxanne", "Victoria", "Lily", "Rose", "Violet", "Vanessa", "Heather", "Sarah", "Ashley", "Isabella", "Emily", "Brianna", "Mia", "Samantha", "Sophia", "Melanie", "Genesis", "Kimberly", "Angelina", "Madison", "Gabriella", "Camila", "Jennifer", "Alyssa", "Sofia", "Arianna", "Hailey", "Maria", "Kayla", "Abigail", "Gabriela", "Victoria", "Stephanie", "Allison", "Vanessa", "Emma", "Daniela", "Evelyn", "Sofía", "Marti", "Valenti", "Mía", "Isabella", "María", "Zoe", "Catali", "Emma", "Alma", "Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valenti", "Maria", "Eduarda", "Sofía", "Emilia", "Isidora", "Florencia", "Antonella", "Marti", "Maite", "Amanda", "Josefa", "Agusti", "Maria", "Valenti", "Isabella", "Sofía", "Valeria", "María", "José", "Gabriela", "Sara", "Salomé", "Daniela", "Xime", "Valenti", "María", "Fernanda", "Sofía", "María", "Marti", "Emilia", "Zoe", "Mia", "Dulce", "María", "María", "Elizabeth", "Beatriz", "Ramo", "Liz", "Concepción", "Caroli", "Mabel", "Raquel", "Noemí", "María", "Camila", "Fernanda", "Milagros", "Luz", "Abigail", "Aria", "Lucia", "Alexandra", "Florencia", "Lucía", "Agusti", "Camila", "Julia", "Julieta", "Sofía", "Abril", "Paula", "Micaela", "Camila", "Isabella", "Sofía", "Victoria", "Valenti", "Valeria", "Nicole", "Samantha", "Maria", "Antonella", "Madison", "Kayla", "Makayla", "Nevaeh", "Jada", "Brianna", "Chloe", "Destiny", "Alyssa", "Gabrielle", "Imani", "Kimora", "Aaliyah", "Jayla", "Abigail", "Arianna", "Ava", "Fatoumata", "Jade", "London", "Savannah", "Victoria", "Aniyah", "Nyla", "Olivia", "Taylor", "Ashley", "Sarah", "Jasmine", "Laila", "Chelsea", "Heaven", "Sophia", "Chloe", "Emily", "Tiffany", "Fiona", "Isabella", "Olivia", "Sarah", "Angela", "Vivian", "Nicole", "Rachel", "Michelle", "Ashley", "Grace", "Joyce", "Anna", "Sophie", "Fatima", "Jasmine", "Jenny", "Jessica", "Cindy", "Emma", "Hannah", "Amy", "Angelina", "Mia", "Shaimaa", "Fatma", "Maha", "Farida", "Aya", "Shahd", "Ashraqat", "Sahar", "Fatin", "Dalal", "Doha", "Suha", "Rowan", "Hosniya", "Hasnaa", "Hosna", "Gamila", "Gamalat", "Habiba", "Aya", "Rania", "Sarah", "Reem", "Hoda", "Marwa", "Fatima", "Eisha", "Nesreen", "Fatoumata", "Mariam", "Aminata", "Hawa", "Awa", "Oumou", "Djeneba", "Bintou", "Fanta", "Kadiatou", "Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Saida", "Mariam", "Shayma", "Khawla", "Ana", "Amanda", "Fernanda", "Julia", "Mariana", "Camila", "leticia", "Larissa", "Beatriz", "Natália", "Thais", "Juliana", "Vitoria", "Jessica", "Luana", "Laura", "Bruna", "Rafaela", "Maria", "Isabela", "Barbara", "Carolina", "Aline", "Anna", "Brenda", "Lívia", "Victória", "Gabrielle", "Andressa", "Maria", "Clara", "Raquel", "Daniela", "Ana", "Clara", "Marcela", "Luiza", "Giovanna", "Stephanie", "Caroline", "Raissa", "Aléxia", "Milena", "Nathalia", "Clara", "Taynara", "Sabrina", "Ana", "Luiza", "Yasmin", "Carla", "Helena", "Ah", "Ai", "An", "Bai", "Bao", "Bi", "Bo", "Cai", "Chang", "Chao", "Chen", "Cheng", "Chin", "Chun", "Da", "Dan", "Fang", "Fen", "Fu", "Guanting", "Guanyu", "Guiying", "Guo", "Hai", "He", "Heng", "Hong", "Hua", "Huan", "Huang", "Hui", "Jia", "Jian", "Jiang", "Jie", "Jin", "Jing", "Jingyi", "Ju", "Juan", "Jun", "Kun", "Lan", "Lei", "Li", "Lian", "Lili", "Lim", "Lin", "Ling", "Mei", "Min", "Ming", "Mu", "Na", "Ni", "Ning", "Nuan", "Ping", "Qian", "Qing", "Qiong", "Qiu", "Rong", "Ru", "Shan", "Shi", "Shu", "Shufen", "Shui", "Shun", "Su", "Tai", "Ting", "Tingting", "Tu", "Wei", "Wen", "Wu", "Xia", "Xian", "Xiang", "Xiaomei", "Xiaoyan", "Xinyi", "Xiu", "Xiulan", "Xiuying", "Xue", "Xun", "Ya", "Yahui", "Yaling", "Yan", "Yang", "Yating", "Yawen", "Yazhu", "Yi", "Yijun", "Yin", "Ying", "Yong", "Yu", "Yun", "Zan", "Zedong", "Zhen", "Zheng", "Zhi", "Zhihao", "Zhong", "Zhou", "Aadhya", "Ananya", "Saanvi", "Aaradhya", "Anaya", "Aanya", "Anika", "Pari", "Myra", "Shanaya", "Ananya", "Anika", "Aradhya", "Harini", "Navya", "Ridhi", "Rishika", "Sanvi", "Shreya", "Ai", "Aika", "Aiko", "Aimi", "Aina", "Airi", "Akane", "Akari", "Akemi", "Aki", "Akiko", "Akira", "Ami", "Anna", "Aoi", "Asuka", "Atsuko", "Aya", "Ayaka", "Ayako", "Ayame", "Ayane", "Ayano", "Ayumi", "Chihiro", "Chika", "Chikako", "Chinatsu", "Chiyo", "Chiyoko", "Cho", "Chou", "Chouko", "Emi", "Erika", "Etsuko", "Hana", "Hanae", "Hanako", "Haru", "Haruka", "Haruko", "Haruna", "Hibiki", "Hikari", "Hikaru", "Hina", "Hinata", "Hiroko", "Hitomi", "Honoka", "Hoshi", "Hoshiko", "Hotaru", "Izumi", "Junko", "Kaede", "Kana", "Kanako", "Kanon", "Kaori", "Kaoru", "Kasumi", "Kazue", "Kazuko", "Keiko", "Kiku", "Kimiko", "Kiyoko", "Kohaku", "Koharu", "Kokoro", "Kotone", "Kumiko", "Kyo", "Kyou", "Mai", "Makoto", "Mami", "Manami", "Mao", "Mari", "Mariko", "Marina", "Masami", "Masuyo", "Mayu", "Megumi", "Mei", "Michi", "Michiko", "Midori", "Miho", "Mika", "Miki", "Miku", "Minako", "Minami", "Minato", "Minoru", "Mio", "Misaki", "Mitsuko", "Miu", "Miyako", "Miyu", "Mizuki", "Moe", "Momoka", "Momoko", "Moriko", "Nana", "Nanako", "Nanami", "Nao", "Naoko", "Naomi", "Natsuki", "Natsuko", "Natsumi", "Noa", "Noriko", "Ran", "Rei", "Ren", "Riko", "Rin", "Rina", "Rio", "Risa", "Sachiko", "Saki", "Sakura", "Sakurako", "Satomi", "Saya", "Sayaka", "Sayuri", "Setsuko", "Shiho", "Shinju", "Shinobu", "Shiori", "Shizuka", "Shun", "Sora", "Sumiko", "Suzu", "Suzume", "Takako", "Takara", "Tamiko", "Tomiko", "Tomoko", "Tomomi", "Tsubaki", "Tsubame", "Tsubasa", "Tsukiko", "Ume", "Umeko", "Wakana", "Yasu", "Yoko", "Yoshi", "Yoshiko", "Youko", "Yua", "Yui", "Yuina", "Yuki", "Yukiko", "Yuko", "Yumi", "Yumiko", "Yuri", "Yuu", "Yuuka", "Yuuki", "Yuuko", "Yuuna", "Yuzuki", "Noor", "Anam", "Karen", "Ayesha", "Mishael", "Mariam", "Aisha", "Faiza", "Zakia", "Aanya", "Komal", "Hajra", "Ifrah", "Lintah", "Leah", "Tooba", "Asma", "Kheezran", "Sana", "Riasat", "Saima", "Mahrukh", "Haniya", "Mariyam", "Umara", "Zuny", "Sajida", "Rameen", "Unsa", "Neha", "Rabia", "Rida", "Zainnah", "Ameria", "Sarah", "Asmi", "Mizha", "Ruby", "Areeba", "Zainab", "Momna", "Rue", "Eraj", "Sara", "Krishma", "Alayna", "Usmaan", "Kainat", "Imama", "Sana", "Anna", "Maria", "Julia", "Katharina", "Katarina", "Catharina", "Eva", "Christina", "Kristina", "Monika", "Monica", "Karin", "Carin", "Sabine", "Susanne", "Christine", "Kristine", "Barbara", "Claudia", "Heike", "Marion", "Katrin", "Kathrin", "Cathrin", "Catrin", "Sarah", "Sara", "Ursula", "Lisa", "Brigitte", "Stefanie", "Stephanie", "Renate", "Elke", "Petra", "Birgit", "Jutta", "Nina", "Jana", "Ingrid", "Annika", "Marie", "Anke", "Andrea", "Sonja", "Lena", "Hannah", "Hanna", "Jasmin", "Yasmin", "Johanna", "Silvia", "Sylvia", "Sandra", "Ute", "Anja", "Anne", "Helga", "Nicole", "Christiane", "Kristiane", "Gisela", "Giesela", "Laura", "Carolin", "Caroline", "Karoline", "Elisabeth", "Ulrike", "Christa", "Krista", "Jessica", "Jessika", "Melanie", "Gabriele", "Martina", "Angelika", "Angelica", "Kerstin", "Daniela", "Alexandra", "Maike", "Meike", "Franziska", "Jennifer", "Sigrid", "Siegrid", "Hannelore", "Erika", "Erica", "Astrid", "Angela", "Silke", "Sylke", "Bärbel", "Rita", "Doris", "Lea", "Leah", "Vanessa", "Antje", "Nadine", "Christel", "Kristel", "Marianne", "Katja", "Regina", "Tanja", "Tania", "Inge", "Dagmar", "Maren", "Alina", "Sophie", "Sofie", "Gudrun", "Kornelia", "Cornelia", "Lara", "Waltraud", "Waltraut", "Bettina", "Leoni", "Leonie", "Ingeborg", "Rosemarie", "Manuela", "Ivonne", "Yvonne", "Beate", "Heidi", "Luisa", "Louisa", "Isabel", "Isabell", "Isabelle", "Marlies", "Nele", "Neele", "Natalie", "Nathalie", "Charlotte", "Annette", "Anette", "Britta", "Michaela", "Svenja", "Swenja", "Kirsten", "Gerda", "Simone", "Sabrina", "Ilse", "Sophia", "Sofia", "Lina", "Hildegard", "Hilde", "Janina", "Bianca", "Bianka", "Irmgard", "Edith", "Miriam", "Antonia", "Irene", "Ruth", "Michelle", "Pia", "Kim", "Ann", "Margret", "Margrit", "Jacqueline", "Jaqueline", "Emma", "Janin", "Janine", "Vera", "Wera", "Clara", "Klara", "Melina", "Josephine", "Josefine", "Elena", "Emily", "Emilie", "Emmily", "Anneliese", "Annelise", "Paula", "Victoria", "Viktoria", "Christin", "Kristin", "Corinna", "Lilli", "Lilly", "Margot", "Carmen", "Marina", "Annegret", "Saskia", "Sina", "Sinah", "Evelyn", "Evelin", "Eveline", "Celina", "Eileen", "Aileen", "Ayleen", "Aylin", "Tatjana", "Gertrud", "Ilona", "Mia", "Carina", "Karina", "Lieselotte", "Liselotte", "Maja", "Maya", "Iris", "Elfriede", "Merle", "Roswitha", "Roswita", "Denise", "Annemarie", "Wiebke", "Wibke", "Amelie", "Amely", "Jule", "Margarethe", "Margarete", "Heidemarie", "Olga", "Carla", "Karla", "Ines", "Mareike", "Vivien", "Vivienne", "Celine", "Céline", "Chiara", "Kiara", "Uta", "Dorothea", "Rebecca", "Rebekka", "Ellen", "Carola", "Karola", "Finja", "Finnja", "Mandy", "Anita", "Tina", "Verena", "Diana", "Patricia", "Patrizia", "Edeltraut", "Edeltraud", "Lidia", "Lydia", "Gabriela", "Emilia", "Melissa", "Sibylle", "Sybille", "Birte", "Heidrun", "Ina", "Marlene", "Angelina", "Pauline", "Linda", "Frauke", "Zoe", "Zoé", "Juliane", "Traute", "Larissa", "Karen", "Caren", "Ursel", "Leni", "Theresa", "Teresa", "Jenny", "Inga", "Ronja", "Greta", "Lucy", "Lucie", "Emely", "Emelie", "Emmely", "Hertha", "Herta", "Irma", "Erna", "Käthe", "Fiona", "Nadja", "Hella", "Hilde", "Irina", "Marita", "Frieda", "Frida", "Gabi", "Gaby", "Helena", "Ida", "Marga", "Helene", "Selina", "Nolo", "Lia", "Liah", "Gina", "Judith", "Heide", "Carlotta", "Karlotta", "Luise", "Louise", "Stella", "Kimberly", "Kimberley", "Dörte", "Dörthe", "Martha", "Marta", "Ingeburg", "Kira", "Kyra", "Jette", "Emma", "Léa", "Chloé", "Manon", "Inès", "Lola", "Jade", "Camille", "Sarah", "Louise", "Zoé", "Lilou", "Lena", "Maëlys", "Clara", "Irina", "Eva", "Lina", "Anaïs", "Louna", "Romane", "Juliette", "Lucie", "Ambre", "Alice", "Lou", "Lisa", "Clémence", "Jeanne", "Louane", "Mathilde", "Océane", "Charlotte", "Marie", "Noémie", "Celia", "Anna", "Nina", "Pauline", "Lana", "Laura", "Lily", "Léonie", "Alicia", "Julie", "Julia", "Rose", "Margaux", "Élise", "Melina", "Luna", "Elisa", "Margot", "Elsa", "Maëlle", "Mélissa", "Justine", "Maeva", "Agathe", "Elena", "Inaya", "Leane", "Éloïse", "Émilie", "Yasmine", "Faustine", "Sara", "Gabrielle", "Anaelle", "Sofia", "Marion", "Leana", "Capucine", "Maya", "Olivia", "Maissa", "Valentine", "Mila", "Salomé", "Aya", "Morgane", "Emy", "Elea", "Kenza", "Lise", "Adèle", "Méline", "Amandine", "Zelie", "Emmy", "Victoria", "Assia", "Héloïse", "Ninon", "Candice", "Lyna", "Stella", "Manel", "Thais", "Apolline", "Cloé", "Marine", "Alix", "Loane", "Lila", "Lylou", "Enola", "Charline", "Clementine", "Anae", "Victoire", "Andrea", "Shana", "Elina", "Lison", "Eden", "Myriam", "Nour", "Cassandra", "Enora", "Constance", "Alyssa", "Tess", "Angelina", "Amélie", "Lucile", "Coline", "Clea", "Lilia", "Garance", "Eléonore", "Clarisse", "Fanny", "Selma", "LilyRose", "Sasha", "Axelle", "Solène", "Chiara", "Flora", "Marwa", "Laly", "Nora", "Leila", "Roxane", "Alexia", "Eline", "Mailys", "Cassandre", "Hanae", "Maeline", "Lilly", "Salma", "Sirine", "Anouk", "Lili", "Anissa", "LouAnn", "Rachel", "Camelia", "Romy", "Violette", "Maelie", "Iris", "Amina", "Chaima", "Maely", "LouAnne", "Lya", "Selena", "Tessa", "Sophie", "Charlie", "Carla", "Maryam", "Céleste", "Naomie", "Melinda", "Mia", "Farah", "Kelya", "Laurine", "Maia", "Claire", "Sana", "Kelly", "Noelie", "Angèle", "Estelle", "Ema", "Ilona", "Diane", "Amelia", "Emeline", "Helena", "Joséphine", "Lara", "Louisa", "Imane", "Serena", "Louanne", "Naila", "Paloma", "Amel", "Asma", "Fatima", "Maria", "Alycia", "Alizee", "Aicha", "Aurore", "Alexandra", "Lindsay", "Naomi", "Fatoumata", "Eve", "Albane", "Daphné", "Élodie", "Jasmine", "Ella", "Kiara", "Rania", "Melody", "Elia", "Shaina", "Ana", "Flavie", "Lalie", "Syrine", "Ava", "Giulia", "Mayssa", "Suzanne", "Norah", "Ilyana", "Maelyne", "Dounia", "Mariam", "Aliya", "Mélanie", "Naelle", "Elyne", "Dina", "Coralie", "Maiwenn", "Wendy", "Sophia", "Amira", "Shanna", "Esther", "Hanna", "Nesrine", "Alya", "Kelia", "Orlane", "Eloane", "Malak", "Yousra", "Ilana", "Shayna", "Noeline", "Clelia", "Jessica", "Perrine", "Maylis", "Marina", "Elya", "Khadija", "Mellina", "Mya", "Soline", "Leona", "Line", "Louison", "Mae", "Raphaëlle", "Audrey", "Aminata", "Blanche", "Noa", "Thea", "Berenice", "Oriane", "Marilou", "Neila", "Eugénie", "Hajar", "Jenna", "Pénélope", "Imene", "Lilya", "Marylou", "Cassie", "Leyna", "Maissane", "Safia", "Yaelle", "Cyrielle", "Laure", "Safa", "Ludivine", "Lucy", "Livia", "Sabrina", "Tiphaine", "Ashley", "Ophélie", "Lia", "Maily", "Calie", "Leia", "Maud", "Melodie", "Kahina", "Nawel", "Charlene", "Madeleine", "Melyne", "Emmie", "Emie", "Erine", "Lilie", "Paola", "Yuna", "Izia", "Hana", "Louann", "Cleo", "Melyna", "Yael", "Soumaya", "Meriem", "Caroline", "Annaelle", "Hélène", "Juline", "Jihane", "Hortense", "Laetitia", "Leanne", "Soraya", "Aliyah", "Ambrine", "Elora", "Lylia", "Sonia", "Assya", "Celya", "Rébecca", "Iliana", "LiliRose", "Angeline", "Hafsa", "Hawa", "Mina", "Amy", "Angela", "Kim", "Maelia", "Bertille", "Leina", "Lilas", "Ornella", "Sidonie", "Thalia", "Hind", "Johanna", "Manelle", "Melia", "Aurélie", "Nayla", "Zahra", "Tatiana", "Sixtine", "Isaure", "Maellys", "Tina", "Flore", "Lorena", "Tania", "Joana", "Leelou", "Aline", "Ela", "Elif", "Janna", "Kayla", "Lilwenn", "Naya", "Rosalie", "Elyna", "Hannah", "Lydia", "Anastasia", "Elona", "Linda", "Nell", "Élisabeth", "Isis", "Mona", "Nais", "Neyla", "Maimouna", "Sherine", "Cali", "Céline", "Judith", "Samia", "Deborah", "Emna", "Fleur", "Florine", "Zia", "Nelia", "Annabelle", "Cécile", "Cecilia", "Gwendoline", "Vanessa", "Emily", "Célestine", "Naia", "Prune", "Selene", "Astrid", "Chayma", "Janelle", "Kessy", "Kyara", "Yasmina", "Abigael", "Carmen", "Clotilde", "Gaëlle", "Grace", "Meissa", "Chahinez", "Naima", "Taina", "Eleana", "Fantine", "Hiba", "Nisa", "Alienor", "Isra", "Diana", "Sakina", "Kamelia", "Lamia", "Lucille", "Meryem", "Philomène", "Tiffany", "Youna", "Lucia", "Malia", "Milla", "Halima", "Joy", "Joyce", "Nada", "Philippine", "Kaina", "Loanne", "Kayna", "Augustine", "Gabriella", "Sacha", "Safiya", "Tamara", "Elissa", "Lois", "Lyana", "Savannah", "Shaima", "Talia", "Aaliyah", "Emmanuelle", "Fatma", "Adriana", "Aleyna", "Ibtissem", "Kimberley", "Liana", "Maelyss", "Awa", "Liya", "Luce", "Maelly", "Soukaina", "Suzie", "Jana", "Layana", "Nola", "Rahma", "Alessia", "Alia", "Alyssia", "Athénaïs", "Eya", "Gwenaëlle", "Imen", "Maina", "Emily", "Chloe", "Megan", "Charlotte", "Emma", "Lauren", "Hannah", "Ellie", "Sophie", "Katie", "Amy", "Lucy", "Olivia", "Jessica", "Georgia", "Rebecca", "Holly", "Sarah", "Caitlin", "Beth", "Bethany", "Molly", "Grace", "Shannon", "Rachel", "Jess", "Alice", "Laura", "Abbie", "Ella", "Amber", "Jade", "Anna", "Jasmine", "Zoe", "Leah", "Rosie", "Mia", "Phoebe", "Lily", "Becky", "Erin", "Courtney", "Niamh", "Kate", "Louise", "Natalie", "Eleanor", "Charlie", "Lydia" ] &gt;&gt;
-  
-  &lt;&lt;set $maleNames to [ "Victor", "Alex", "Alexander", "Martin", "Steve", "Tony", "Bucky", "James", "Robert", "Ivan", "John", "William", "Richard", "Dick", "Charles", "Joseph", "Thomas", "Chris", "Christopher", "Mark", "Edward", "Anthony", "Scott", "Brian", "Jason", "Cassius", "Lawrence", "Manuel", "Iago", "Jacob", "Lee", "Francis", "Sue", "Frederick", "Theodore", "Miguel", "Pedro", "Maurice", "Ricardo", "Rafael", "Cecil", "Carlos", "Julio", "Felix", "Yoshi", "Hideyoshi", 'Trent',
-  'Irvin',
-  'Freddy',
-  'Bryant',
-  'Erin',
-  'Marlon',
-  'Augustine',
-  'Elton',
-  'Tyree',
-  'Adalberto',
-  'Gerry',
-  'Logan',
-  'Mike',
-  'Jerome',
-  'Eldon',
-  'Newton',
-  'Walter',
-  'Rene',
-  'Anibal',
-  'Ira',
-  'Kurt',
-  'Marion',
-  'Rick',
-  'Owen',
-  'Wilbert',
-  'Ty',
-  'Giovanni',
-  'Vance',
-  'Damian',
-  'Ashley',
-  'Lemuel',
-  'Deon',
-  'Ernesto',
-  'Rocco',
-  'Archie',
-  'Sherwood',
-  'Michel',
-  'Vince',
-  'Robbie',
-  'Chauncey',
-  'Alonzo',
-  'Eloy',
-  'Bill',
-  'Johnnie',
-  'Samuel',
-  'Margarito',
-  'Alvin',
-  'Scotty',
-  'Forrest',
-  'Wilfredo',
-  'Ollie',
-  'Rickey',
-  'Joey',
-  'Kenny',
-  'Bennie',
-  'Bill',
-  'Shayne',
-  'Keven',
-  'Mark',
-  'Jarvis',
-  'Dane',
-  'Wayne',
-  'Alphonso',
-  'Bobbie',
-  'Oren',
-  'Berry',
-  'Kennith',
-  'Benedict',
-  'Arnoldo',
-  'Harold',
-  'Taylor',
-  'Dexter',
-  'Vernon',
-  'Dino',
-  'Maria',
-  'Alfonzo',
-  'Pablo',
-  'Jay',
-  'Elroy',
-  'Neil',
-  'Woodrow',
-  'Irving',
-  'Michal',
-  'Fernando',
-  'Eduardo',
-  'Christopher',
-  'Bob',
-  'Colby',
-  'Luther',
-  'Julius',
-  'Derek',
-  'Pasquale',
-  'Sebastian',
-  'Ronnie',
-  'Augustus',
-  'Leon',
-  'Gilbert',
-  'Morton',
-  'Carmine',
-  'Whitney',
-   ] &gt;&gt;
-  
-  &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
-  &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
-  &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
-  
-  &lt;&lt;set $height to [ "very short", "short", "average height", "tall", "very tall" ] &gt;&gt;
-  &lt;&lt;set $hair to [ "red", "blond", "auburn", "mousy brown", "very light", "salt and pepper", "black", "gray"] &gt;&gt;
-  &lt;&lt;set $hair_style to [ "neatly braided", "dreadlocked", "long and straight", "long and wavy", "pinned up", "shaved", "tight and curly", "buzzed", "short and spiky", "soft and curly", "messily curled", "closely shaved"] &gt;&gt;
-  &lt;&lt;set $eyes to [ "blue", "green", "very dark", "black", "gray", "hazel", "light blue", "brown"] &gt;&gt;
-  &lt;&lt;set $skin to [ "pale", "light and freckled", "tan", "ruddy", "olive", "brown", "very dark"] &gt;&gt;
-  &lt;&lt;set $physique to [ "fit and athletic", "rounded and soft", "toned and well muscled", "a bit chubby", "nicely plump", "very dainty", "buff and very muscular", "heavyset and powerful", "soft and cuddly", "chiseled like marble"] &gt;&gt;
-  &lt;&lt;set $pubic to [ "waxed completely bare", "shaved to a neat strip", "trimmed neatly", "left completely natural"] &gt;&gt;
+    /* To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets */
+    
+    &lt;&lt;set $height to [ "very short", "short", "average height", "tall", "very tall" ] &gt;&gt;
+    
+    &lt;&lt;set $hair to [ "red", "blond", "auburn", "mousy brown", "very light", "salt and pepper", "black", "gray"] &gt;&gt;
+    
+    &lt;&lt;set $hair_style to [ "neatly braided", "dreadlocked", "long and straight", "long and wavy", "pinned up", "shaved", "tight and curly", "buzzed", "short and spiky", "soft and curly", "messily curled", "closely shaved"] &gt;&gt;
+    
+    &lt;&lt;set $eyes to [ "blue", "green", "very dark", "black", "gray", "hazel", "light blue", "brown"] &gt;&gt;
+    
+    &lt;&lt;set $skin to [ "pale", "light and freckled", "tan", "ruddy", "olive", "brown", "very dark"] &gt;&gt;
+    
+    /* A general physical description.  Should be in the format of "Overall, he appears [your description]".  Should be gender neutral. */
+    
+    &lt;&lt;set $physique to [ "fit and athletic", "rounded and soft", "toned and well muscled", "a bit chubby", "nicely plump", "very dainty", "buff and very muscular", "heavyset and powerful", "soft and cuddly", "chiseled like marble"] &gt;&gt;
+    
+    /* Pubic hair style.  Should be in the format of "His pubic hair is [your text]" */
+    
+    &lt;&lt;set $pubic to [ "waxed completely bare", "shaved to a neat strip", "trimmed neatly", "left completely natural"] &gt;&gt;
+    
+    &lt;&lt;set $femaleNames to [ "Jessica", "Mary", "Meredith", "Wanda", "Natalie", "Pepper", "Peggy", "Dottie", "Angie", "Rhonda", "Genevieve", "Vivian", "Natasha", "Pamela", "Millie", "Miriam", "Judith", "Elizabeth", "Bess", "Liz", "Lissa", "Linda", "Susan", "Jezebel", "Ruth", "Sharon", "Deborah", "Tina", "Christina", "Therese", "Rita", "Grace", "Hazel", "Ava", "Eva", "Lilith", "Lilias", "Alicia", "Regina", "Sally", "Maria", "Ida", "Joy", "Stella", "Lydia", "Olga", "Ivana", "Daisy", "Marguerite", "Cecilia", "Inez", "Roxanne", "Victoria", "Lily", "Rose", "Violet", "Vanessa", "Heather", "Sarah", "Ashley", "Isabella", "Emily", "Brianna", "Mia", "Samantha", "Sophia", "Melanie", "Genesis", "Kimberly", "Angelina", "Madison", "Gabriella", "Camila", "Jennifer", "Alyssa", "Sofia", "Arianna", "Hailey", "Maria", "Kayla", "Abigail", "Gabriela", "Victoria", "Stephanie", "Allison", "Vanessa", "Emma", "Daniela", "Evelyn", "Sofía", "Marti", "Valenti", "Mía", "Isabella", "María", "Zoe", "Catali", "Emma", "Alma", "Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valenti", "Maria", "Eduarda", "Sofía", "Emilia", "Isidora", "Florencia", "Antonella", "Marti", "Maite", "Amanda", "Josefa", "Agusti", "Maria", "Valenti", "Isabella", "Sofía", "Valeria", "María", "José", "Gabriela", "Sara", "Salomé", "Daniela", "Xime", "Valenti", "María", "Fernanda", "Sofía", "María", "Marti", "Emilia", "Zoe", "Mia", "Dulce", "María", "María", "Elizabeth", "Beatriz", "Ramo", "Liz", "Concepción", "Caroli", "Mabel", "Raquel", "Noemí", "María", "Camila", "Fernanda", "Milagros", "Luz", "Abigail", "Aria", "Lucia", "Alexandra", "Florencia", "Lucía", "Agusti", "Camila", "Julia", "Julieta", "Sofía", "Abril", "Paula", "Micaela", "Camila", "Isabella", "Sofía", "Victoria", "Valenti", "Valeria", "Nicole", "Samantha", "Maria", "Antonella", "Madison", "Kayla", "Makayla", "Nevaeh", "Jada", "Brianna", "Chloe", "Destiny", "Alyssa", "Gabrielle", "Imani", "Kimora", "Aaliyah", "Jayla", "Abigail", "Arianna", "Ava", "Fatoumata", "Jade", "London", "Savannah", "Victoria", "Aniyah", "Nyla", "Olivia", "Taylor", "Ashley", "Sarah", "Jasmine", "Laila", "Chelsea", "Heaven", "Sophia", "Chloe", "Emily", "Tiffany", "Fiona", "Isabella", "Olivia", "Sarah", "Angela", "Vivian", "Nicole", "Rachel", "Michelle", "Ashley", "Grace", "Joyce", "Anna", "Sophie", "Fatima", "Jasmine", "Jenny", "Jessica", "Cindy", "Emma", "Hannah", "Amy", "Angelina", "Mia", "Shaimaa", "Fatma", "Maha", "Farida", "Aya", "Shahd", "Ashraqat", "Sahar", "Fatin", "Dalal", "Doha", "Suha", "Rowan", "Hosniya", "Hasnaa", "Hosna", "Gamila", "Gamalat", "Habiba", "Aya", "Rania", "Sarah", "Reem", "Hoda", "Marwa", "Fatima", "Eisha", "Nesreen", "Fatoumata", "Mariam", "Aminata", "Hawa", "Awa", "Oumou", "Djeneba", "Bintou", "Fanta", "Kadiatou", "Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Saida", "Mariam", "Shayma", "Khawla", "Ana", "Amanda", "Fernanda", "Julia", "Mariana", "Camila", "leticia", "Larissa", "Beatriz", "Natália", "Thais", "Juliana", "Vitoria", "Jessica", "Luana", "Laura", "Bruna", "Rafaela", "Maria", "Isabela", "Barbara", "Carolina", "Aline", "Anna", "Brenda", "Lívia", "Victória", "Gabrielle", "Andressa", "Maria", "Clara", "Raquel", "Daniela", "Ana", "Clara", "Marcela", "Luiza", "Giovanna", "Stephanie", "Caroline", "Raissa", "Aléxia", "Milena", "Nathalia", "Clara", "Taynara", "Sabrina", "Ana", "Luiza", "Yasmin", "Carla", "Helena", "Ah", "Ai", "An", "Bai", "Bao", "Bi", "Bo", "Cai", "Chang", "Chao", "Chen", "Cheng", "Chin", "Chun", "Da", "Dan", "Fang", "Fen", "Fu", "Guanting", "Guanyu", "Guiying", "Guo", "Hai", "He", "Heng", "Hong", "Hua", "Huan", "Huang", "Hui", "Jia", "Jian", "Jiang", "Jie", "Jin", "Jing", "Jingyi", "Ju", "Juan", "Jun", "Kun", "Lan", "Lei", "Li", "Lian", "Lili", "Lim", "Lin", "Ling", "Mei", "Min", "Ming", "Mu", "Na", "Ni", "Ning", "Nuan", "Ping", "Qian", "Qing", "Qiong", "Qiu", "Rong", "Ru", "Shan", "Shi", "Shu", "Shufen", "Shui", "Shun", "Su", "Tai", "Ting", "Tingting", "Tu", "Wei", "Wen", "Wu", "Xia", "Xian", "Xiang", "Xiaomei", "Xiaoyan", "Xinyi", "Xiu", "Xiulan", "Xiuying", "Xue", "Xun", "Ya", "Yahui", "Yaling", "Yan", "Yang", "Yating", "Yawen", "Yazhu", "Yi", "Yijun", "Yin", "Ying", "Yong", "Yu", "Yun", "Zan", "Zedong", "Zhen", "Zheng", "Zhi", "Zhihao", "Zhong", "Zhou", "Aadhya", "Ananya", "Saanvi", "Aaradhya", "Anaya", "Aanya", "Anika", "Pari", "Myra", "Shanaya", "Ananya", "Anika", "Aradhya", "Harini", "Navya", "Ridhi", "Rishika", "Sanvi", "Shreya", "Ai", "Aika", "Aiko", "Aimi", "Aina", "Airi", "Akane", "Akari", "Akemi", "Aki", "Akiko", "Akira", "Ami", "Anna", "Aoi", "Asuka", "Atsuko", "Aya", "Ayaka", "Ayako", "Ayame", "Ayane", "Ayano", "Ayumi", "Chihiro", "Chika", "Chikako", "Chinatsu", "Chiyo", "Chiyoko", "Cho", "Chou", "Chouko", "Emi", "Erika", "Etsuko", "Hana", "Hanae", "Hanako", "Haru", "Haruka", "Haruko", "Haruna", "Hibiki", "Hikari", "Hikaru", "Hina", "Hinata", "Hiroko", "Hitomi", "Honoka", "Hoshi", "Hoshiko", "Hotaru", "Izumi", "Junko", "Kaede", "Kana", "Kanako", "Kanon", "Kaori", "Kaoru", "Kasumi", "Kazue", "Kazuko", "Keiko", "Kiku", "Kimiko", "Kiyoko", "Kohaku", "Koharu", "Kokoro", "Kotone", "Kumiko", "Kyo", "Kyou", "Mai", "Makoto", "Mami", "Manami", "Mao", "Mari", "Mariko", "Marina", "Masami", "Masuyo", "Mayu", "Megumi", "Mei", "Michi", "Michiko", "Midori", "Miho", "Mika", "Miki", "Miku", "Minako", "Minami", "Minato", "Minoru", "Mio", "Misaki", "Mitsuko", "Miu", "Miyako", "Miyu", "Mizuki", "Moe", "Momoka", "Momoko", "Moriko", "Nana", "Nanako", "Nanami", "Nao", "Naoko", "Naomi", "Natsuki", "Natsuko", "Natsumi", "Noa", "Noriko", "Ran", "Rei", "Ren", "Riko", "Rin", "Rina", "Rio", "Risa", "Sachiko", "Saki", "Sakura", "Sakurako", "Satomi", "Saya", "Sayaka", "Sayuri", "Setsuko", "Shiho", "Shinju", "Shinobu", "Shiori", "Shizuka", "Shun", "Sora", "Sumiko", "Suzu", "Suzume", "Takako", "Takara", "Tamiko", "Tomiko", "Tomoko", "Tomomi", "Tsubaki", "Tsubame", "Tsubasa", "Tsukiko", "Ume", "Umeko", "Wakana", "Yasu", "Yoko", "Yoshi", "Yoshiko", "Youko", "Yua", "Yui", "Yuina", "Yuki", "Yukiko", "Yuko", "Yumi", "Yumiko", "Yuri", "Yuu", "Yuuka", "Yuuki", "Yuuko", "Yuuna", "Yuzuki", "Noor", "Anam", "Karen", "Ayesha", "Mishael", "Mariam", "Aisha", "Faiza", "Zakia", "Aanya", "Komal", "Hajra", "Ifrah", "Lintah", "Leah", "Tooba", "Asma", "Kheezran", "Sana", "Riasat", "Saima", "Mahrukh", "Haniya", "Mariyam", "Umara", "Zuny", "Sajida", "Rameen", "Unsa", "Neha", "Rabia", "Rida", "Zainnah", "Ameria", "Sarah", "Asmi", "Mizha", "Ruby", "Areeba", "Zainab", "Momna", "Rue", "Eraj", "Sara", "Krishma", "Alayna", "Usmaan", "Kainat", "Imama", "Sana", "Anna", "Maria", "Julia", "Katharina", "Katarina", "Catharina", "Eva", "Christina", "Kristina", "Monika", "Monica", "Karin", "Carin", "Sabine", "Susanne", "Christine", "Kristine", "Barbara", "Claudia", "Heike", "Marion", "Katrin", "Kathrin", "Cathrin", "Catrin", "Sarah", "Sara", "Ursula", "Lisa", "Brigitte", "Stefanie", "Stephanie", "Renate", "Elke", "Petra", "Birgit", "Jutta", "Nina", "Jana", "Ingrid", "Annika", "Marie", "Anke", "Andrea", "Sonja", "Lena", "Hannah", "Hanna", "Jasmin", "Yasmin", "Johanna", "Silvia", "Sylvia", "Sandra", "Ute", "Anja", "Anne", "Helga", "Nicole", "Christiane", "Kristiane", "Gisela", "Giesela", "Laura", "Carolin", "Caroline", "Karoline", "Elisabeth", "Ulrike", "Christa", "Krista", "Jessica", "Jessika", "Melanie", "Gabriele", "Martina", "Angelika", "Angelica", "Kerstin", "Daniela", "Alexandra", "Maike", "Meike", "Franziska", "Jennifer", "Sigrid", "Siegrid", "Hannelore", "Erika", "Erica", "Astrid", "Angela", "Silke", "Sylke", "Bärbel", "Rita", "Doris", "Lea", "Leah", "Vanessa", "Antje", "Nadine", "Christel", "Kristel", "Marianne", "Katja", "Regina", "Tanja", "Tania", "Inge", "Dagmar", "Maren", "Alina", "Sophie", "Sofie", "Gudrun", "Kornelia", "Cornelia", "Lara", "Waltraud", "Waltraut", "Bettina", "Leoni", "Leonie", "Ingeborg", "Rosemarie", "Manuela", "Ivonne", "Yvonne", "Beate", "Heidi", "Luisa", "Louisa", "Isabel", "Isabell", "Isabelle", "Marlies", "Nele", "Neele", "Natalie", "Nathalie", "Charlotte", "Annette", "Anette", "Britta", "Michaela", "Svenja", "Swenja", "Kirsten", "Gerda", "Simone", "Sabrina", "Ilse", "Sophia", "Sofia", "Lina", "Hildegard", "Hilde", "Janina", "Bianca", "Bianka", "Irmgard", "Edith", "Miriam", "Antonia", "Irene", "Ruth", "Michelle", "Pia", "Kim", "Ann", "Margret", "Margrit", "Jacqueline", "Jaqueline", "Emma", "Janin", "Janine", "Vera", "Wera", "Clara", "Klara", "Melina", "Josephine", "Josefine", "Elena", "Emily", "Emilie", "Emmily", "Anneliese", "Annelise", "Paula", "Victoria", "Viktoria", "Christin", "Kristin", "Corinna", "Lilli", "Lilly", "Margot", "Carmen", "Marina", "Annegret", "Saskia", "Sina", "Sinah", "Evelyn", "Evelin", "Eveline", "Celina", "Eileen", "Aileen", "Ayleen", "Aylin", "Tatjana", "Gertrud", "Ilona", "Mia", "Carina", "Karina", "Lieselotte", "Liselotte", "Maja", "Maya", "Iris", "Elfriede", "Merle", "Roswitha", "Roswita", "Denise", "Annemarie", "Wiebke", "Wibke", "Amelie", "Amely", "Jule", "Margarethe", "Margarete", "Heidemarie", "Olga", "Carla", "Karla", "Ines", "Mareike", "Vivien", "Vivienne", "Celine", "Céline", "Chiara", "Kiara", "Uta", "Dorothea", "Rebecca", "Rebekka", "Ellen", "Carola", "Karola", "Finja", "Finnja", "Mandy", "Anita", "Tina", "Verena", "Diana", "Patricia", "Patrizia", "Edeltraut", "Edeltraud", "Lidia", "Lydia", "Gabriela", "Emilia", "Melissa", "Sibylle", "Sybille", "Birte", "Heidrun", "Ina", "Marlene", "Angelina", "Pauline", "Linda", "Frauke", "Zoe", "Zoé", "Juliane", "Traute", "Larissa", "Karen", "Caren", "Ursel", "Leni", "Theresa", "Teresa", "Jenny", "Inga", "Ronja", "Greta", "Lucy", "Lucie", "Emely", "Emelie", "Emmely", "Hertha", "Herta", "Irma", "Erna", "Käthe", "Fiona", "Nadja", "Hella", "Hilde", "Irina", "Marita", "Frieda", "Frida", "Gabi", "Gaby", "Helena", "Ida", "Marga", "Helene", "Selina", "Nolo", "Lia", "Liah", "Gina", "Judith", "Heide", "Carlotta", "Karlotta", "Luise", "Louise", "Stella", "Kimberly", "Kimberley", "Dörte", "Dörthe", "Martha", "Marta", "Ingeburg", "Kira", "Kyra", "Jette", "Emma", "Léa", "Chloé", "Manon", "Inès", "Lola", "Jade", "Camille", "Sarah", "Louise", "Zoé", "Lilou", "Lena", "Maëlys", "Clara", "Irina", "Eva", "Lina", "Anaïs", "Louna", "Romane", "Juliette", "Lucie", "Ambre", "Alice", "Lou", "Lisa", "Clémence", "Jeanne", "Louane", "Mathilde", "Océane", "Charlotte", "Marie", "Noémie", "Celia", "Anna", "Nina", "Pauline", "Lana", "Laura", "Lily", "Léonie", "Alicia", "Julie", "Julia", "Rose", "Margaux", "Élise", "Melina", "Luna", "Elisa", "Margot", "Elsa", "Maëlle", "Mélissa", "Justine", "Maeva", "Agathe", "Elena", "Inaya", "Leane", "Éloïse", "Émilie", "Yasmine", "Faustine", "Sara", "Gabrielle", "Anaelle", "Sofia", "Marion", "Leana", "Capucine", "Maya", "Olivia", "Maissa", "Valentine", "Mila", "Salomé", "Aya", "Morgane", "Emy", "Elea", "Kenza", "Lise", "Adèle", "Méline", "Amandine", "Zelie", "Emmy", "Victoria", "Assia", "Héloïse", "Ninon", "Candice", "Lyna", "Stella", "Manel", "Thais", "Apolline", "Cloé", "Marine", "Alix", "Loane", "Lila", "Lylou", "Enola", "Charline", "Clementine", "Anae", "Victoire", "Andrea", "Shana", "Elina", "Lison", "Eden", "Myriam", "Nour", "Cassandra", "Enora", "Constance", "Alyssa", "Tess", "Angelina", "Amélie", "Lucile", "Coline", "Clea", "Lilia", "Garance", "Eléonore", "Clarisse", "Fanny", "Selma", "LilyRose", "Sasha", "Axelle", "Solène", "Chiara", "Flora", "Marwa", "Laly", "Nora", "Leila", "Roxane", "Alexia", "Eline", "Mailys", "Cassandre", "Hanae", "Maeline", "Lilly", "Salma", "Sirine", "Anouk", "Lili", "Anissa", "LouAnn", "Rachel", "Camelia", "Romy", "Violette", "Maelie", "Iris", "Amina", "Chaima", "Maely", "LouAnne", "Lya", "Selena", "Tessa", "Sophie", "Charlie", "Carla", "Maryam", "Céleste", "Naomie", "Melinda", "Mia", "Farah", "Kelya", "Laurine", "Maia", "Claire", "Sana", "Kelly", "Noelie", "Angèle", "Estelle", "Ema", "Ilona", "Diane", "Amelia", "Emeline", "Helena", "Joséphine", "Lara", "Louisa", "Imane", "Serena", "Louanne", "Naila", "Paloma", "Amel", "Asma", "Fatima", "Maria", "Alycia", "Alizee", "Aicha", "Aurore", "Alexandra", "Lindsay", "Naomi", "Fatoumata", "Eve", "Albane", "Daphné", "Élodie", "Jasmine", "Ella", "Kiara", "Rania", "Melody", "Elia", "Shaina", "Ana", "Flavie", "Lalie", "Syrine", "Ava", "Giulia", "Mayssa", "Suzanne", "Norah", "Ilyana", "Maelyne", "Dounia", "Mariam", "Aliya", "Mélanie", "Naelle", "Elyne", "Dina", "Coralie", "Maiwenn", "Wendy", "Sophia", "Amira", "Shanna", "Esther", "Hanna", "Nesrine", "Alya", "Kelia", "Orlane", "Eloane", "Malak", "Yousra", "Ilana", "Shayna", "Noeline", "Clelia", "Jessica", "Perrine", "Maylis", "Marina", "Elya", "Khadija", "Mellina", "Mya", "Soline", "Leona", "Line", "Louison", "Mae", "Raphaëlle", "Audrey", "Aminata", "Blanche", "Noa", "Thea", "Berenice", "Oriane", "Marilou", "Neila", "Eugénie", "Hajar", "Jenna", "Pénélope", "Imene", "Lilya", "Marylou", "Cassie", "Leyna", "Maissane", "Safia", "Yaelle", "Cyrielle", "Laure", "Safa", "Ludivine", "Lucy", "Livia", "Sabrina", "Tiphaine", "Ashley", "Ophélie", "Lia", "Maily", "Calie", "Leia", "Maud", "Melodie", "Kahina", "Nawel", "Charlene", "Madeleine", "Melyne", "Emmie", "Emie", "Erine", "Lilie", "Paola", "Yuna", "Izia", "Hana", "Louann", "Cleo", "Melyna", "Yael", "Soumaya", "Meriem", "Caroline", "Annaelle", "Hélène", "Juline", "Jihane", "Hortense", "Laetitia", "Leanne", "Soraya", "Aliyah", "Ambrine", "Elora", "Lylia", "Sonia", "Assya", "Celya", "Rébecca", "Iliana", "LiliRose", "Angeline", "Hafsa", "Hawa", "Mina", "Amy", "Angela", "Kim", "Maelia", "Bertille", "Leina", "Lilas", "Ornella", "Sidonie", "Thalia", "Hind", "Johanna", "Manelle", "Melia", "Aurélie", "Nayla", "Zahra", "Tatiana", "Sixtine", "Isaure", "Maellys", "Tina", "Flore", "Lorena", "Tania", "Joana", "Leelou", "Aline", "Ela", "Elif", "Janna", "Kayla", "Lilwenn", "Naya", "Rosalie", "Elyna", "Hannah", "Lydia", "Anastasia", "Elona", "Linda", "Nell", "Élisabeth", "Isis", "Mona", "Nais", "Neyla", "Maimouna", "Sherine", "Cali", "Céline", "Judith", "Samia", "Deborah", "Emna", "Fleur", "Florine", "Zia", "Nelia", "Annabelle", "Cécile", "Cecilia", "Gwendoline", "Vanessa", "Emily", "Célestine", "Naia", "Prune", "Selene", "Astrid", "Chayma", "Janelle", "Kessy", "Kyara", "Yasmina", "Abigael", "Carmen", "Clotilde", "Gaëlle", "Grace", "Meissa", "Chahinez", "Naima", "Taina", "Eleana", "Fantine", "Hiba", "Nisa", "Alienor", "Isra", "Diana", "Sakina", "Kamelia", "Lamia", "Lucille", "Meryem", "Philomène", "Tiffany", "Youna", "Lucia", "Malia", "Milla", "Halima", "Joy", "Joyce", "Nada", "Philippine", "Kaina", "Loanne", "Kayna", "Augustine", "Gabriella", "Sacha", "Safiya", "Tamara", "Elissa", "Lois", "Lyana", "Savannah", "Shaima", "Talia", "Aaliyah", "Emmanuelle", "Fatma", "Adriana", "Aleyna", "Ibtissem", "Kimberley", "Liana", "Maelyss", "Awa", "Liya", "Luce", "Maelly", "Soukaina", "Suzie", "Jana", "Layana", "Nola", "Rahma", "Alessia", "Alia", "Alyssia", "Athénaïs", "Eya", "Gwenaëlle", "Imen", "Maina", "Emily", "Chloe", "Megan", "Charlotte", "Emma", "Lauren", "Hannah", "Ellie", "Sophie", "Katie", "Amy", "Lucy", "Olivia", "Jessica", "Georgia", "Rebecca", "Holly", "Sarah", "Caitlin", "Beth", "Bethany", "Molly", "Grace", "Shannon", "Rachel", "Jess", "Alice", "Laura", "Abbie", "Ella", "Amber", "Jade", "Anna", "Jasmine", "Zoe", "Leah", "Rosie", "Mia", "Phoebe", "Lily", "Becky", "Erin", "Courtney", "Niamh", "Kate", "Louise", "Natalie", "Eleanor", "Charlie", "Lydia" ] &gt;&gt;
+    
+    &lt;&lt;set $maleNames to [ "Victor", "Alex", "Alexander", "Martin", "Steve", "Tony", "Bucky", "James", "Robert", "Ivan", "John", "William", "Richard", "Dick", "Charles", "Joseph", "Thomas", "Chris", "Christopher", "Mark", "Edward", "Anthony", "Scott", "Brian", "Jason", "Cassius", "Lawrence", "Manuel", "Iago", "Jacob", "Lee", "Francis", "Sue", "Frederick", "Theodore", "Miguel", "Pedro", "Maurice", "Ricardo", "Rafael", "Cecil", "Carlos", "Julio", "Felix", "Yoshi", "Hideyoshi", 'Trent', 'Irvin','Freddy', 'Bryant', 'Erin', 'Marlon', 'Augustine', 'Elton', 'Tyree', 'Adalberto', 'Gerry', 'Logan', 'Mike', 'Jerome', 'Eldon', 'Newton', 'Walter', 'Rene', 'Anibal', 'Ira', 'Kurt', 'Marion', 'Rick', 'Owen', 'Wilbert', 'Ty', 'Giovanni', 'Vance', 'Damian', 'Ashley', 'Lemuel', 'Deon', 'Ernesto', 'Rocco', 'Archie', 'Sherwood', 'Michel', 'Vince', 'Robbie', 'Chauncey', 'Alonzo', 'Eloy', 'Bill', 'Johnnie', 'Samuel', 'Margarito', 'Alvin', 'Scotty', 'Forrest', 'Wilfredo', 'Ollie', 'Rickey',
+    'Joey', 'Kenny', 'Bennie', 'Bill', 'Shayne', 'Keven', 'Mark', 'Jarvis', 'Dane', 'Wayne', 'Alphonso', 'Bobbie', 'Oren', 'Berry', 'Kennith', 'Benedict', 'Arnoldo', 'Harold', 'Taylor', 'Dexter', 'Vernon', 'Dino', 'Maria', 'Alfonzo', 'Pablo', 'Jay', 'Elroy', 'Neil', 'Woodrow', 'Irving', 'Michal', 'Fernando', 'Eduardo', 'Christopher', 'Bob', 'Colby', 'Luther', 'Julius', 'Derek', 'Pasquale', 'Sebastian', 'Ronnie', 'Augustus', 'Leon', 'Gilbert', 'Morton', 'Carmine', 'Whitney', "Benjamin", "Threetoo"
+     ] &gt;&gt;
   
   &lt;&lt;if $slavegender is "male"&gt;&gt;&lt;&lt;set
   $slavename to either($maleNames), $slavethey to "he", $slavetheir to "his", $slavethem to "him", $slaveThey to "He", $slaveTheir to "His", $slaveThem to "Him", $cock to random(1,5)
@@ -576,8 +496,17 @@ Your reputation and actions affect your interactions with other citizens and you
   &gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+  /* If you'd like to add a fetish/kink, please discuss it on meme first so that adjustments to game behavior can be coordinated */
+  
+  &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
+  &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
+  &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
+  
   &lt;&lt;set $ass to random(1,5)&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "His ass is [your description here]" and should be gender neutral */
+    
     &lt;&lt;if $ass is 1&gt;&gt;
       &lt;&lt;set
         $slaveass to either("flat", "bony", "sharp", "not very impressive")
@@ -606,6 +535,9 @@ Your reputation and actions affect your interactions with other citizens and you
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "His cock is [your description here]" */
+    
     &lt;&lt;if $cock is 1&gt;&gt;&lt;&lt;set
       $slavecock to
         either("tiny and soft", "tiny and half hard", "tiny and circumcised")
@@ -633,6 +565,9 @@ Your reputation and actions affect your interactions with other citizens and you
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "Her breasts are [your description here]" */
+    
     &lt;&lt;if $breasts is 1&gt;&gt;
       &lt;&lt;set $slavebreasts to either("flat", "barely there", "non-existent", "quite small")&gt;&gt;
     
@@ -650,6 +585,9 @@ Your reputation and actions affect your interactions with other citizens and you
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "Her pussy is [your description here]" */
+    
     &lt;&lt;if $vagina is 1&gt;&gt;&lt;&lt;set
       $slavevagina to
         either("tight and appealing", "very tight and wet", "pink and wet")
@@ -703,6 +641,9 @@ Your reputation and actions affect your interactions with other citizens and you
   &lt;&lt;set $happiness to random(1,5)&gt;&gt;
   
   &lt;&lt;nobr&gt;&gt;
+  
+  /* Please don't modify this file unless you know Sugarcube! */
+  
   &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -898,6 +839,8 @@ Your reputation and actions affect your interactions with other citizens and you
   &gt;&gt;
   &lt;&lt;set $IDnumber += 1&gt;&gt;
   &lt;&lt;/nobr&gt;&gt;
+  /* Please don't modify this file unless you know Sugarcube! */
+  
   &lt;&lt;nobr&gt;&gt;
   &lt;&lt;set $price to 1000&gt;&gt;
   
@@ -1002,19 +945,35 @@ $slave.They
 
 &lt;b&gt;Inspect $slave.name:&lt;/b&gt;
   &lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set $finger_pussy_reaction to [
   
-  "sighs happily as you make her even wetter",
+    /* Please don't modify this file unless you know Sugarcube! */
   
-  "flinches away from your touch",
-  
-  "endures your touch with a set jaw",
-  
-  "leans into you for more",
-  
-  "tries to chase the sensation as you finger her"
-  
-  ]&gt;&gt;
+    &lt;&lt;set $finger_pussy_reaction to [
+    
+    "sighs happily as you make her even wetter",
+    
+    "flinches away from your touch",
+    
+    "endures your touch with a set jaw",
+    
+    "leans into you for more",
+    
+    "tries to chase the sensation as you finger her"
+    
+    ]&gt;&gt;
+    &lt;&lt;set $finger_ass_reaction to [
+    
+    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
+    
+    "flinches away from your touch",
+    
+    "endures your touch with a set jaw",
+    
+    "leans into you for more",
+    
+    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
+    
+    ]&gt;&gt;
   
     &lt;&lt;set $female_ride_strapon to [
     
@@ -1130,6 +1089,8 @@ $slave.They
     &lt;&lt;linkreplace "*Finger her pussy"&gt;&gt;&lt;&lt;print $slave.Their&gt;&gt; pussy is &lt;&lt;print $slave.vagina&gt;&gt;&lt;&lt;if $vaginal_virgin&gt;&gt; and she's a virgin&lt;&lt;/if&gt;&gt;.   &lt;&lt;print $slave.They&gt;&gt; &lt;&lt;print either($finger_pussy_reaction)&gt;&gt;.&lt;&lt;/linkreplace&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+  &lt;&lt;linkreplace "*Finger &lt;&lt;print $slave.their&gt;&gt; ass"&gt;&gt;&lt;&lt;print $slave.Their&gt;&gt; ass is &lt;&lt;print $slave.ass&gt;&gt;&lt;&lt;if $anal_virgin&gt;&gt; and $slave.they's a virgin&lt;&lt;/if&gt;&gt;.   &lt;&lt;print $slave.They&gt;&gt; &lt;&lt;print either($finger_ass_reaction)&gt;&gt;.&lt;&lt;/linkreplace&gt;&gt;
+  
   &lt;&lt;if $penetrative_virgin is false&gt;&gt;
     &lt;&lt;if $PCgender is "female"&gt;&gt;
       &lt;&lt;if $slave.gender is "female"&gt;&gt;
@@ -1195,7 +1156,8 @@ $slave.They
 &lt;&lt;if $money gte $price&gt;&gt;[["Purchase " + $slave.name + " and add another slave"|First Slave][$money -= $price, $slaves_owned.push($slave) ]]
 [["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]&lt;&lt;/if&gt;&gt;
 [["Pass on " + $slave.name + " and inspect another slave"|First Slave]]
-[[Go home-&gt;Home]]</tw-passagedata><tw-passagedata pid="13" name="Home" tags="home" position="">&lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
+[[Go home-&gt;Home]]
+/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="13" name="Home" tags="home" position="">&lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
 &lt;&lt;print "[[$slaves_owned[_i].name|Manage Slave][$currentSlave to $slaves_owned[" + _i + "]]]"&gt;&gt;, $slaves_owned[_i].gender, $slaves_owned[_i].age
 ''Assignment:'' $slaves_owned[_i].assignment_short
 &lt;&lt;nobr&gt;&gt;
@@ -1323,6 +1285,9 @@ Masturbation rules: $currentSlave.sex_rules_short
 
 Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &lt;&lt;nobr&gt;&gt;
+  
+  /* Please don't modify this file unless you know Sugarcube! */
+  
     &lt;&lt;set $finger_pussy_reaction to [
     
     "sighs happily as you make her even wetter",
@@ -1338,7 +1303,7 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     ]&gt;&gt;
     &lt;&lt;set $finger_ass_reaction to [
     
-    "sighs happily as you slowly finger fuck $currentSlave.their tight ass",
+    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
     
     "flinches away from your touch",
     
@@ -1346,7 +1311,7 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     
     "leans into you for more",
     
-    "tries to chase the sensation as you finger $currentSlave.their ass"
+    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
     
     ]&gt;&gt;
   
@@ -1578,125 +1543,41 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Manage Domain" tags="" position=""></tw-passagedata><tw-passagedata pid="16" name="Buy Slaves" tags="" position="">&lt;&lt;nobr&gt;&gt;
+
+/* Please don't modify this file unless you know Sugarcube! */
+
+
   &lt;&lt;nobr&gt;&gt;
+  
+  /* Please don't modify this file unless you know how to make adjustments to the variables you're changing or adding! */
   
   &lt;&lt;set $slavegender to either("male", "female")&gt;&gt;
   
-  &lt;&lt;set $femaleNames to [ "Jessica", "Mary", "Meredith", "Wanda", "Natalie", "Pepper", "Peggy", "Dottie", "Angie", "Rhonda", "Genevieve", "Vivian", "Natasha", "Pamela", "Millie", "Miriam", "Judith", "Elizabeth", "Bess", "Liz", "Lissa", "Linda", "Susan", "Jezebel", "Ruth", "Sharon", "Deborah", "Tina", "Christina", "Therese", "Rita", "Grace", "Hazel", "Ava", "Eva", "Lilith", "Lilias", "Alicia", "Regina", "Sally", "Maria", "Ida", "Joy", "Stella", "Lydia", "Olga", "Ivana", "Daisy", "Marguerite", "Cecilia", "Inez", "Roxanne", "Victoria", "Lily", "Rose", "Violet", "Vanessa", "Heather", "Sarah", "Ashley", "Isabella", "Emily", "Brianna", "Mia", "Samantha", "Sophia", "Melanie", "Genesis", "Kimberly", "Angelina", "Madison", "Gabriella", "Camila", "Jennifer", "Alyssa", "Sofia", "Arianna", "Hailey", "Maria", "Kayla", "Abigail", "Gabriela", "Victoria", "Stephanie", "Allison", "Vanessa", "Emma", "Daniela", "Evelyn", "Sofía", "Marti", "Valenti", "Mía", "Isabella", "María", "Zoe", "Catali", "Emma", "Alma", "Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valenti", "Maria", "Eduarda", "Sofía", "Emilia", "Isidora", "Florencia", "Antonella", "Marti", "Maite", "Amanda", "Josefa", "Agusti", "Maria", "Valenti", "Isabella", "Sofía", "Valeria", "María", "José", "Gabriela", "Sara", "Salomé", "Daniela", "Xime", "Valenti", "María", "Fernanda", "Sofía", "María", "Marti", "Emilia", "Zoe", "Mia", "Dulce", "María", "María", "Elizabeth", "Beatriz", "Ramo", "Liz", "Concepción", "Caroli", "Mabel", "Raquel", "Noemí", "María", "Camila", "Fernanda", "Milagros", "Luz", "Abigail", "Aria", "Lucia", "Alexandra", "Florencia", "Lucía", "Agusti", "Camila", "Julia", "Julieta", "Sofía", "Abril", "Paula", "Micaela", "Camila", "Isabella", "Sofía", "Victoria", "Valenti", "Valeria", "Nicole", "Samantha", "Maria", "Antonella", "Madison", "Kayla", "Makayla", "Nevaeh", "Jada", "Brianna", "Chloe", "Destiny", "Alyssa", "Gabrielle", "Imani", "Kimora", "Aaliyah", "Jayla", "Abigail", "Arianna", "Ava", "Fatoumata", "Jade", "London", "Savannah", "Victoria", "Aniyah", "Nyla", "Olivia", "Taylor", "Ashley", "Sarah", "Jasmine", "Laila", "Chelsea", "Heaven", "Sophia", "Chloe", "Emily", "Tiffany", "Fiona", "Isabella", "Olivia", "Sarah", "Angela", "Vivian", "Nicole", "Rachel", "Michelle", "Ashley", "Grace", "Joyce", "Anna", "Sophie", "Fatima", "Jasmine", "Jenny", "Jessica", "Cindy", "Emma", "Hannah", "Amy", "Angelina", "Mia", "Shaimaa", "Fatma", "Maha", "Farida", "Aya", "Shahd", "Ashraqat", "Sahar", "Fatin", "Dalal", "Doha", "Suha", "Rowan", "Hosniya", "Hasnaa", "Hosna", "Gamila", "Gamalat", "Habiba", "Aya", "Rania", "Sarah", "Reem", "Hoda", "Marwa", "Fatima", "Eisha", "Nesreen", "Fatoumata", "Mariam", "Aminata", "Hawa", "Awa", "Oumou", "Djeneba", "Bintou", "Fanta", "Kadiatou", "Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Saida", "Mariam", "Shayma", "Khawla", "Ana", "Amanda", "Fernanda", "Julia", "Mariana", "Camila", "leticia", "Larissa", "Beatriz", "Natália", "Thais", "Juliana", "Vitoria", "Jessica", "Luana", "Laura", "Bruna", "Rafaela", "Maria", "Isabela", "Barbara", "Carolina", "Aline", "Anna", "Brenda", "Lívia", "Victória", "Gabrielle", "Andressa", "Maria", "Clara", "Raquel", "Daniela", "Ana", "Clara", "Marcela", "Luiza", "Giovanna", "Stephanie", "Caroline", "Raissa", "Aléxia", "Milena", "Nathalia", "Clara", "Taynara", "Sabrina", "Ana", "Luiza", "Yasmin", "Carla", "Helena", "Ah", "Ai", "An", "Bai", "Bao", "Bi", "Bo", "Cai", "Chang", "Chao", "Chen", "Cheng", "Chin", "Chun", "Da", "Dan", "Fang", "Fen", "Fu", "Guanting", "Guanyu", "Guiying", "Guo", "Hai", "He", "Heng", "Hong", "Hua", "Huan", "Huang", "Hui", "Jia", "Jian", "Jiang", "Jie", "Jin", "Jing", "Jingyi", "Ju", "Juan", "Jun", "Kun", "Lan", "Lei", "Li", "Lian", "Lili", "Lim", "Lin", "Ling", "Mei", "Min", "Ming", "Mu", "Na", "Ni", "Ning", "Nuan", "Ping", "Qian", "Qing", "Qiong", "Qiu", "Rong", "Ru", "Shan", "Shi", "Shu", "Shufen", "Shui", "Shun", "Su", "Tai", "Ting", "Tingting", "Tu", "Wei", "Wen", "Wu", "Xia", "Xian", "Xiang", "Xiaomei", "Xiaoyan", "Xinyi", "Xiu", "Xiulan", "Xiuying", "Xue", "Xun", "Ya", "Yahui", "Yaling", "Yan", "Yang", "Yating", "Yawen", "Yazhu", "Yi", "Yijun", "Yin", "Ying", "Yong", "Yu", "Yun", "Zan", "Zedong", "Zhen", "Zheng", "Zhi", "Zhihao", "Zhong", "Zhou", "Aadhya", "Ananya", "Saanvi", "Aaradhya", "Anaya", "Aanya", "Anika", "Pari", "Myra", "Shanaya", "Ananya", "Anika", "Aradhya", "Harini", "Navya", "Ridhi", "Rishika", "Sanvi", "Shreya", "Ai", "Aika", "Aiko", "Aimi", "Aina", "Airi", "Akane", "Akari", "Akemi", "Aki", "Akiko", "Akira", "Ami", "Anna", "Aoi", "Asuka", "Atsuko", "Aya", "Ayaka", "Ayako", "Ayame", "Ayane", "Ayano", "Ayumi", "Chihiro", "Chika", "Chikako", "Chinatsu", "Chiyo", "Chiyoko", "Cho", "Chou", "Chouko", "Emi", "Erika", "Etsuko", "Hana", "Hanae", "Hanako", "Haru", "Haruka", "Haruko", "Haruna", "Hibiki", "Hikari", "Hikaru", "Hina", "Hinata", "Hiroko", "Hitomi", "Honoka", "Hoshi", "Hoshiko", "Hotaru", "Izumi", "Junko", "Kaede", "Kana", "Kanako", "Kanon", "Kaori", "Kaoru", "Kasumi", "Kazue", "Kazuko", "Keiko", "Kiku", "Kimiko", "Kiyoko", "Kohaku", "Koharu", "Kokoro", "Kotone", "Kumiko", "Kyo", "Kyou", "Mai", "Makoto", "Mami", "Manami", "Mao", "Mari", "Mariko", "Marina", "Masami", "Masuyo", "Mayu", "Megumi", "Mei", "Michi", "Michiko", "Midori", "Miho", "Mika", "Miki", "Miku", "Minako", "Minami", "Minato", "Minoru", "Mio", "Misaki", "Mitsuko", "Miu", "Miyako", "Miyu", "Mizuki", "Moe", "Momoka", "Momoko", "Moriko", "Nana", "Nanako", "Nanami", "Nao", "Naoko", "Naomi", "Natsuki", "Natsuko", "Natsumi", "Noa", "Noriko", "Ran", "Rei", "Ren", "Riko", "Rin", "Rina", "Rio", "Risa", "Sachiko", "Saki", "Sakura", "Sakurako", "Satomi", "Saya", "Sayaka", "Sayuri", "Setsuko", "Shiho", "Shinju", "Shinobu", "Shiori", "Shizuka", "Shun", "Sora", "Sumiko", "Suzu", "Suzume", "Takako", "Takara", "Tamiko", "Tomiko", "Tomoko", "Tomomi", "Tsubaki", "Tsubame", "Tsubasa", "Tsukiko", "Ume", "Umeko", "Wakana", "Yasu", "Yoko", "Yoshi", "Yoshiko", "Youko", "Yua", "Yui", "Yuina", "Yuki", "Yukiko", "Yuko", "Yumi", "Yumiko", "Yuri", "Yuu", "Yuuka", "Yuuki", "Yuuko", "Yuuna", "Yuzuki", "Noor", "Anam", "Karen", "Ayesha", "Mishael", "Mariam", "Aisha", "Faiza", "Zakia", "Aanya", "Komal", "Hajra", "Ifrah", "Lintah", "Leah", "Tooba", "Asma", "Kheezran", "Sana", "Riasat", "Saima", "Mahrukh", "Haniya", "Mariyam", "Umara", "Zuny", "Sajida", "Rameen", "Unsa", "Neha", "Rabia", "Rida", "Zainnah", "Ameria", "Sarah", "Asmi", "Mizha", "Ruby", "Areeba", "Zainab", "Momna", "Rue", "Eraj", "Sara", "Krishma", "Alayna", "Usmaan", "Kainat", "Imama", "Sana", "Anna", "Maria", "Julia", "Katharina", "Katarina", "Catharina", "Eva", "Christina", "Kristina", "Monika", "Monica", "Karin", "Carin", "Sabine", "Susanne", "Christine", "Kristine", "Barbara", "Claudia", "Heike", "Marion", "Katrin", "Kathrin", "Cathrin", "Catrin", "Sarah", "Sara", "Ursula", "Lisa", "Brigitte", "Stefanie", "Stephanie", "Renate", "Elke", "Petra", "Birgit", "Jutta", "Nina", "Jana", "Ingrid", "Annika", "Marie", "Anke", "Andrea", "Sonja", "Lena", "Hannah", "Hanna", "Jasmin", "Yasmin", "Johanna", "Silvia", "Sylvia", "Sandra", "Ute", "Anja", "Anne", "Helga", "Nicole", "Christiane", "Kristiane", "Gisela", "Giesela", "Laura", "Carolin", "Caroline", "Karoline", "Elisabeth", "Ulrike", "Christa", "Krista", "Jessica", "Jessika", "Melanie", "Gabriele", "Martina", "Angelika", "Angelica", "Kerstin", "Daniela", "Alexandra", "Maike", "Meike", "Franziska", "Jennifer", "Sigrid", "Siegrid", "Hannelore", "Erika", "Erica", "Astrid", "Angela", "Silke", "Sylke", "Bärbel", "Rita", "Doris", "Lea", "Leah", "Vanessa", "Antje", "Nadine", "Christel", "Kristel", "Marianne", "Katja", "Regina", "Tanja", "Tania", "Inge", "Dagmar", "Maren", "Alina", "Sophie", "Sofie", "Gudrun", "Kornelia", "Cornelia", "Lara", "Waltraud", "Waltraut", "Bettina", "Leoni", "Leonie", "Ingeborg", "Rosemarie", "Manuela", "Ivonne", "Yvonne", "Beate", "Heidi", "Luisa", "Louisa", "Isabel", "Isabell", "Isabelle", "Marlies", "Nele", "Neele", "Natalie", "Nathalie", "Charlotte", "Annette", "Anette", "Britta", "Michaela", "Svenja", "Swenja", "Kirsten", "Gerda", "Simone", "Sabrina", "Ilse", "Sophia", "Sofia", "Lina", "Hildegard", "Hilde", "Janina", "Bianca", "Bianka", "Irmgard", "Edith", "Miriam", "Antonia", "Irene", "Ruth", "Michelle", "Pia", "Kim", "Ann", "Margret", "Margrit", "Jacqueline", "Jaqueline", "Emma", "Janin", "Janine", "Vera", "Wera", "Clara", "Klara", "Melina", "Josephine", "Josefine", "Elena", "Emily", "Emilie", "Emmily", "Anneliese", "Annelise", "Paula", "Victoria", "Viktoria", "Christin", "Kristin", "Corinna", "Lilli", "Lilly", "Margot", "Carmen", "Marina", "Annegret", "Saskia", "Sina", "Sinah", "Evelyn", "Evelin", "Eveline", "Celina", "Eileen", "Aileen", "Ayleen", "Aylin", "Tatjana", "Gertrud", "Ilona", "Mia", "Carina", "Karina", "Lieselotte", "Liselotte", "Maja", "Maya", "Iris", "Elfriede", "Merle", "Roswitha", "Roswita", "Denise", "Annemarie", "Wiebke", "Wibke", "Amelie", "Amely", "Jule", "Margarethe", "Margarete", "Heidemarie", "Olga", "Carla", "Karla", "Ines", "Mareike", "Vivien", "Vivienne", "Celine", "Céline", "Chiara", "Kiara", "Uta", "Dorothea", "Rebecca", "Rebekka", "Ellen", "Carola", "Karola", "Finja", "Finnja", "Mandy", "Anita", "Tina", "Verena", "Diana", "Patricia", "Patrizia", "Edeltraut", "Edeltraud", "Lidia", "Lydia", "Gabriela", "Emilia", "Melissa", "Sibylle", "Sybille", "Birte", "Heidrun", "Ina", "Marlene", "Angelina", "Pauline", "Linda", "Frauke", "Zoe", "Zoé", "Juliane", "Traute", "Larissa", "Karen", "Caren", "Ursel", "Leni", "Theresa", "Teresa", "Jenny", "Inga", "Ronja", "Greta", "Lucy", "Lucie", "Emely", "Emelie", "Emmely", "Hertha", "Herta", "Irma", "Erna", "Käthe", "Fiona", "Nadja", "Hella", "Hilde", "Irina", "Marita", "Frieda", "Frida", "Gabi", "Gaby", "Helena", "Ida", "Marga", "Helene", "Selina", "Nolo", "Lia", "Liah", "Gina", "Judith", "Heide", "Carlotta", "Karlotta", "Luise", "Louise", "Stella", "Kimberly", "Kimberley", "Dörte", "Dörthe", "Martha", "Marta", "Ingeburg", "Kira", "Kyra", "Jette", "Emma", "Léa", "Chloé", "Manon", "Inès", "Lola", "Jade", "Camille", "Sarah", "Louise", "Zoé", "Lilou", "Lena", "Maëlys", "Clara", "Irina", "Eva", "Lina", "Anaïs", "Louna", "Romane", "Juliette", "Lucie", "Ambre", "Alice", "Lou", "Lisa", "Clémence", "Jeanne", "Louane", "Mathilde", "Océane", "Charlotte", "Marie", "Noémie", "Celia", "Anna", "Nina", "Pauline", "Lana", "Laura", "Lily", "Léonie", "Alicia", "Julie", "Julia", "Rose", "Margaux", "Élise", "Melina", "Luna", "Elisa", "Margot", "Elsa", "Maëlle", "Mélissa", "Justine", "Maeva", "Agathe", "Elena", "Inaya", "Leane", "Éloïse", "Émilie", "Yasmine", "Faustine", "Sara", "Gabrielle", "Anaelle", "Sofia", "Marion", "Leana", "Capucine", "Maya", "Olivia", "Maissa", "Valentine", "Mila", "Salomé", "Aya", "Morgane", "Emy", "Elea", "Kenza", "Lise", "Adèle", "Méline", "Amandine", "Zelie", "Emmy", "Victoria", "Assia", "Héloïse", "Ninon", "Candice", "Lyna", "Stella", "Manel", "Thais", "Apolline", "Cloé", "Marine", "Alix", "Loane", "Lila", "Lylou", "Enola", "Charline", "Clementine", "Anae", "Victoire", "Andrea", "Shana", "Elina", "Lison", "Eden", "Myriam", "Nour", "Cassandra", "Enora", "Constance", "Alyssa", "Tess", "Angelina", "Amélie", "Lucile", "Coline", "Clea", "Lilia", "Garance", "Eléonore", "Clarisse", "Fanny", "Selma", "LilyRose", "Sasha", "Axelle", "Solène", "Chiara", "Flora", "Marwa", "Laly", "Nora", "Leila", "Roxane", "Alexia", "Eline", "Mailys", "Cassandre", "Hanae", "Maeline", "Lilly", "Salma", "Sirine", "Anouk", "Lili", "Anissa", "LouAnn", "Rachel", "Camelia", "Romy", "Violette", "Maelie", "Iris", "Amina", "Chaima", "Maely", "LouAnne", "Lya", "Selena", "Tessa", "Sophie", "Charlie", "Carla", "Maryam", "Céleste", "Naomie", "Melinda", "Mia", "Farah", "Kelya", "Laurine", "Maia", "Claire", "Sana", "Kelly", "Noelie", "Angèle", "Estelle", "Ema", "Ilona", "Diane", "Amelia", "Emeline", "Helena", "Joséphine", "Lara", "Louisa", "Imane", "Serena", "Louanne", "Naila", "Paloma", "Amel", "Asma", "Fatima", "Maria", "Alycia", "Alizee", "Aicha", "Aurore", "Alexandra", "Lindsay", "Naomi", "Fatoumata", "Eve", "Albane", "Daphné", "Élodie", "Jasmine", "Ella", "Kiara", "Rania", "Melody", "Elia", "Shaina", "Ana", "Flavie", "Lalie", "Syrine", "Ava", "Giulia", "Mayssa", "Suzanne", "Norah", "Ilyana", "Maelyne", "Dounia", "Mariam", "Aliya", "Mélanie", "Naelle", "Elyne", "Dina", "Coralie", "Maiwenn", "Wendy", "Sophia", "Amira", "Shanna", "Esther", "Hanna", "Nesrine", "Alya", "Kelia", "Orlane", "Eloane", "Malak", "Yousra", "Ilana", "Shayna", "Noeline", "Clelia", "Jessica", "Perrine", "Maylis", "Marina", "Elya", "Khadija", "Mellina", "Mya", "Soline", "Leona", "Line", "Louison", "Mae", "Raphaëlle", "Audrey", "Aminata", "Blanche", "Noa", "Thea", "Berenice", "Oriane", "Marilou", "Neila", "Eugénie", "Hajar", "Jenna", "Pénélope", "Imene", "Lilya", "Marylou", "Cassie", "Leyna", "Maissane", "Safia", "Yaelle", "Cyrielle", "Laure", "Safa", "Ludivine", "Lucy", "Livia", "Sabrina", "Tiphaine", "Ashley", "Ophélie", "Lia", "Maily", "Calie", "Leia", "Maud", "Melodie", "Kahina", "Nawel", "Charlene", "Madeleine", "Melyne", "Emmie", "Emie", "Erine", "Lilie", "Paola", "Yuna", "Izia", "Hana", "Louann", "Cleo", "Melyna", "Yael", "Soumaya", "Meriem", "Caroline", "Annaelle", "Hélène", "Juline", "Jihane", "Hortense", "Laetitia", "Leanne", "Soraya", "Aliyah", "Ambrine", "Elora", "Lylia", "Sonia", "Assya", "Celya", "Rébecca", "Iliana", "LiliRose", "Angeline", "Hafsa", "Hawa", "Mina", "Amy", "Angela", "Kim", "Maelia", "Bertille", "Leina", "Lilas", "Ornella", "Sidonie", "Thalia", "Hind", "Johanna", "Manelle", "Melia", "Aurélie", "Nayla", "Zahra", "Tatiana", "Sixtine", "Isaure", "Maellys", "Tina", "Flore", "Lorena", "Tania", "Joana", "Leelou", "Aline", "Ela", "Elif", "Janna", "Kayla", "Lilwenn", "Naya", "Rosalie", "Elyna", "Hannah", "Lydia", "Anastasia", "Elona", "Linda", "Nell", "Élisabeth", "Isis", "Mona", "Nais", "Neyla", "Maimouna", "Sherine", "Cali", "Céline", "Judith", "Samia", "Deborah", "Emna", "Fleur", "Florine", "Zia", "Nelia", "Annabelle", "Cécile", "Cecilia", "Gwendoline", "Vanessa", "Emily", "Célestine", "Naia", "Prune", "Selene", "Astrid", "Chayma", "Janelle", "Kessy", "Kyara", "Yasmina", "Abigael", "Carmen", "Clotilde", "Gaëlle", "Grace", "Meissa", "Chahinez", "Naima", "Taina", "Eleana", "Fantine", "Hiba", "Nisa", "Alienor", "Isra", "Diana", "Sakina", "Kamelia", "Lamia", "Lucille", "Meryem", "Philomène", "Tiffany", "Youna", "Lucia", "Malia", "Milla", "Halima", "Joy", "Joyce", "Nada", "Philippine", "Kaina", "Loanne", "Kayna", "Augustine", "Gabriella", "Sacha", "Safiya", "Tamara", "Elissa", "Lois", "Lyana", "Savannah", "Shaima", "Talia", "Aaliyah", "Emmanuelle", "Fatma", "Adriana", "Aleyna", "Ibtissem", "Kimberley", "Liana", "Maelyss", "Awa", "Liya", "Luce", "Maelly", "Soukaina", "Suzie", "Jana", "Layana", "Nola", "Rahma", "Alessia", "Alia", "Alyssia", "Athénaïs", "Eya", "Gwenaëlle", "Imen", "Maina", "Emily", "Chloe", "Megan", "Charlotte", "Emma", "Lauren", "Hannah", "Ellie", "Sophie", "Katie", "Amy", "Lucy", "Olivia", "Jessica", "Georgia", "Rebecca", "Holly", "Sarah", "Caitlin", "Beth", "Bethany", "Molly", "Grace", "Shannon", "Rachel", "Jess", "Alice", "Laura", "Abbie", "Ella", "Amber", "Jade", "Anna", "Jasmine", "Zoe", "Leah", "Rosie", "Mia", "Phoebe", "Lily", "Becky", "Erin", "Courtney", "Niamh", "Kate", "Louise", "Natalie", "Eleanor", "Charlie", "Lydia" ] &gt;&gt;
-  
-  &lt;&lt;set $maleNames to [ "Victor", "Alex", "Alexander", "Martin", "Steve", "Tony", "Bucky", "James", "Robert", "Ivan", "John", "William", "Richard", "Dick", "Charles", "Joseph", "Thomas", "Chris", "Christopher", "Mark", "Edward", "Anthony", "Scott", "Brian", "Jason", "Cassius", "Lawrence", "Manuel", "Iago", "Jacob", "Lee", "Francis", "Sue", "Frederick", "Theodore", "Miguel", "Pedro", "Maurice", "Ricardo", "Rafael", "Cecil", "Carlos", "Julio", "Felix", "Yoshi", "Hideyoshi", 'Trent',
-  'Irvin',
-  'Freddy',
-  'Bryant',
-  'Erin',
-  'Marlon',
-  'Augustine',
-  'Elton',
-  'Tyree',
-  'Adalberto',
-  'Gerry',
-  'Logan',
-  'Mike',
-  'Jerome',
-  'Eldon',
-  'Newton',
-  'Walter',
-  'Rene',
-  'Anibal',
-  'Ira',
-  'Kurt',
-  'Marion',
-  'Rick',
-  'Owen',
-  'Wilbert',
-  'Ty',
-  'Giovanni',
-  'Vance',
-  'Damian',
-  'Ashley',
-  'Lemuel',
-  'Deon',
-  'Ernesto',
-  'Rocco',
-  'Archie',
-  'Sherwood',
-  'Michel',
-  'Vince',
-  'Robbie',
-  'Chauncey',
-  'Alonzo',
-  'Eloy',
-  'Bill',
-  'Johnnie',
-  'Samuel',
-  'Margarito',
-  'Alvin',
-  'Scotty',
-  'Forrest',
-  'Wilfredo',
-  'Ollie',
-  'Rickey',
-  'Joey',
-  'Kenny',
-  'Bennie',
-  'Bill',
-  'Shayne',
-  'Keven',
-  'Mark',
-  'Jarvis',
-  'Dane',
-  'Wayne',
-  'Alphonso',
-  'Bobbie',
-  'Oren',
-  'Berry',
-  'Kennith',
-  'Benedict',
-  'Arnoldo',
-  'Harold',
-  'Taylor',
-  'Dexter',
-  'Vernon',
-  'Dino',
-  'Maria',
-  'Alfonzo',
-  'Pablo',
-  'Jay',
-  'Elroy',
-  'Neil',
-  'Woodrow',
-  'Irving',
-  'Michal',
-  'Fernando',
-  'Eduardo',
-  'Christopher',
-  'Bob',
-  'Colby',
-  'Luther',
-  'Julius',
-  'Derek',
-  'Pasquale',
-  'Sebastian',
-  'Ronnie',
-  'Augustus',
-  'Leon',
-  'Gilbert',
-  'Morton',
-  'Carmine',
-  'Whitney',
-   ] &gt;&gt;
-  
-  &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
-  &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
-  &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
-  
-  &lt;&lt;set $height to [ "very short", "short", "average height", "tall", "very tall" ] &gt;&gt;
-  &lt;&lt;set $hair to [ "red", "blond", "auburn", "mousy brown", "very light", "salt and pepper", "black", "gray"] &gt;&gt;
-  &lt;&lt;set $hair_style to [ "neatly braided", "dreadlocked", "long and straight", "long and wavy", "pinned up", "shaved", "tight and curly", "buzzed", "short and spiky", "soft and curly", "messily curled", "closely shaved"] &gt;&gt;
-  &lt;&lt;set $eyes to [ "blue", "green", "very dark", "black", "gray", "hazel", "light blue", "brown"] &gt;&gt;
-  &lt;&lt;set $skin to [ "pale", "light and freckled", "tan", "ruddy", "olive", "brown", "very dark"] &gt;&gt;
-  &lt;&lt;set $physique to [ "fit and athletic", "rounded and soft", "toned and well muscled", "a bit chubby", "nicely plump", "very dainty", "buff and very muscular", "heavyset and powerful", "soft and cuddly", "chiseled like marble"] &gt;&gt;
-  &lt;&lt;set $pubic to [ "waxed completely bare", "shaved to a neat strip", "trimmed neatly", "left completely natural"] &gt;&gt;
+    /* To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets */
+    
+    &lt;&lt;set $height to [ "very short", "short", "average height", "tall", "very tall" ] &gt;&gt;
+    
+    &lt;&lt;set $hair to [ "red", "blond", "auburn", "mousy brown", "very light", "salt and pepper", "black", "gray"] &gt;&gt;
+    
+    &lt;&lt;set $hair_style to [ "neatly braided", "dreadlocked", "long and straight", "long and wavy", "pinned up", "shaved", "tight and curly", "buzzed", "short and spiky", "soft and curly", "messily curled", "closely shaved"] &gt;&gt;
+    
+    &lt;&lt;set $eyes to [ "blue", "green", "very dark", "black", "gray", "hazel", "light blue", "brown"] &gt;&gt;
+    
+    &lt;&lt;set $skin to [ "pale", "light and freckled", "tan", "ruddy", "olive", "brown", "very dark"] &gt;&gt;
+    
+    /* A general physical description.  Should be in the format of "Overall, he appears [your description]".  Should be gender neutral. */
+    
+    &lt;&lt;set $physique to [ "fit and athletic", "rounded and soft", "toned and well muscled", "a bit chubby", "nicely plump", "very dainty", "buff and very muscular", "heavyset and powerful", "soft and cuddly", "chiseled like marble"] &gt;&gt;
+    
+    /* Pubic hair style.  Should be in the format of "His pubic hair is [your text]" */
+    
+    &lt;&lt;set $pubic to [ "waxed completely bare", "shaved to a neat strip", "trimmed neatly", "left completely natural"] &gt;&gt;
+    
+    &lt;&lt;set $femaleNames to [ "Jessica", "Mary", "Meredith", "Wanda", "Natalie", "Pepper", "Peggy", "Dottie", "Angie", "Rhonda", "Genevieve", "Vivian", "Natasha", "Pamela", "Millie", "Miriam", "Judith", "Elizabeth", "Bess", "Liz", "Lissa", "Linda", "Susan", "Jezebel", "Ruth", "Sharon", "Deborah", "Tina", "Christina", "Therese", "Rita", "Grace", "Hazel", "Ava", "Eva", "Lilith", "Lilias", "Alicia", "Regina", "Sally", "Maria", "Ida", "Joy", "Stella", "Lydia", "Olga", "Ivana", "Daisy", "Marguerite", "Cecilia", "Inez", "Roxanne", "Victoria", "Lily", "Rose", "Violet", "Vanessa", "Heather", "Sarah", "Ashley", "Isabella", "Emily", "Brianna", "Mia", "Samantha", "Sophia", "Melanie", "Genesis", "Kimberly", "Angelina", "Madison", "Gabriella", "Camila", "Jennifer", "Alyssa", "Sofia", "Arianna", "Hailey", "Maria", "Kayla", "Abigail", "Gabriela", "Victoria", "Stephanie", "Allison", "Vanessa", "Emma", "Daniela", "Evelyn", "Sofía", "Marti", "Valenti", "Mía", "Isabella", "María", "Zoe", "Catali", "Emma", "Alma", "Sophia", "Alice", "Julia", "Isabella", "Manuela", "Laura", "Luiza", "Valenti", "Maria", "Eduarda", "Sofía", "Emilia", "Isidora", "Florencia", "Antonella", "Marti", "Maite", "Amanda", "Josefa", "Agusti", "Maria", "Valenti", "Isabella", "Sofía", "Valeria", "María", "José", "Gabriela", "Sara", "Salomé", "Daniela", "Xime", "Valenti", "María", "Fernanda", "Sofía", "María", "Marti", "Emilia", "Zoe", "Mia", "Dulce", "María", "María", "Elizabeth", "Beatriz", "Ramo", "Liz", "Concepción", "Caroli", "Mabel", "Raquel", "Noemí", "María", "Camila", "Fernanda", "Milagros", "Luz", "Abigail", "Aria", "Lucia", "Alexandra", "Florencia", "Lucía", "Agusti", "Camila", "Julia", "Julieta", "Sofía", "Abril", "Paula", "Micaela", "Camila", "Isabella", "Sofía", "Victoria", "Valenti", "Valeria", "Nicole", "Samantha", "Maria", "Antonella", "Madison", "Kayla", "Makayla", "Nevaeh", "Jada", "Brianna", "Chloe", "Destiny", "Alyssa", "Gabrielle", "Imani", "Kimora", "Aaliyah", "Jayla", "Abigail", "Arianna", "Ava", "Fatoumata", "Jade", "London", "Savannah", "Victoria", "Aniyah", "Nyla", "Olivia", "Taylor", "Ashley", "Sarah", "Jasmine", "Laila", "Chelsea", "Heaven", "Sophia", "Chloe", "Emily", "Tiffany", "Fiona", "Isabella", "Olivia", "Sarah", "Angela", "Vivian", "Nicole", "Rachel", "Michelle", "Ashley", "Grace", "Joyce", "Anna", "Sophie", "Fatima", "Jasmine", "Jenny", "Jessica", "Cindy", "Emma", "Hannah", "Amy", "Angelina", "Mia", "Shaimaa", "Fatma", "Maha", "Farida", "Aya", "Shahd", "Ashraqat", "Sahar", "Fatin", "Dalal", "Doha", "Suha", "Rowan", "Hosniya", "Hasnaa", "Hosna", "Gamila", "Gamalat", "Habiba", "Aya", "Rania", "Sarah", "Reem", "Hoda", "Marwa", "Fatima", "Eisha", "Nesreen", "Fatoumata", "Mariam", "Aminata", "Hawa", "Awa", "Oumou", "Djeneba", "Bintou", "Fanta", "Kadiatou", "Fatima", "Khadija", "Aicha", "Malika", "Naima", "Rachida", "Nadia", "Karima", "Saida", "Mariam", "Shayma", "Khawla", "Ana", "Amanda", "Fernanda", "Julia", "Mariana", "Camila", "leticia", "Larissa", "Beatriz", "Natália", "Thais", "Juliana", "Vitoria", "Jessica", "Luana", "Laura", "Bruna", "Rafaela", "Maria", "Isabela", "Barbara", "Carolina", "Aline", "Anna", "Brenda", "Lívia", "Victória", "Gabrielle", "Andressa", "Maria", "Clara", "Raquel", "Daniela", "Ana", "Clara", "Marcela", "Luiza", "Giovanna", "Stephanie", "Caroline", "Raissa", "Aléxia", "Milena", "Nathalia", "Clara", "Taynara", "Sabrina", "Ana", "Luiza", "Yasmin", "Carla", "Helena", "Ah", "Ai", "An", "Bai", "Bao", "Bi", "Bo", "Cai", "Chang", "Chao", "Chen", "Cheng", "Chin", "Chun", "Da", "Dan", "Fang", "Fen", "Fu", "Guanting", "Guanyu", "Guiying", "Guo", "Hai", "He", "Heng", "Hong", "Hua", "Huan", "Huang", "Hui", "Jia", "Jian", "Jiang", "Jie", "Jin", "Jing", "Jingyi", "Ju", "Juan", "Jun", "Kun", "Lan", "Lei", "Li", "Lian", "Lili", "Lim", "Lin", "Ling", "Mei", "Min", "Ming", "Mu", "Na", "Ni", "Ning", "Nuan", "Ping", "Qian", "Qing", "Qiong", "Qiu", "Rong", "Ru", "Shan", "Shi", "Shu", "Shufen", "Shui", "Shun", "Su", "Tai", "Ting", "Tingting", "Tu", "Wei", "Wen", "Wu", "Xia", "Xian", "Xiang", "Xiaomei", "Xiaoyan", "Xinyi", "Xiu", "Xiulan", "Xiuying", "Xue", "Xun", "Ya", "Yahui", "Yaling", "Yan", "Yang", "Yating", "Yawen", "Yazhu", "Yi", "Yijun", "Yin", "Ying", "Yong", "Yu", "Yun", "Zan", "Zedong", "Zhen", "Zheng", "Zhi", "Zhihao", "Zhong", "Zhou", "Aadhya", "Ananya", "Saanvi", "Aaradhya", "Anaya", "Aanya", "Anika", "Pari", "Myra", "Shanaya", "Ananya", "Anika", "Aradhya", "Harini", "Navya", "Ridhi", "Rishika", "Sanvi", "Shreya", "Ai", "Aika", "Aiko", "Aimi", "Aina", "Airi", "Akane", "Akari", "Akemi", "Aki", "Akiko", "Akira", "Ami", "Anna", "Aoi", "Asuka", "Atsuko", "Aya", "Ayaka", "Ayako", "Ayame", "Ayane", "Ayano", "Ayumi", "Chihiro", "Chika", "Chikako", "Chinatsu", "Chiyo", "Chiyoko", "Cho", "Chou", "Chouko", "Emi", "Erika", "Etsuko", "Hana", "Hanae", "Hanako", "Haru", "Haruka", "Haruko", "Haruna", "Hibiki", "Hikari", "Hikaru", "Hina", "Hinata", "Hiroko", "Hitomi", "Honoka", "Hoshi", "Hoshiko", "Hotaru", "Izumi", "Junko", "Kaede", "Kana", "Kanako", "Kanon", "Kaori", "Kaoru", "Kasumi", "Kazue", "Kazuko", "Keiko", "Kiku", "Kimiko", "Kiyoko", "Kohaku", "Koharu", "Kokoro", "Kotone", "Kumiko", "Kyo", "Kyou", "Mai", "Makoto", "Mami", "Manami", "Mao", "Mari", "Mariko", "Marina", "Masami", "Masuyo", "Mayu", "Megumi", "Mei", "Michi", "Michiko", "Midori", "Miho", "Mika", "Miki", "Miku", "Minako", "Minami", "Minato", "Minoru", "Mio", "Misaki", "Mitsuko", "Miu", "Miyako", "Miyu", "Mizuki", "Moe", "Momoka", "Momoko", "Moriko", "Nana", "Nanako", "Nanami", "Nao", "Naoko", "Naomi", "Natsuki", "Natsuko", "Natsumi", "Noa", "Noriko", "Ran", "Rei", "Ren", "Riko", "Rin", "Rina", "Rio", "Risa", "Sachiko", "Saki", "Sakura", "Sakurako", "Satomi", "Saya", "Sayaka", "Sayuri", "Setsuko", "Shiho", "Shinju", "Shinobu", "Shiori", "Shizuka", "Shun", "Sora", "Sumiko", "Suzu", "Suzume", "Takako", "Takara", "Tamiko", "Tomiko", "Tomoko", "Tomomi", "Tsubaki", "Tsubame", "Tsubasa", "Tsukiko", "Ume", "Umeko", "Wakana", "Yasu", "Yoko", "Yoshi", "Yoshiko", "Youko", "Yua", "Yui", "Yuina", "Yuki", "Yukiko", "Yuko", "Yumi", "Yumiko", "Yuri", "Yuu", "Yuuka", "Yuuki", "Yuuko", "Yuuna", "Yuzuki", "Noor", "Anam", "Karen", "Ayesha", "Mishael", "Mariam", "Aisha", "Faiza", "Zakia", "Aanya", "Komal", "Hajra", "Ifrah", "Lintah", "Leah", "Tooba", "Asma", "Kheezran", "Sana", "Riasat", "Saima", "Mahrukh", "Haniya", "Mariyam", "Umara", "Zuny", "Sajida", "Rameen", "Unsa", "Neha", "Rabia", "Rida", "Zainnah", "Ameria", "Sarah", "Asmi", "Mizha", "Ruby", "Areeba", "Zainab", "Momna", "Rue", "Eraj", "Sara", "Krishma", "Alayna", "Usmaan", "Kainat", "Imama", "Sana", "Anna", "Maria", "Julia", "Katharina", "Katarina", "Catharina", "Eva", "Christina", "Kristina", "Monika", "Monica", "Karin", "Carin", "Sabine", "Susanne", "Christine", "Kristine", "Barbara", "Claudia", "Heike", "Marion", "Katrin", "Kathrin", "Cathrin", "Catrin", "Sarah", "Sara", "Ursula", "Lisa", "Brigitte", "Stefanie", "Stephanie", "Renate", "Elke", "Petra", "Birgit", "Jutta", "Nina", "Jana", "Ingrid", "Annika", "Marie", "Anke", "Andrea", "Sonja", "Lena", "Hannah", "Hanna", "Jasmin", "Yasmin", "Johanna", "Silvia", "Sylvia", "Sandra", "Ute", "Anja", "Anne", "Helga", "Nicole", "Christiane", "Kristiane", "Gisela", "Giesela", "Laura", "Carolin", "Caroline", "Karoline", "Elisabeth", "Ulrike", "Christa", "Krista", "Jessica", "Jessika", "Melanie", "Gabriele", "Martina", "Angelika", "Angelica", "Kerstin", "Daniela", "Alexandra", "Maike", "Meike", "Franziska", "Jennifer", "Sigrid", "Siegrid", "Hannelore", "Erika", "Erica", "Astrid", "Angela", "Silke", "Sylke", "Bärbel", "Rita", "Doris", "Lea", "Leah", "Vanessa", "Antje", "Nadine", "Christel", "Kristel", "Marianne", "Katja", "Regina", "Tanja", "Tania", "Inge", "Dagmar", "Maren", "Alina", "Sophie", "Sofie", "Gudrun", "Kornelia", "Cornelia", "Lara", "Waltraud", "Waltraut", "Bettina", "Leoni", "Leonie", "Ingeborg", "Rosemarie", "Manuela", "Ivonne", "Yvonne", "Beate", "Heidi", "Luisa", "Louisa", "Isabel", "Isabell", "Isabelle", "Marlies", "Nele", "Neele", "Natalie", "Nathalie", "Charlotte", "Annette", "Anette", "Britta", "Michaela", "Svenja", "Swenja", "Kirsten", "Gerda", "Simone", "Sabrina", "Ilse", "Sophia", "Sofia", "Lina", "Hildegard", "Hilde", "Janina", "Bianca", "Bianka", "Irmgard", "Edith", "Miriam", "Antonia", "Irene", "Ruth", "Michelle", "Pia", "Kim", "Ann", "Margret", "Margrit", "Jacqueline", "Jaqueline", "Emma", "Janin", "Janine", "Vera", "Wera", "Clara", "Klara", "Melina", "Josephine", "Josefine", "Elena", "Emily", "Emilie", "Emmily", "Anneliese", "Annelise", "Paula", "Victoria", "Viktoria", "Christin", "Kristin", "Corinna", "Lilli", "Lilly", "Margot", "Carmen", "Marina", "Annegret", "Saskia", "Sina", "Sinah", "Evelyn", "Evelin", "Eveline", "Celina", "Eileen", "Aileen", "Ayleen", "Aylin", "Tatjana", "Gertrud", "Ilona", "Mia", "Carina", "Karina", "Lieselotte", "Liselotte", "Maja", "Maya", "Iris", "Elfriede", "Merle", "Roswitha", "Roswita", "Denise", "Annemarie", "Wiebke", "Wibke", "Amelie", "Amely", "Jule", "Margarethe", "Margarete", "Heidemarie", "Olga", "Carla", "Karla", "Ines", "Mareike", "Vivien", "Vivienne", "Celine", "Céline", "Chiara", "Kiara", "Uta", "Dorothea", "Rebecca", "Rebekka", "Ellen", "Carola", "Karola", "Finja", "Finnja", "Mandy", "Anita", "Tina", "Verena", "Diana", "Patricia", "Patrizia", "Edeltraut", "Edeltraud", "Lidia", "Lydia", "Gabriela", "Emilia", "Melissa", "Sibylle", "Sybille", "Birte", "Heidrun", "Ina", "Marlene", "Angelina", "Pauline", "Linda", "Frauke", "Zoe", "Zoé", "Juliane", "Traute", "Larissa", "Karen", "Caren", "Ursel", "Leni", "Theresa", "Teresa", "Jenny", "Inga", "Ronja", "Greta", "Lucy", "Lucie", "Emely", "Emelie", "Emmely", "Hertha", "Herta", "Irma", "Erna", "Käthe", "Fiona", "Nadja", "Hella", "Hilde", "Irina", "Marita", "Frieda", "Frida", "Gabi", "Gaby", "Helena", "Ida", "Marga", "Helene", "Selina", "Nolo", "Lia", "Liah", "Gina", "Judith", "Heide", "Carlotta", "Karlotta", "Luise", "Louise", "Stella", "Kimberly", "Kimberley", "Dörte", "Dörthe", "Martha", "Marta", "Ingeburg", "Kira", "Kyra", "Jette", "Emma", "Léa", "Chloé", "Manon", "Inès", "Lola", "Jade", "Camille", "Sarah", "Louise", "Zoé", "Lilou", "Lena", "Maëlys", "Clara", "Irina", "Eva", "Lina", "Anaïs", "Louna", "Romane", "Juliette", "Lucie", "Ambre", "Alice", "Lou", "Lisa", "Clémence", "Jeanne", "Louane", "Mathilde", "Océane", "Charlotte", "Marie", "Noémie", "Celia", "Anna", "Nina", "Pauline", "Lana", "Laura", "Lily", "Léonie", "Alicia", "Julie", "Julia", "Rose", "Margaux", "Élise", "Melina", "Luna", "Elisa", "Margot", "Elsa", "Maëlle", "Mélissa", "Justine", "Maeva", "Agathe", "Elena", "Inaya", "Leane", "Éloïse", "Émilie", "Yasmine", "Faustine", "Sara", "Gabrielle", "Anaelle", "Sofia", "Marion", "Leana", "Capucine", "Maya", "Olivia", "Maissa", "Valentine", "Mila", "Salomé", "Aya", "Morgane", "Emy", "Elea", "Kenza", "Lise", "Adèle", "Méline", "Amandine", "Zelie", "Emmy", "Victoria", "Assia", "Héloïse", "Ninon", "Candice", "Lyna", "Stella", "Manel", "Thais", "Apolline", "Cloé", "Marine", "Alix", "Loane", "Lila", "Lylou", "Enola", "Charline", "Clementine", "Anae", "Victoire", "Andrea", "Shana", "Elina", "Lison", "Eden", "Myriam", "Nour", "Cassandra", "Enora", "Constance", "Alyssa", "Tess", "Angelina", "Amélie", "Lucile", "Coline", "Clea", "Lilia", "Garance", "Eléonore", "Clarisse", "Fanny", "Selma", "LilyRose", "Sasha", "Axelle", "Solène", "Chiara", "Flora", "Marwa", "Laly", "Nora", "Leila", "Roxane", "Alexia", "Eline", "Mailys", "Cassandre", "Hanae", "Maeline", "Lilly", "Salma", "Sirine", "Anouk", "Lili", "Anissa", "LouAnn", "Rachel", "Camelia", "Romy", "Violette", "Maelie", "Iris", "Amina", "Chaima", "Maely", "LouAnne", "Lya", "Selena", "Tessa", "Sophie", "Charlie", "Carla", "Maryam", "Céleste", "Naomie", "Melinda", "Mia", "Farah", "Kelya", "Laurine", "Maia", "Claire", "Sana", "Kelly", "Noelie", "Angèle", "Estelle", "Ema", "Ilona", "Diane", "Amelia", "Emeline", "Helena", "Joséphine", "Lara", "Louisa", "Imane", "Serena", "Louanne", "Naila", "Paloma", "Amel", "Asma", "Fatima", "Maria", "Alycia", "Alizee", "Aicha", "Aurore", "Alexandra", "Lindsay", "Naomi", "Fatoumata", "Eve", "Albane", "Daphné", "Élodie", "Jasmine", "Ella", "Kiara", "Rania", "Melody", "Elia", "Shaina", "Ana", "Flavie", "Lalie", "Syrine", "Ava", "Giulia", "Mayssa", "Suzanne", "Norah", "Ilyana", "Maelyne", "Dounia", "Mariam", "Aliya", "Mélanie", "Naelle", "Elyne", "Dina", "Coralie", "Maiwenn", "Wendy", "Sophia", "Amira", "Shanna", "Esther", "Hanna", "Nesrine", "Alya", "Kelia", "Orlane", "Eloane", "Malak", "Yousra", "Ilana", "Shayna", "Noeline", "Clelia", "Jessica", "Perrine", "Maylis", "Marina", "Elya", "Khadija", "Mellina", "Mya", "Soline", "Leona", "Line", "Louison", "Mae", "Raphaëlle", "Audrey", "Aminata", "Blanche", "Noa", "Thea", "Berenice", "Oriane", "Marilou", "Neila", "Eugénie", "Hajar", "Jenna", "Pénélope", "Imene", "Lilya", "Marylou", "Cassie", "Leyna", "Maissane", "Safia", "Yaelle", "Cyrielle", "Laure", "Safa", "Ludivine", "Lucy", "Livia", "Sabrina", "Tiphaine", "Ashley", "Ophélie", "Lia", "Maily", "Calie", "Leia", "Maud", "Melodie", "Kahina", "Nawel", "Charlene", "Madeleine", "Melyne", "Emmie", "Emie", "Erine", "Lilie", "Paola", "Yuna", "Izia", "Hana", "Louann", "Cleo", "Melyna", "Yael", "Soumaya", "Meriem", "Caroline", "Annaelle", "Hélène", "Juline", "Jihane", "Hortense", "Laetitia", "Leanne", "Soraya", "Aliyah", "Ambrine", "Elora", "Lylia", "Sonia", "Assya", "Celya", "Rébecca", "Iliana", "LiliRose", "Angeline", "Hafsa", "Hawa", "Mina", "Amy", "Angela", "Kim", "Maelia", "Bertille", "Leina", "Lilas", "Ornella", "Sidonie", "Thalia", "Hind", "Johanna", "Manelle", "Melia", "Aurélie", "Nayla", "Zahra", "Tatiana", "Sixtine", "Isaure", "Maellys", "Tina", "Flore", "Lorena", "Tania", "Joana", "Leelou", "Aline", "Ela", "Elif", "Janna", "Kayla", "Lilwenn", "Naya", "Rosalie", "Elyna", "Hannah", "Lydia", "Anastasia", "Elona", "Linda", "Nell", "Élisabeth", "Isis", "Mona", "Nais", "Neyla", "Maimouna", "Sherine", "Cali", "Céline", "Judith", "Samia", "Deborah", "Emna", "Fleur", "Florine", "Zia", "Nelia", "Annabelle", "Cécile", "Cecilia", "Gwendoline", "Vanessa", "Emily", "Célestine", "Naia", "Prune", "Selene", "Astrid", "Chayma", "Janelle", "Kessy", "Kyara", "Yasmina", "Abigael", "Carmen", "Clotilde", "Gaëlle", "Grace", "Meissa", "Chahinez", "Naima", "Taina", "Eleana", "Fantine", "Hiba", "Nisa", "Alienor", "Isra", "Diana", "Sakina", "Kamelia", "Lamia", "Lucille", "Meryem", "Philomène", "Tiffany", "Youna", "Lucia", "Malia", "Milla", "Halima", "Joy", "Joyce", "Nada", "Philippine", "Kaina", "Loanne", "Kayna", "Augustine", "Gabriella", "Sacha", "Safiya", "Tamara", "Elissa", "Lois", "Lyana", "Savannah", "Shaima", "Talia", "Aaliyah", "Emmanuelle", "Fatma", "Adriana", "Aleyna", "Ibtissem", "Kimberley", "Liana", "Maelyss", "Awa", "Liya", "Luce", "Maelly", "Soukaina", "Suzie", "Jana", "Layana", "Nola", "Rahma", "Alessia", "Alia", "Alyssia", "Athénaïs", "Eya", "Gwenaëlle", "Imen", "Maina", "Emily", "Chloe", "Megan", "Charlotte", "Emma", "Lauren", "Hannah", "Ellie", "Sophie", "Katie", "Amy", "Lucy", "Olivia", "Jessica", "Georgia", "Rebecca", "Holly", "Sarah", "Caitlin", "Beth", "Bethany", "Molly", "Grace", "Shannon", "Rachel", "Jess", "Alice", "Laura", "Abbie", "Ella", "Amber", "Jade", "Anna", "Jasmine", "Zoe", "Leah", "Rosie", "Mia", "Phoebe", "Lily", "Becky", "Erin", "Courtney", "Niamh", "Kate", "Louise", "Natalie", "Eleanor", "Charlie", "Lydia" ] &gt;&gt;
+    
+    &lt;&lt;set $maleNames to [ "Victor", "Alex", "Alexander", "Martin", "Steve", "Tony", "Bucky", "James", "Robert", "Ivan", "John", "William", "Richard", "Dick", "Charles", "Joseph", "Thomas", "Chris", "Christopher", "Mark", "Edward", "Anthony", "Scott", "Brian", "Jason", "Cassius", "Lawrence", "Manuel", "Iago", "Jacob", "Lee", "Francis", "Sue", "Frederick", "Theodore", "Miguel", "Pedro", "Maurice", "Ricardo", "Rafael", "Cecil", "Carlos", "Julio", "Felix", "Yoshi", "Hideyoshi", 'Trent', 'Irvin','Freddy', 'Bryant', 'Erin', 'Marlon', 'Augustine', 'Elton', 'Tyree', 'Adalberto', 'Gerry', 'Logan', 'Mike', 'Jerome', 'Eldon', 'Newton', 'Walter', 'Rene', 'Anibal', 'Ira', 'Kurt', 'Marion', 'Rick', 'Owen', 'Wilbert', 'Ty', 'Giovanni', 'Vance', 'Damian', 'Ashley', 'Lemuel', 'Deon', 'Ernesto', 'Rocco', 'Archie', 'Sherwood', 'Michel', 'Vince', 'Robbie', 'Chauncey', 'Alonzo', 'Eloy', 'Bill', 'Johnnie', 'Samuel', 'Margarito', 'Alvin', 'Scotty', 'Forrest', 'Wilfredo', 'Ollie', 'Rickey',
+    'Joey', 'Kenny', 'Bennie', 'Bill', 'Shayne', 'Keven', 'Mark', 'Jarvis', 'Dane', 'Wayne', 'Alphonso', 'Bobbie', 'Oren', 'Berry', 'Kennith', 'Benedict', 'Arnoldo', 'Harold', 'Taylor', 'Dexter', 'Vernon', 'Dino', 'Maria', 'Alfonzo', 'Pablo', 'Jay', 'Elroy', 'Neil', 'Woodrow', 'Irving', 'Michal', 'Fernando', 'Eduardo', 'Christopher', 'Bob', 'Colby', 'Luther', 'Julius', 'Derek', 'Pasquale', 'Sebastian', 'Ronnie', 'Augustus', 'Leon', 'Gilbert', 'Morton', 'Carmine', 'Whitney', "Benjamin", "Threetoo"
+     ] &gt;&gt;
   
   &lt;&lt;if $slavegender is "male"&gt;&gt;&lt;&lt;set
   $slavename to either($maleNames), $slavethey to "he", $slavetheir to "his", $slavethem to "him", $slaveThey to "He", $slaveTheir to "His", $slaveThem to "Him", $cock to random(1,5)
@@ -1707,8 +1588,17 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+  /* If you'd like to add a fetish/kink, please discuss it on meme first so that adjustments to game behavior can be coordinated */
+  
+  &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
+  &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
+  &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
+  
   &lt;&lt;set $ass to random(1,5)&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "His ass is [your description here]" and should be gender neutral */
+    
     &lt;&lt;if $ass is 1&gt;&gt;
       &lt;&lt;set
         $slaveass to either("flat", "bony", "sharp", "not very impressive")
@@ -1737,6 +1627,9 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "His cock is [your description here]" */
+    
     &lt;&lt;if $cock is 1&gt;&gt;&lt;&lt;set
       $slavecock to
         either("tiny and soft", "tiny and half hard", "tiny and circumcised")
@@ -1764,6 +1657,9 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "Her breasts are [your description here]" */
+    
     &lt;&lt;if $breasts is 1&gt;&gt;
       &lt;&lt;set $slavebreasts to either("flat", "barely there", "non-existent", "quite small")&gt;&gt;
     
@@ -1781,6 +1677,9 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;/nobr&gt;&gt;
     &lt;&lt;nobr&gt;&gt;
+    
+    /* Descriptions here are loosely grouped together, but don't worry about it too much, they don't affect story behavior.  To add descriptors, type your additions in quotes (single or double are both ok) and separate each with a comma.  All descriptions should stay inside the square brackets.  Additions should be in the format of "Her pussy is [your description here]" */
+    
     &lt;&lt;if $vagina is 1&gt;&gt;&lt;&lt;set
       $slavevagina to
         either("tight and appealing", "very tight and wet", "pink and wet")
@@ -1834,6 +1733,9 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &lt;&lt;set $happiness to random(1,5)&gt;&gt;
   
   &lt;&lt;nobr&gt;&gt;
+  
+  /* Please don't modify this file unless you know Sugarcube! */
+  
   &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2029,6 +1931,8 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &gt;&gt;
   &lt;&lt;set $IDnumber += 1&gt;&gt;
   &lt;&lt;/nobr&gt;&gt;
+  /* Please don't modify this file unless you know Sugarcube! */
+  
   &lt;&lt;nobr&gt;&gt;
   &lt;&lt;set $price to 1000&gt;&gt;
   
@@ -2139,19 +2043,35 @@ $slave.They
 
 &lt;b&gt;Inspect $slave.name:&lt;/b&gt;
   &lt;&lt;nobr&gt;&gt;
-  &lt;&lt;set $finger_pussy_reaction to [
   
-  "sighs happily as you make her even wetter",
+    /* Please don't modify this file unless you know Sugarcube! */
   
-  "flinches away from your touch",
-  
-  "endures your touch with a set jaw",
-  
-  "leans into you for more",
-  
-  "tries to chase the sensation as you finger her"
-  
-  ]&gt;&gt;
+    &lt;&lt;set $finger_pussy_reaction to [
+    
+    "sighs happily as you make her even wetter",
+    
+    "flinches away from your touch",
+    
+    "endures your touch with a set jaw",
+    
+    "leans into you for more",
+    
+    "tries to chase the sensation as you finger her"
+    
+    ]&gt;&gt;
+    &lt;&lt;set $finger_ass_reaction to [
+    
+    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
+    
+    "flinches away from your touch",
+    
+    "endures your touch with a set jaw",
+    
+    "leans into you for more",
+    
+    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
+    
+    ]&gt;&gt;
   
     &lt;&lt;set $female_ride_strapon to [
     
@@ -2267,6 +2187,8 @@ $slave.They
     &lt;&lt;linkreplace "*Finger her pussy"&gt;&gt;&lt;&lt;print $slave.Their&gt;&gt; pussy is &lt;&lt;print $slave.vagina&gt;&gt;&lt;&lt;if $vaginal_virgin&gt;&gt; and she's a virgin&lt;&lt;/if&gt;&gt;.   &lt;&lt;print $slave.They&gt;&gt; &lt;&lt;print either($finger_pussy_reaction)&gt;&gt;.&lt;&lt;/linkreplace&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+  &lt;&lt;linkreplace "*Finger &lt;&lt;print $slave.their&gt;&gt; ass"&gt;&gt;&lt;&lt;print $slave.Their&gt;&gt; ass is &lt;&lt;print $slave.ass&gt;&gt;&lt;&lt;if $anal_virgin&gt;&gt; and $slave.they's a virgin&lt;&lt;/if&gt;&gt;.   &lt;&lt;print $slave.They&gt;&gt; &lt;&lt;print either($finger_ass_reaction)&gt;&gt;.&lt;&lt;/linkreplace&gt;&gt;
+  
   &lt;&lt;if $penetrative_virgin is false&gt;&gt;
     &lt;&lt;if $PCgender is "female"&gt;&gt;
       &lt;&lt;if $slave.gender is "female"&gt;&gt;
@@ -2332,7 +2254,9 @@ $slave.They
 &lt;&lt;if $money gte $price&gt;&gt;[["Purchase " + $slave.name + " and add another slave"|Buy Slaves][$money -= $price, $slaves_owned.push($slave) ]]
 [["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]&lt;&lt;/if&gt;&gt;
 [["Pass on " + $slave.name + " and inspect another slave"|Buy Slaves]]
-[[Go home-&gt;Home]]</tw-passagedata><tw-passagedata pid="17" name="End Week" tags="" position="">&lt;&lt;if $av_health is 3&gt;&gt;
+[[Go home-&gt;Home]]</tw-passagedata><tw-passagedata pid="17" name="End Week" tags="" position="">/* Please don't modify this file unless you know Sugarcube! */
+
+  &lt;&lt;if $av_health is 3&gt;&gt;
     &lt;&lt; if random(1,100) is 100 &gt;&gt;
       &lt;&lt;set $epidemic to true&gt;&gt;
     &lt;&lt;/if&gt;&gt;
@@ -2403,7 +2327,7 @@ $slave.They
     &lt;&lt;if $PCkindness lte 1&gt;&gt;
       &lt;&lt;set $currentSlave.change_devotion -= 2&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-  &lt;&lt;else&gt;&gt;
+  &lt;&lt;elseif $currentSlave.personality is "needs_harsh"&gt;&gt;
     &lt;&lt;if $PCkindness is 9&gt;&gt;
       &lt;&lt;set $currentSlave.change_devotion -= 1&gt;&gt;
     &lt;&lt;/if&gt;&gt;
@@ -2544,6 +2468,8 @@ $slave.They
     &lt;&lt;set $currentSlave.change_obedience -= 2, $currentSlave.change_devotion -= 2, $currentSlave.change_happiness -= 2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
+  
+  /* Please don't modify this file unless you know Sugarcube! */
   
   &lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $currentSlave.health lt 1&gt;&gt;&lt;&lt;set $currentSlave.health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2708,6 +2634,9 @@ $slave.They
 
 &lt;&lt;goto "Report"&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Report" tags="" position="">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;nobr&gt;&gt;
+  
+  /* Please don't modify this file unless you know Sugarcube! */
+  
     &lt;&lt;if $PCkindness lte 1&gt;&gt;&lt;&lt;set $kindness_desc to "very cruel"&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;if $PCkindness is 2&gt;&gt;&lt;&lt;set $kindness_desc to "hard-hearted"&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;if $PCkindness is 3&gt;&gt;&lt;&lt;set $kindness_desc to "harsh"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2769,20 +2698,20 @@ $slave.They
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if random(1,3) is 3&gt;&gt;
-&lt;&lt;set $reported to either($slaves_owned)&gt;&gt;
-&lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
-  &lt;&lt;if $reported.name isnot $slaves_owned[_i].name&gt;&gt;
-    $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape", "lying to you")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
-  &lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $slaves_owned[_i].honesty is 5&gt;&gt;
-  &lt;&lt;if $reported.name isnot $slaves_owned[_i].name&gt;&gt;
-    &lt;&lt;if $reported.obedience lte 2&gt;&gt;
-      $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
-    &lt;&lt;elseif $reported.honesty lte 2&gt;&gt;
-      $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "lying to you", "encouraging other slaves to escape")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
+  &lt;&lt;set $reported to either($slaves_owned)&gt;&gt;
+  &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
+    &lt;&lt;if $reported.name isnot $slaves_owned[_i].name&gt;&gt;
+      $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape", "lying to you")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
+    &lt;&lt;/if&gt;&gt;
+  &lt;&lt;elseif $slaves_owned[_i].honesty is 5&gt;&gt;
+    &lt;&lt;if $reported.name isnot $slaves_owned[_i].name&gt;&gt;
+      &lt;&lt;if $reported.obedience lte 2&gt;&gt;
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "disobeying your orders", "encouraging other slaves to escape")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
+      &lt;&lt;elseif $reported.honesty lte 2&gt;&gt;
+        $slaves_owned[_i].name reports that @@color:red;$reported.name@@ is &lt;&lt;print either("planning to escape", "sowing dissent among the other slaves", "lying to you", "encouraging other slaves to escape")&gt;&gt;&lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;, but you're not sure if you believe it&lt;&lt;/if&gt;&gt;.
+      &lt;&lt;/if&gt;&gt;
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
