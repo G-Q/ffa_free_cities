@@ -376,6 +376,13 @@
   <<if $currentSlave.obedience is 2>><<set $total_customers *= -0.2>><</if>>
   <<if $currentSlave.obedience is 3>><<set $total_customers *= -0.1>><</if>>
   
+/* A very attractive/unattractive slave will see more or fewer customers */
+  <<if $currentSlave.attractiveness lte 1>><<set $total_customers *= -0.2>><</if>>
+  <<if $currentSlave.attractiveness is 2>><<set $total_customers *= -0.1>><</if>>
+  <<if $currentSlave.attractiveness is 3>><<set $total_customers *= 0>><</if>>
+  <<if $currentSlave.attractiveness is 4>><<set $total_customers *= 0.1>><</if>>
+  <<if $currentSlave.attractiveness gte 5>><<set $total_customers *= 0.2>><</if>>
+  
   <<set $total_customers to Math.round($total_customers)>>
   
 /* Set proportion of male/female customers */
@@ -383,6 +390,7 @@
   
   <<set $currentSlave.customers_female to ($total_customers - $currentSlave.customers_male)>>
   
+<<if $currentSlave.assignment isnot 2>>
   <<set _base_price += $currentSlave.oral_skill>>
   <<set _base_price += $currentSlave.anal_skill>>
   <<set _base_price += $currentSlave.penetrative_skill>>
@@ -390,6 +398,7 @@
     <<set _base_price += $currentSlave.vaginal_skill>>
   <</if>>
   <<set _base_price += $currentSlave.attractiveness>>
+<</if>>
   
   <<set $currentSlave.earned to $total_customers * _base_price>>
   
@@ -401,7 +410,7 @@
   <<set $currentSlave.earned to Math.round($currentSlave.earned)>>
   
   <<if $currentSlave.assignment is 2>>
-    <<set $income += ($currentSlave.earned/2)>>
+    <<set $income += $currentSlave.earned>>
     <<set $money += $income>>
   <</if>>
   

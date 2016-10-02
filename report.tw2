@@ -58,13 +58,27 @@ Demand for sexual services this week was
   
 /* Report for assignments */
 
-This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.  
+This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
 
-<<if $slaves_owned[_i].assignment is 3 or $slaves_owned[_i].assignment is 4 or $slaves_owned[_i].assignment is 2>>
-  <<if $slaves_owned[_i].assignment is 3>>
-    $slaves_owned[_i].they saw $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers.
+  <<if $slaves_owned[_i].assignment is 0>><</if>>
+  
+  <<if $slaves_owned[_i].assignment is 1>><</if>>
+
+  <<if $slaves_owned[_i].assignment is 2>>
+    $slaves_owned[_i].they was fucked by $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers, earning you <b>⨕ $slaves_owned[_i].earned</b>.
   <</if>>
-<</if>>
+  
+  <<if $slaves_owned[_i].assignment is 3>>
+    $slaves_owned[_i].they saw $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers, earning you <b>⨕ $slaves_owned[_i].earned</b>.
+  <</if>>
+  
+  <<if $slaves_owned[_i].assignment is 4>>
+    $slaves_owned[_i].they was loaned out to $slaves_owned[_i].customers_male male citizens and $slaves_owned[_i].customers_female female citizens, increasing your reputation by <b>$slaves_owned[_i].earned</b>.
+  <</if>>
+  
+  <<if $slaves_owned[_i].assignment is 5>><</if>>
+  
+  <<if $slaves_owned[_i].assignment is 6>><</if>>
 
 /* A very honest, obedient slave will report if others are likely to rebel */
 
