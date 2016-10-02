@@ -99,7 +99,7 @@ The slave before you is a $slave.height ''$slave.gender'' named $slave.name, age
 
 $slave.They is $health_desc and $devotion_desc.  From your previous experience with $slave.them, you know that $slave.they $honesty_desc, that $slave.they $obedience_desc, that $slave.they is $stubborness_desc, and that $slave.they is $intelligence_desc.
 
-$slave.They $flaw_desc  $slave.They $sexual_flaw_desc  $slave.They $fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.  $slave.They $male_attraction_desc and $female_attraction_desc.  You find $slave.them $attractiveness_desc.
+<<if $slave.flaw isnot "none">>$slave.They $flaw_desc<</if>>  <<if $slave.sexual_flaw isnot "none">>$slave.They<</if>> $sexual_flaw_desc  <<if $slave.flaw isnot "none">>$slave.They $fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.<</if>>  $slave.They $male_attraction_desc and $female_attraction_desc.  You find $slave.them $attractiveness_desc.
 
 <<nobr>>
 $slave.They

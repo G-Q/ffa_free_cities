@@ -65,15 +65,236 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
   <<if $slaves_owned[_i].assignment is 1>><</if>>
 
   <<if $slaves_owned[_i].assignment is 2>>
-    $slaves_owned[_i].they was fucked by $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers, earning you <b>⨕ $slaves_owned[_i].earned</b>.
+    $slaves_owned[_i].they was fucked by $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers.
   <</if>>
   
   <<if $slaves_owned[_i].assignment is 3>>
     $slaves_owned[_i].they saw $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers, earning you <b>⨕ $slaves_owned[_i].earned</b>.
+    <<if $slaves_owned[_i].sexual_flaw isnot "none" and $slaves_owned[_i].customers_sexual_flaw_mad gt 0>>
+      <<if $slaves_owned[_i].customers_sexual_flaw_mad is 1>>
+        One customer complained that $slaves_owned[_i].name
+          <<if $slaves_owned[_i].sexual_flaw is "hates men">>
+            @@color:red;hates sex with men@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates women">>
+            @@color:red;hates sex with women@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates anal">>
+            @@color:red;hates anal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates oral">>
+            @@color:red;hates oral sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates vaginal">>
+            @@color:red;hates vaginal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates penetrative">>
+            @@color:red;hates penetrative sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates all">>
+            @@color:red;hates all sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "very shy">>
+            @@color:red;is too shy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "idealistic">>
+            @@color:red;is too romantic and idealiztic about sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "judgemental">>
+            @@color:red;is too judgemental@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "vulgar">>
+            @@color:red;is too vulgar@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "apathetic">>
+            @@color:red;is too boring and apathetic@@
+          <</if>>
+      <<else>>
+        Several customers complained that $slaves_owned[_i].name
+        <<if $slaves_owned[_i].sexual_flaw is "hates men">>
+            @@color:red;hates sex with men@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates women">>
+            @@color:red;hates sex with women@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates anal">>
+            @@color:red;hates anal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates oral">>
+            @@color:red;hates oral sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates vaginal">>
+            @@color:red;hates vaginal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates penetrative">>
+            @@color:red;hates penetrative sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates all">>
+            @@color:red;hates all sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "very shy">>
+            @@color:red;is too shy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "idealistic">>
+            @@color:red;is too romantic and idealiztic about sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "judgemental">>
+            @@color:red;is too judgemental@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "vulgar">>
+            @@color:red;is too vulgar@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "apathetic">>
+            @@color:red;is too boring and apathetic@@
+          <</if>>
+      <</if>>
+      and paid you <b>⨕ <<print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))>></b> as a result.
+    <</if>>
+    
+    <<if $slaves_owned[_i].flaw isnot "none" and $slaves_owned[_i].customers_flaw_mad gt 0>>
+      <<if $slaves_owned[_i].customers_flaw_mad is 1>>
+        One customer complained that $slaves_owned[_i].name
+          <<if $slaves_owned[_i].sexual_flaw is "bitchy">>
+            @@color:red;is too bitchy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "eccentric">>
+            @@color:red;is too odd@@
+          <</if>>
+      <<else>>
+        Several customers complained that $slaves_owned[_i].name
+        <<if $slaves_owned[_i].sexual_flaw is "bitchy">>
+            @@color:red;is too bitchy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "eccentric">>
+            @@color:red;is too odd@@
+          <</if>>
+      <</if>>
+      and paid you <b>⨕ <<print ($slaves_owned[_i].customers_flaw_mad * ($slaves_owned[_i].base_price/2))>></b> as a result.
+    <</if>>
+    
+    <<if $slaves_owned[_i].fetish isnot "none" and $slaves_owned[_i].customers_like_fetish gte 1>>
+      <<if $slaves_owned[_i].customers_like_fetish is 1>>
+        One citizen very much enjoyed
+        <<if $slaves_owned[_i].fetish is "sub">>$slaves_owned[_i].name's @@color:green;submissive tendencies@@<</if>>
+        <<if $slaves_owned[_i].fetish is "dom">>@@color:green;being dominated by@@ $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "bondage">>$slaves_owned[_i].name's @@color:green;skill with bondage@@<</if>>
+        <<if $slaves_owned[_i].fetish is "sadism">>$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@<</if>>
+        <<if $slaves_owned[_i].fetish is "masochism">>$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@<</if>>
+        <<if $slaves_owned[_i].fetish is "pregnancy">>$slaves_owned[_i].name's @@color:green;pregnancy fetish@@<</if>>
+        <<if $slaves_owned[_i].fetish is "anal">>$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@<</if>>
+        <<if $slaves_owned[_i].fetish is "breasts">>$slaves_owned[_i].name's @@color:green;love of breastplay@@<</if>>
+        <<if $slaves_owned[_i].fetish is "penetrative">>@@color:green;being fucked@@ by $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "oral">>$slaves_owned[_i].name's @@color:green;love of oral sex@@<</if>>
+        <<if $slaves_owned[_i].fetish is "tentacles">>$slaves_owned[_i].name's @@color:green;love of tentacles@@<</if>>
+      <<elseif $slaves_owned[_i].customers_like_fetish gt 1>>
+        Several citizens very much enjoyed
+        <<if $slaves_owned[_i].fetish is "sub">>$slaves_owned[_i].name's @@color:green;submissive tendencies@@<</if>>
+        <<if $slaves_owned[_i].fetish is "dom">>@@color:green;being dominated by@@ $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "bondage">>$slaves_owned[_i].name's @@color:green;skill with bondage@@<</if>>
+        <<if $slaves_owned[_i].fetish is "sadism">>$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@<</if>>
+        <<if $slaves_owned[_i].fetish is "masochism">>$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@<</if>>
+        <<if $slaves_owned[_i].fetish is "pregnancy">>$slaves_owned[_i].name's @@color:green;pregnancy fetish@@<</if>>
+        <<if $slaves_owned[_i].fetish is "anal">>$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@<</if>>
+        <<if $slaves_owned[_i].fetish is "breasts">>$slaves_owned[_i].name's @@color:green;love of breastplay@@<</if>>
+        <<if $slaves_owned[_i].fetish is "penetrative">>@@color:green;being fucked@@ by $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "oral">>$slaves_owned[_i].name's @@color:green;love of oral sex@@<</if>>
+        <<if $slaves_owned[_i].fetish is "tentacles">>$slaves_owned[_i].name's @@color:green;love of tentacles@@<</if>>
+      <</if>>
+      and paid you <b>⨕ <<print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))>></b> as a result.
+    <</if>>
+    
+    In total, $slaves_owned[_i].name earned you <b>⨕ $slaves_owned[_i].earned</b>
   <</if>>
   
   <<if $slaves_owned[_i].assignment is 4>>
     $slaves_owned[_i].they was loaned out to $slaves_owned[_i].customers_male male citizens and $slaves_owned[_i].customers_female female citizens, increasing your reputation by <b>$slaves_owned[_i].earned</b>.
+    
+    <<if $slaves_owned[_i].customers_sexual_flaw_mad is 1>>
+        One customer complained that $slaves_owned[_i].name
+          <<if $slaves_owned[_i].sexual_flaw is "hates men">>
+            @@color:red;hates sex with men@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates women">>
+            @@color:red;hates sex with women@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates anal">>
+            @@color:red;hates anal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates oral">>
+            @@color:red;hates oral sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates vaginal">>
+            @@color:red;hates vaginal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates penetrative">>
+            @@color:red;hates penetrative sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates all">>
+            @@color:red;hates all sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "very shy">>
+            @@color:red;is too shy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "idealistic">>
+            @@color:red;is too romantic and idealiztic about sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "judgemental">>
+            @@color:red;is too judgemental@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "vulgar">>
+            @@color:red;is too vulgar@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "apathetic">>
+            @@color:red;is too boring and apathetic@@
+          <</if>>
+      <<else>>
+        Several customers complained that $slaves_owned[_i].name
+        <<if $slaves_owned[_i].sexual_flaw is "hates men">>
+            @@color:red;hates sex with men@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates women">>
+            @@color:red;hates sex with women@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates anal">>
+            @@color:red;hates anal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates oral">>
+            @@color:red;hates oral sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates vaginal">>
+            @@color:red;hates vaginal sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates penetrative">>
+            @@color:red;hates penetrative sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "hates all">>
+            @@color:red;hates all sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "very shy">>
+            @@color:red;is too shy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "idealistic">>
+            @@color:red;is too romantic and idealiztic about sex@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "judgemental">>
+            @@color:red;is too judgemental@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "vulgar">>
+            @@color:red;is too vulgar@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "apathetic">>
+            @@color:red;is too boring and apathetic@@
+          <</if>>
+      <</if>>
+      and decreased your reputation <b><<print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))>></b> as a result.
+    <</if>>
+    
+    <<if $slaves_owned[_i].flaw isnot "none" and $slaves_owned[_i].customers_flaw_mad gt 0>>
+      <<if $slaves_owned[_i].customers_flaw_mad is 1>>
+        One customer complained that $slaves_owned[_i].name
+          <<if $slaves_owned[_i].sexual_flaw is "bitchy">>
+            @@color:red;is too bitchy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "eccentric">>
+            @@color:red;is too odd@@
+          <</if>>
+      <<else>>
+        Several customers complained that $slaves_owned[_i].name
+        <<if $slaves_owned[_i].sexual_flaw is "bitchy">>
+            @@color:red;is too bitchy@@
+          <<elseif $slaves_owned[_i].sexual_flaw is "eccentric">>
+            @@color:red;is too odd@@
+          <</if>>
+      <</if>>
+      and decreased your reputation <b><<print ($slaves_owned[_i].customers_flaw_mad * $slaves_owned[_i].base_price)>></b> as a result.
+    <</if>>
+    
+    <<if $slaves_owned[_i].fetish isnot "none" and $slaves_owned[_i].customers_like_fetish gte 1>>
+      <<if $slaves_owned[_i].customers_like_fetish is 1>>
+        One citizen very much enjoyed
+        <<if $slaves_owned[_i].fetish is "sub">>$slaves_owned[_i].name's @@color:green;submissive tendencies@@<</if>>
+        <<if $slaves_owned[_i].fetish is "dom">>@@color:green;being dominated by@@ $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "bondage">>$slaves_owned[_i].name's @@color:green;skill with bondage@@<</if>>
+        <<if $slaves_owned[_i].fetish is "sadism">>$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@<</if>>
+        <<if $slaves_owned[_i].fetish is "masochism">>$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@<</if>>
+        <<if $slaves_owned[_i].fetish is "pregnancy">>$slaves_owned[_i].name's @@color:green;pregnancy fetish@@<</if>>
+        <<if $slaves_owned[_i].fetish is "anal">>$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@<</if>>
+        <<if $slaves_owned[_i].fetish is "breasts">>$slaves_owned[_i].name's @@color:green;love of breastplay@@<</if>>
+        <<if $slaves_owned[_i].fetish is "penetrative">>@@color:green;being fucked@@ by $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "oral">>$slaves_owned[_i].name's @@color:green;love of oral sex@@<</if>>
+        <<if $slaves_owned[_i].fetish is "tentacles">>$slaves_owned[_i].name's @@color:green;love of tentacles@@<</if>>
+      <<elseif $slaves_owned[_i].customers_like_fetish gt 1>>
+        Several citizens very much enjoyed
+        <<if $slaves_owned[_i].fetish is "sub">>$slaves_owned[_i].name's @@color:green;submissive tendencies@@<</if>>
+        <<if $slaves_owned[_i].fetish is "dom">>@@color:green;being dominated by@@ $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "bondage">>$slaves_owned[_i].name's @@color:green;skill with bondage@@<</if>>
+        <<if $slaves_owned[_i].fetish is "sadism">>$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@<</if>>
+        <<if $slaves_owned[_i].fetish is "masochism">>$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@<</if>>
+        <<if $slaves_owned[_i].fetish is "pregnancy">>$slaves_owned[_i].name's @@color:green;pregnancy fetish@@<</if>>
+        <<if $slaves_owned[_i].fetish is "anal">>$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@<</if>>
+        <<if $slaves_owned[_i].fetish is "breasts">>$slaves_owned[_i].name's @@color:green;love of breastplay@@<</if>>
+        <<if $slaves_owned[_i].fetish is "penetrative">>@@color:green;being fucked@@ by $slaves_owned[_i].name<</if>>
+        <<if $slaves_owned[_i].fetish is "oral">>$slaves_owned[_i].name's @@color:green;love of oral sex@@<</if>>
+        <<if $slaves_owned[_i].fetish is "tentacles">>$slaves_owned[_i].name's @@color:green;love of tentacles@@<</if>>
+      <</if>>
+      , which increased your reputation <b><<print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))>></b> as a result.
+    <</if>>
+    
+    In total, $slaves_owned[_i].name increased your reputation <b> $slaves_owned[_i].earned</b>
+    
   <</if>>
   
   <<if $slaves_owned[_i].assignment is 5>><</if>>

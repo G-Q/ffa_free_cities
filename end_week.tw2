@@ -10,8 +10,8 @@
 /* Fluctuate demand for services */
 <<set $demand to either(-0.2, -0.1, 0, 0.1, 0.2)>>
 <<set $total_customers to (20 + (20 * $demand))>>
-<<set _base_price to 5>>
-<<set _base_price to (_base_price + (_base_price * $demand))>>
+<<set $currentSlave.base_price to 5>>
+<<set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))>>
 
 /* Get and set average attributes. */
 
@@ -391,30 +391,54 @@
   <<set $currentSlave.customers_female to ($total_customers - $currentSlave.customers_male)>>
   
 <<if $currentSlave.assignment isnot 2>>
-  <<set _base_price += $currentSlave.oral_skill>>
-  <<set _base_price += $currentSlave.anal_skill>>
-  <<set _base_price += $currentSlave.penetrative_skill>>
+  <<set $currentSlave.base_price += $currentSlave.oral_skill>>
+  <<set $currentSlave.base_price += $currentSlave.anal_skill>>
+  <<set $currentSlave.base_price += $currentSlave.penetrative_skill>>
   <<if $currentSlave.gender is "female">>
-    <<set _base_price += $currentSlave.vaginal_skill>>
+    <<set $currentSlave.base_price += $currentSlave.vaginal_skill>>
   <</if>>
-  <<set _base_price += $currentSlave.attractiveness>>
+  <<set $currentSlave.base_price += $currentSlave.attractiveness>>
 <</if>>
   
-  <<set $currentSlave.earned to $total_customers * _base_price>>
+  <<set $currentSlave.earned to $total_customers * $currentSlave.base_price>>
+
+/* Personality and sexual flaws will make some customers pay less */  
+  
+<<if $currentSlave.assignment isnot 2>>
+  <<if $currentSlave.flaw isnot "none">>
+    <<if $currentSlave.flaw isnot "jealous">>
+      <<set $currentSlave.customers_flaw_mad to random(0,$total_customers)>>
+    <</if>>
+  <</if>>
+  <<if $currentSlave.sexual_flaw is "bitchy" or $currentSlave.sexual_flaw is "eccentric">>
+    <<set $currentSlave.customers_sexual_flaw_mad to random(0,$total_customers)>>
+  <</if>>
+<</if>>
+
+/* Kinks will make some customers pay more */
+
+<<if $currentSlave.assignment isnot 2>>
+  <<if $currentSlave.fetish isnot "none">>
+    <<set $currentSlave.customers_like_fetish to random(0,$total_customers)>>
+  <</if>>
+<</if>>
+
+<<set $currentSlave.earned += ($currentSlave.customers_like_fetish * ($currentSlave.base_price * 3))>>
+
+<<set $currentSlave.earned -= (($currentSlave.customers_sexual_flaw_mad + $currentSlave.customers_flaw_mad) * ($currentSlave.base_price/2))>>
+
+<<set $currentSlave.earned to Math.round($currentSlave.earned)>>
   
 /* A dishonest slave will skim some earnings into their savings */
+<<if $currentSlave.assignment is 3 or $currentSlave.assignment is 2>>
   <<if $currentSlave.honesty lte 1>><<set $currentSlave.savings += ($currentSlave.earned *= 0.15), $currentSlave.earned to ($currentSlave.earned *= -0.15)>><</if>>
   <<if $currentSlave.honesty is 2>><<set $currentSlave.savings += ($currentSlave.earned *= 0.1), $currentSlave.earned to ($currentSlave.earned *= -0.1)>><</if>>
   <<if $currentSlave.honesty is 3>><<set $currentSlave.savings += ($currentSlave.earned *= 0.05), $currentSlave.earned to ($currentSlave.earned *= -0.05)>><</if>>
+<</if>>
   
   <<set $currentSlave.earned to Math.round($currentSlave.earned)>>
   
-  <<if $currentSlave.assignment is 2>>
-    <<set $income += $currentSlave.earned>>
-    <<set $money += $income>>
-  <</if>>
-  
-  <<if $currentSlave.assignment is 3>>
+  <<if $currentSlave.assignment is 3 or $currentSlave.assignment is 2>>
     <<set $income += $currentSlave.earned>>
     <<set $money += $income>>
   <</if>>
