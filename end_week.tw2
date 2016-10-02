@@ -2,6 +2,50 @@
 
 /* Please don't modify this file unless you know Sugarcube! */
 
+/* Reset weekly expenses */
+
+<<set $expenses to 0>>
+<<set $income to 0>>
+
+/* Fluctuate demand for services */
+<<set $demand to either(-0.2, -0.1, 0, 0.1, 0.2)>>
+<<set $total_customers to (20 + (20 * $demand))>>
+<<set _base_price to 5>>
+<<set _base_price to (_base_price + (_base_price * $demand))>>
+
+/* Get and set average attributes. */
+
+<<set $total_intelligence to 0>>
+<<set $total_obedience to 0>>
+<<set $total_health to 0>>
+<<set $total_happiness to 0>>
+
+<<set $av_intelligence to 0>>
+<<set $av_obedience to 0>>
+<<set $av_health to 0>>
+<<set $av_happiness to 0>>
+
+<<for _i to 0; _i lt $slaves_owned.length; _i++>>
+
+<<set $total_intelligence += $slaves_owned[_i].intelligence>>
+
+<<set $total_obedience += $slaves_owned[_i].obedience>>
+
+<<set $total_health += $slaves_owned[_i].health>>
+
+<<set $total_happiness += $slaves_owned[_i].happiness>>
+
+/* Baseline expenses for keeping one slave */
+
+<<set $expenses += 50>>
+  
+<</for>>
+
+<<set $av_intelligence to ($total_intelligence/$slaves_owned.length)>>
+<<set $av_obedience to ($total_obedience/$slaves_owned.length)>>
+<<set $av_health to ($total_health/$slaves_owned.length)>>
+<<set $av_happiness to ($total_happiness/$slaves_owned.length)>>
+
 /* Not used anywhere yet, if enough slaves are sick or the average health is low, chances of spreading a disease increase. */
   <<if $av_health is 3>>
     << if random(1,100) is 100 >>
@@ -19,6 +63,10 @@
   
 <<for _i to 0; _i lt $slaves_owned.length; _i++>>
   <<set $currentSlave to $slaves_owned[_i]>>
+  
+  <<if $currentSlave.birth_week is $week>>
+    <<set $currentSlave.age += 1>>
+  <</if>>
   
   <<set $currentSlave.treatment to 0>>
   
@@ -131,6 +179,16 @@
     <<set $currentSlave.change_happiness -=2>>
   <</if>>
   
+/* Average happiness/unhappiness will bring an individual up or down. */
+
+  <<if $av_happiness is gte $currentSlave.happiness>>
+    <<set $currentSlave.change_happiness += 1>>
+  <</if>>
+  
+  <<if $av_happiness is lte $currentSlave.happiness>>
+    <<set $currentSlave.change_happiness -= 1>>
+  <</if>>
+  
 /* An unhappy slave will become less obedient, devoted, and more unhappy over time, a happy slave will become more obedient, devoted and happy. */
   
   <<if $currentSlave.happiness lte 1>>
@@ -233,6 +291,13 @@
 <<if $currentSlave.living is 2>><<set $currentSlave.treatment += 1>><</if>>
 <<if $currentSlave.living is 3>><<set $currentSlave.treatment += 2>><</if>>
 
+/* Increase expenses based on living standard */
+
+<<if $currentSlave.living is 0>><<set $expenses += 0>><</if>>
+<<if $currentSlave.living is 1>><<set $expenses += 25>><</if>>
+<<if $currentSlave.living is 2>><<set $expenses += 50>><</if>>
+<<if $currentSlave.living is 3>><<set $expenses += 100>><</if>>
+
 /* Change treatment score and skill depending on plug. */ 
 
 <<if $currentSlave.plug is 0>><<set $currentSlave.anal_skill += 0>><</if>>
@@ -281,9 +346,82 @@
     <<set $currentSlave.change_obedience -= 1, $currentSlave.change_devotion -= 1, $currentSlave.change_happiness -= 1>>
   <</if>>
 <</if>>
+
+/* Jealous slaves with needs_harsh/needs_kindness will be envious of other slaves who are treated better/worse. */
+
+<<if $currentSlave.flaw is "jealous" and $currentSlave.personality is "needs_harsh">>
+  <<if $av_treatment lte $currentSlave.treatment>>
+    <<set $currentSlave.change_happiness -= 2>>
+  <</if>>
+<</if>>
+
+<<if $currentSlave.flaw is "jealous" and $currentSlave.personality is "needs_kindness">>
+  <<if $av_treatment gte $currentSlave.treatment>>
+    <<set $currentSlave.change_happiness -= 2>>
+  <</if>>
+<</if>>
+
+/* Change weekly expenses based on assignment, see update_assignment.tw2 for assignments */
+
+<<if $currentSlave.assignment is 5>><<set $expenses -= 25>><</if>>
+<<if $currentSlave.assignment is 6>><<set $expenses += 25>><</if>>
+<<if $currentSlave.assignment is 2>><<set $currentSlave.change_health -= 2>><</if>>
+
+/* Set number of customers */
+
+<<if $currentSlave.assignment is 3 or $currentSlave.assignment is 4 or $currentSlave.assignment is 2>>
+
+/* A disobedient slave will see fewer customers */
+  <<if $currentSlave.obedience lte 1>><<set $total_customers *= -0.3>><</if>>
+  <<if $currentSlave.obedience is 2>><<set $total_customers *= -0.2>><</if>>
+  <<if $currentSlave.obedience is 3>><<set $total_customers *= -0.1>><</if>>
+  
+  <<set $total_customers to Math.round($total_customers)>>
+  
+/* Set proportion of male/female customers */
+  <<set $currentSlave.customers_male to random(0, $total_customers)>>
+  
+  <<set $currentSlave.customers_female to ($total_customers - $currentSlave.customers_male)>>
+  
+  <<set _base_price += $currentSlave.oral_skill>>
+  <<set _base_price += $currentSlave.anal_skill>>
+  <<set _base_price += $currentSlave.penetrative_skill>>
+  <<if $currentSlave.gender is "female">>
+    <<set _base_price += $currentSlave.vaginal_skill>>
+  <</if>>
+  <<set _base_price += $currentSlave.attractiveness>>
+  
+  <<set $currentSlave.earned to $total_customers * _base_price>>
+  
+/* A dishonest slave will skim some earnings into their savings */
+  <<if $currentSlave.honesty lte 1>><<set $currentSlave.savings += ($currentSlave.earned *= 0.15), $currentSlave.earned to ($currentSlave.earned *= -0.15)>><</if>>
+  <<if $currentSlave.honesty is 2>><<set $currentSlave.savings += ($currentSlave.earned *= 0.1), $currentSlave.earned to ($currentSlave.earned *= -0.1)>><</if>>
+  <<if $currentSlave.honesty is 3>><<set $currentSlave.savings += ($currentSlave.earned *= 0.05), $currentSlave.earned to ($currentSlave.earned *= -0.05)>><</if>>
+  
+  <<set $currentSlave.earned to Math.round($currentSlave.earned)>>
+  
+  <<if $currentSlave.assignment is 2>>
+    <<set $income += ($currentSlave.earned/2)>>
+    <<set $money += $income>>
+  <</if>>
+  
+  <<if $currentSlave.assignment is 3>>
+    <<set $income += $currentSlave.earned>>
+    <<set $money += $income>>
+  <</if>>
+  
+  <<if $currentSlave.assignment is 4>>
+    <<set $reputation += ($currentSlave.earned * 2)>>
+  <</if>>
+<</if>>
   
   ::@include update_slave_attr.tw2
 <</for>>
+
+<<if $week is 52>>
+  <<set $week to 0>>
+<</if>>
+<<set $week += 1>>
 
 <<set $currentSlave to {}>>
 

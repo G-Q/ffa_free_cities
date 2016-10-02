@@ -8,6 +8,14 @@
 <<if $currentSlave.assignment is 5>><<set $currentSlave.assignment_short to "serve your household">><</if>>
 <<if $currentSlave.assignment is 6>><<set $currentSlave.assignment_short to "be trained">><</if>>
 
+<<if $currentSlave.assignment is 0>><<set $currentSlave.assignment_report to "rested">><</if>>
+<<if $currentSlave.assignment is 1>><<set $currentSlave.assignment_report to "was your personal toy">><</if>>
+<<if $currentSlave.assignment is 2>><<set $currentSlave.assignment_report to "worked a gloryhole">><</if>>
+<<if $currentSlave.assignment is 3>><<set $currentSlave.assignment_report to "was sold as a whore">><</if>>
+<<if $currentSlave.assignment is 4>><<set $currentSlave.assignment_report to "served the public">><</if>>
+<<if $currentSlave.assignment is 5>><<set $currentSlave.assignment_report to "served your household">><</if>>
+<<if $currentSlave.assignment is 6>><<set $currentSlave.assignment_report to "was trained">><</if>>
+
 <<if $currentSlave.clothing is 0>><<set $currentSlave.clothing_short to "naked">><<set $currentSlave.clothing_pres to "neither">><</if>>
 <<if $currentSlave.clothing is 1>><<set $currentSlave.clothing_short to "cute panties">><<set $currentSlave.clothing_pres to "femme">><</if>>
 <<if $currentSlave.clothing is 2>><<set $currentSlave.clothing_short to "latex">><<set $currentSlave.clothing_pres to "neither">><</if>>

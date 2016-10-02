@@ -1,18 +1,22 @@
 ::Report
 <<nobr>>
   ::@include description/description_player.tw2
-  <<set $av_intelligence to 0>>
-  <<set $av_obedience to 0>>
-  <<set $av_health to 0>>
-<</nobr>>  
+<</nobr>>
+<<nobr>>
+Demand for sexual services this week was
+<<if $demand is -0.2>>@@color:red;very low@@.<</if>>
+<<if $demand is -0.1>>@@color:orange;a bit low@@.<</if>>
+<<if $demand is 0>>normal<</if>>
+<<if $demand is 0.1>>@@color:blue;high@@.<</if>>
+<<if $demand is 0.2>>@@color:green;very high@@.<</if>>
+<</nobr>>
+
 <<for _i to 0; _i lt $slaves_owned.length; _i++>>
 <<nobr>>
 
-<<set $av_intelligence += $slaves_owned[_i].intelligence>>
-
-<<set $av_obedience += $slaves_owned[_i].obedience>>
-
-<<set $av_health += $slaves_owned[_i].health>>
+<<if $slaves_owned[_i].gender is "male" and $slaves_owned[_i].oral_virginity is true>>
+  male oral virgin
+<</if>>
 
 ''$slaves_owned[_i].name''
 
@@ -51,6 +55,16 @@
     <</if>>
   
   <</if>>
+  
+/* Report for assignments */
+
+This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.  
+
+<<if $slaves_owned[_i].assignment is 3 or $slaves_owned[_i].assignment is 4 or $slaves_owned[_i].assignment is 2>>
+  <<if $slaves_owned[_i].assignment is 3>>
+    $slaves_owned[_i].they saw $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers.
+  <</if>>
+<</if>>
 
 /* A very honest, obedient slave will report if others are likely to rebel */
 

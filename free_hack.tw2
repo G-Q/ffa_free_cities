@@ -12,6 +12,7 @@ report.tw2
 
 ::StoryCaption
 <<nobr>>
+
 <<if not tags().contains("no-header")>>
   <<if tags().contains("manage-slave")>>
     [[Home|Update Current]]
@@ -27,6 +28,7 @@ report.tw2
 
   <hr>
 <</if>>
+
 <<if tags().contains("home")>>
 [[End Week]]<br>
 [[Buy Slaves]]

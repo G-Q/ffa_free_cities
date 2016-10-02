@@ -14,4 +14,4 @@ Want to write sex scenes? Checkout the [f/f](/ff/), [f/m](/fm/), [m/f](mf), or [
 
 Worried about messing things up?  Don't be!  There's comments at the start of every file about how to make changes, and everything is undoable.
 
-If you know Sugarcube and want to add passages, checkout [the list of existing passages](passage-titles.txt).
+If you know [Sugarcube](http://www.motoslave.net/sugarcube/2/) and want to add passages, checkout [the list of existing passages](passage-titles.txt) first.

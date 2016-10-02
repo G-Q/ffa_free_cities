@@ -15,10 +15,12 @@ $slavename to either($femaleNames), $slavethey to "she", $slavetheir to "her", $
 >>
 <</if>>
 
-/* If you'd like to add a fetish/kink, please discuss it on meme first so that adjustments to game behavior can be coordinated */
+/* If you'd like to add a fetish/kink/personality, please discuss it on meme first so that adjustments to game behavior can be coordinated */
 
 <<set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]>>
+
 <<set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] >>
+
 <<set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] >>
 
 <<set $ass to random(1,5)>>
@@ -52,16 +54,17 @@ $slavename to either($femaleNames), $slavethey to "she", $slavetheir to "her", $
 <<set $stubborness to random(1,5)>>
 <<set $happiness to random(1,5)>>
 
-::@include description/description_slave_attr.tw2
+  ::@include description/description_slave_attr.tw2
 
 <<set $slave to {
+
 name: $slavename, gender: $slavegender, ID: $IDnumber, personality: either("needs_harsh", "needs_kindness", "neither"), gender_pres: ("butch", "femme", "neither"),
 
 they: $slavethey, their: $slavetheir, them: $slavethem, theirs: $slavetheirs, They: $slaveThey, Their: $slaveTheir, Theirs: $slaveTheirs,
 
 height: either($height), hair: either($hair), hairstyle: either($hair_style), eyes: either($eyes), skin: either($skin), physique: either($physique), pubic: either($pubic),
 
-age: random(18,50),
+age: random(18,50), birth_week: (1,52),
 
 oral_virginity: $oral_virgin, anal_virginity: $anal_virgin, vaginal_virginity: $vaginal_virgin, penetrative_virginity: $penetrative_virgin,
 
@@ -83,11 +86,13 @@ change_flaw: 0, change_sexual_flaw: 0, change_fetish: 0,
 
 ass: $slaveass, cock: $slavecock, vagina: $slavevagina, breasts: $slavebreasts,
 
-assignment: 0, assignment_short: "rest", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
+assignment: 0, assignment_short: "rest", assignment_report: "rested", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
 
 treatment: 0,
 
-smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you"
+smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you",
+
+customers_male: 0, customers_female: 0, earned: 0, savings: 0
 }
 >>
 <<set $IDnumber += 1>>
