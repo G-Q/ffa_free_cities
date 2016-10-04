@@ -117,14 +117,14 @@ $slave.They
 
 <<nobr>>
 <<if $money gt $price>>
-  $slave.They is available for purchase for <b>⨕ $price</b>.
+  $slave.They is available for purchase for <b>⨕ <<print ($price/2)>></b>.
 <<else>>You do not have enough money to purchase this slave.
 <</if>>
 <</nobr>>
 
 <b>Inspect $slave.name:</b>
   ::@include inspect/inspect-actions.tw2
-<<if $money gte $price>>[["Purchase " + $slave.name + " and add another slave"|First Slave][$money -= $price, $slaves_owned.push($slave) ]]
-[["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= $price, $slaves_owned.push($slave) ]]<</if>>
+<<if $money gte $price>>[["Purchase " + $slave.name + " and add another slave"|First Slave][$money -= ($price/2), $slaves_owned.push($slave) ]]
+[["Purchase " + $slave.name + " and go to " + $domain|Home][$money -= ($price/2), $slaves_owned.push($slave) ]]<</if>>
 [["Pass on " + $slave.name + " and inspect another slave"|First Slave]]
 [[Go home->Home]]
