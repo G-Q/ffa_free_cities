@@ -406,7 +406,7 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 &lt;&lt;set $week to 1, $expenses to 0, $income to 0&gt;&gt;
 
 &lt;&lt;/nobr&gt;&gt;
-/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on [Free Cities|"https://www.tfgamessite.com/?module=viewgame&amp;id=751"].
+/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on [[Free Cities|"https://www.tfgamessite.com/?module=viewgame&amp;id=751"]].
 
 This is a text-based game which includes graphic descriptions of sex, violence, drug use and other adult themes.  By continuing you acknowledge that you are over 18 and that you may encounter graphic or upsetting material.
 
@@ -2725,7 +2725,9 @@ $slave.They
 &lt;&lt;if $currentSlave.customers_like_sexual_flaw gte 1&gt;&gt;&lt;&lt;set $currentSlave.earned += ($currentSlave.customers_like_sexual_flaw * ($currentSlave.base_price * 2))&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.customers_like_fetish gte 1&gt;&gt;&lt;&lt;set $currentSlave.earned += ($currentSlave.customers_like_fetish * ($currentSlave.base_price * 2))&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-  &lt;&lt;if $currentSlave.assignment is 3 or $currentSlave.assignment is 2&gt;&gt;
+/* A dishonest slave will skim some earnings into their savings */
+
+&lt;&lt;if $currentSlave.assignment is 3 or $currentSlave.assignment is 2&gt;&gt;
     &lt;&lt;if $currentSlave.honesty lte 1&gt;&gt;&lt;&lt;set $currentSlave.savings += ($currentSlave.earned *= 0.15), $currentSlave.earned += ($currentSlave.earned *= -0.15)&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;if $currentSlave.honesty is 2&gt;&gt;&lt;&lt;set $currentSlave.savings += ($currentSlave.earned *= 0.1), $currentSlave.earned += ($currentSlave.earned *= -0.1)&gt;&gt;&lt;&lt;/if&gt;&gt;
     &lt;&lt;if $currentSlave.honesty is 3&gt;&gt;&lt;&lt;set $currentSlave.savings += ($currentSlave.earned *= 0.05), $currentSlave.earned to ($currentSlave.earned += -0.05)&gt;&gt;&lt;&lt;/if&gt;&gt;

@@ -444,7 +444,9 @@
 <<if $currentSlave.customers_like_sexual_flaw gte 1>><<set $currentSlave.earned += ($currentSlave.customers_like_sexual_flaw * ($currentSlave.base_price * 2))>><</if>>
 <<if $currentSlave.customers_like_fetish gte 1>><<set $currentSlave.earned += ($currentSlave.customers_like_fetish * ($currentSlave.base_price * 2))>><</if>>
 
-  <<if $currentSlave.assignment is 3 or $currentSlave.assignment is 2>>
+/* A dishonest slave will skim some earnings into their savings */
+
+<<if $currentSlave.assignment is 3 or $currentSlave.assignment is 2>>
     <<if $currentSlave.honesty lte 1>><<set $currentSlave.savings += ($currentSlave.earned *= 0.15), $currentSlave.earned += ($currentSlave.earned *= -0.15)>><</if>>
     <<if $currentSlave.honesty is 2>><<set $currentSlave.savings += ($currentSlave.earned *= 0.1), $currentSlave.earned += ($currentSlave.earned *= -0.1)>><</if>>
     <<if $currentSlave.honesty is 3>><<set $currentSlave.savings += ($currentSlave.earned *= 0.05), $currentSlave.earned to ($currentSlave.earned += -0.05)>><</if>>
