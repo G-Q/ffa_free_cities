@@ -116,7 +116,7 @@
 <</if>>
 <<if $currentSlave.sexual_flaw is "apathetic">><<set $currentSlave.sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex.">>
 <</if>>
-<<if $currentSlave.sexual_flaw is "idealistic">><<set $currentSlave.sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make <<print $currentSlave.slave.them>> more disobedient and fearful over time unless already devoted to you.">>
+<<if $currentSlave.sexual_flaw is "idealistic">><<set $currentSlave.sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make <<print $currentSlave.them>> more disobedient and fearful over time unless already devoted to you.">>
 <</if>>
 
 <<if $currentSlave.fetish is "none">><<set $currentSlave.fetish_desc to "">><</if>>

@@ -118,6 +118,7 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 /* Please don't modify this file unless you know Sugarcube! */
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryCaption" tags="" position="">&lt;&lt;nobr&gt;&gt;
+
 &lt;&lt;if not tags().contains("no-header")&gt;&gt;
   &lt;&lt;if tags().contains("manage-slave")&gt;&gt;
     [[Home|Update Current]]
@@ -133,6 +134,7 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 
   &lt;hr&gt;
 &lt;&lt;/if&gt;&gt;
+
 &lt;&lt;if tags().contains("home")&gt;&gt;
 [[End Week]]&lt;br&gt;
 [[Buy Slaves]]
@@ -245,6 +247,14 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
   &lt;&lt;if $currentSlave.assignment is 5&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "serve your household"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 6&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "be trained"&gt;&gt;&lt;&lt;/if&gt;&gt;
   
+  &lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "rested"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 1&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was your personal toy"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 2&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "worked a gloryhole"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 3&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was sold as a whore"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 4&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "served the public"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 5&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "served your household"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 6&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was trained"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  
   &lt;&lt;if $currentSlave.clothing is 0&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naked"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 1&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "cute panties"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 2&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "latex"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -321,6 +331,14 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
   &lt;&lt;if $currentSlave.assignment is 5&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "serve your household"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.assignment is 6&gt;&gt;&lt;&lt;set $currentSlave.assignment_short to "be trained"&gt;&gt;&lt;&lt;/if&gt;&gt;
   
+  &lt;&lt;if $currentSlave.assignment is 0&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "rested"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 1&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was your personal toy"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 2&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "worked a gloryhole"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 3&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was sold as a whore"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 4&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "served the public"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 5&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "served your household"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.assignment is 6&gt;&gt;&lt;&lt;set $currentSlave.assignment_report to "was trained"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  
   &lt;&lt;if $currentSlave.clothing is 0&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naked"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 1&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "cute panties"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 2&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "latex"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -385,9 +403,10 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
 &lt;&lt;set $money to 10000, $reputation to 0&gt;&gt;
 &lt;&lt;set $slaves_owned to []&gt;&gt;
 &lt;&lt;set $IDnumber to 0&gt;&gt;
+&lt;&lt;set $week to 1, $expenses to 0, $income to 0&gt;&gt;
 
 &lt;&lt;/nobr&gt;&gt;
-/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on Free Cities.
+/* Please don't modify this file unless you know Sugarcube! */</tw-passagedata><tw-passagedata pid="5" name="Start" tags="no-header" position="">A collaborative fic based in part on [Free Cities|"https://www.tfgamessite.com/?module=viewgame&amp;id=751"].
 
 This is a text-based game which includes graphic descriptions of sex, violence, drug use and other adult themes.  By continuing you acknowledge that you are over 18 and that you may encounter graphic or upsetting material.
 
@@ -496,10 +515,12 @@ Your reputation and actions affect your interactions with other citizens and you
   &gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
-  /* If you'd like to add a fetish/kink, please discuss it on meme first so that adjustments to game behavior can be coordinated */
+  /* If you'd like to add a fetish/kink/personality, please discuss it on meme first so that adjustments to game behavior can be coordinated */
   
   &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
+  
   &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
+  
   &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
   
   &lt;&lt;set $ass to random(1,5)&gt;&gt;
@@ -640,175 +661,176 @@ Your reputation and actions affect your interactions with other citizens and you
   &lt;&lt;set $stubborness to random(1,5)&gt;&gt;
   &lt;&lt;set $happiness to random(1,5)&gt;&gt;
   
-  &lt;&lt;nobr&gt;&gt;
-  
-  /* Please don't modify this file unless you know Sugarcube! */
-  
-  &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 3&gt;&gt;&lt;&lt;set $health_desc to "@@color:gray;a bit sick@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 4&gt;&gt;&lt;&lt;set $health_desc to "@@color:blue;healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health gte 5&gt;&gt;&lt;&lt;set $health_desc to "@@color:purple;very healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $honesty lte 1&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:red;is a pathogical liar@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 2&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:orange;lies frequently@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 3&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:gray;will lie when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 4&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:blue;is honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty gte 5&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:purple;is disarmingly honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $obedience lte 1&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:red;is rebellious and wildly disobedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 2&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:orange;is disobedient if not supervised closely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 3&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:gray;will disobey when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 4&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:blue;is obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience gte 5&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:purple;is very obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $devotion lte 1&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:red;both hates and fears you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 2&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:orange;afraid and mistrustful of you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 3&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:gray;ambivalent towards you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 4&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:blue;devoted and trusts you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion gte 5&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:purple;slavishly worshipful, trusting you completely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $intelligence lte 1&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:red;very stupid@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 2&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:orange;not very bright@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 3&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:gray;of average intelligence@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 4&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:blue;quite smart@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence gte 5&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:purple;brilliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $attractiveness lte 1&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:red;very unattractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 2&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:orange;not much to look at@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 3&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:gray;very average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 4&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:blue;quite attractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness gte 5&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:purple;absolutely stunning@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $stubborness lte 1&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:red;incredibly stubborn and difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 2&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:orange;difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 3&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:gray;moderately trainable@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 4&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:blue;easily trained@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness gte 5&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:purple;very compliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $oral_skill lte 1&gt;&gt;&lt;&lt;set $oral_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $oral_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $oral_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 4&gt;&gt;&lt;&lt;set $oral_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill gte 5&gt;&gt;&lt;&lt;set $oral_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $anal_skill lte 1&gt;&gt;&lt;&lt;set $anal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 2&gt;&gt;&lt;&lt;set $anal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 3&gt;&gt;&lt;&lt;set $anal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 4&gt;&gt;&lt;&lt;set $anal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill gte 5&gt;&gt;&lt;&lt;set $anal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $vaginal_skill lte 1&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 2&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 3&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 4&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill gte 5&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $penetrative_skill lte 1&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 2&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 3&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 4&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill gte 5&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $male_attraction lte 1&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:red;finds sex with men repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 2&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:orange;does not care for sex with men, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 3&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:gray;will have sex with men if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 4&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:blue;is very attracted to men@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction gte 5&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:purple;loves cock, seeking out sex with men when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $female_attraction lte 1&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:red;finds sex with women repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 2&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:orange;does not care for sex with women, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 3&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:gray;will have sex with women if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 4&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:blue;is very attracted to women@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction gte 5&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:purple;loves pussy, seeking out sex with women when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $flaw is "none"&gt;&gt;&lt;&lt;set $flaw_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "opposed to slavery"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;opposed to slavery@@ and may become more rebellious and disobedient over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "arrogant"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;arrogant@@ and may become more disobedient and less trusting over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "bitchy"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;bitchy@@ and may be unkind to other slaves and customers."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "chronically ill"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;chronically ill@@ and is likely to get more sick over time, and might never be completely healthy."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "eccentric"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;eccentric@@ and might not get along with other slaves and may behave strangely."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "jealous"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;jealous@@ and may become unhappy or disobedient if not treated better than other slaves."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $sexual_flaw is "none"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to ""&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates anal"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates anal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates oral"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates oral sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates vaginal"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates vaginal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates penetrative"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates fucking others@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates all"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates all sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates men"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with men@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates women"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with women@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "very shy"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very shy@@, which may affect the price customers are willing to pay."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "judgemental"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very judgemental@@, which may affect the price customers are willing to pay and may become more disobedient over time."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "vulgar"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;vulgar@@, which may affect the price customers are willing to pay."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "apathetic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make &lt;&lt;print $slave.them&gt;&gt; more disobedient and fearful over time unless already devoted to you."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $fetish is "none"&gt;&gt;&lt;&lt;set $fetish_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "sub"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves submitting to others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "dom"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves dominating and punishing others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "dom"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;gets off on being humiliated@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "sadism"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves inflicting pain on others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "masochism"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being hurt and punished@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "bondage"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being bound and used@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "pregnancy"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being pregnant and being impregnated@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "anal"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being fucked in the ass@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "breasts"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves breasts@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "penetrative"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves fucking others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "oral"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves going down on others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "tentacles"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves tentacles@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;/nobr&gt;&gt;
+    &lt;&lt;nobr&gt;&gt;
+    
+    /* Please don't modify this file unless you know Sugarcube! */
+    
+    &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 3&gt;&gt;&lt;&lt;set $health_desc to "@@color:gray;a bit sick@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 4&gt;&gt;&lt;&lt;set $health_desc to "@@color:blue;healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health gte 5&gt;&gt;&lt;&lt;set $health_desc to "@@color:purple;very healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $honesty lte 1&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:red;is a pathogical liar@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 2&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:orange;lies frequently@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 3&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:gray;will lie when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 4&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:blue;is honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty gte 5&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:purple;is disarmingly honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $obedience lte 1&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:red;is rebellious and wildly disobedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 2&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:orange;is disobedient if not supervised closely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 3&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:gray;will disobey when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 4&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:blue;is obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience gte 5&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:purple;is very obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $devotion lte 1&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:red;both hates and fears you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 2&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:orange;afraid and mistrustful of you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 3&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:gray;ambivalent towards you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 4&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:blue;devoted and trusts you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion gte 5&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:purple;slavishly worshipful, trusting you completely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $intelligence lte 1&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:red;very stupid@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 2&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:orange;not very bright@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 3&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:gray;of average intelligence@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 4&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:blue;quite smart@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence gte 5&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:purple;brilliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $attractiveness lte 1&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:red;very unattractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 2&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:orange;not much to look at@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 3&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:gray;very average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 4&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:blue;quite attractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness gte 5&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:purple;absolutely stunning@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $stubborness lte 1&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:red;incredibly stubborn and difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 2&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:orange;difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 3&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:gray;moderately trainable@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 4&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:blue;easily trained@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness gte 5&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:purple;very compliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $oral_skill lte 1&gt;&gt;&lt;&lt;set $oral_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $oral_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $oral_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 4&gt;&gt;&lt;&lt;set $oral_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill gte 5&gt;&gt;&lt;&lt;set $oral_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $anal_skill lte 1&gt;&gt;&lt;&lt;set $anal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 2&gt;&gt;&lt;&lt;set $anal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 3&gt;&gt;&lt;&lt;set $anal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 4&gt;&gt;&lt;&lt;set $anal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill gte 5&gt;&gt;&lt;&lt;set $anal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $vaginal_skill lte 1&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 2&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 3&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 4&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill gte 5&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $penetrative_skill lte 1&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 2&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 3&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 4&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill gte 5&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $male_attraction lte 1&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:red;finds sex with men repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 2&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:orange;does not care for sex with men, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 3&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:gray;will have sex with men if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 4&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:blue;is very attracted to men@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction gte 5&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:purple;loves cock, seeking out sex with men when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $female_attraction lte 1&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:red;finds sex with women repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 2&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:orange;does not care for sex with women, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 3&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:gray;will have sex with women if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 4&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:blue;is very attracted to women@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction gte 5&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:purple;loves pussy, seeking out sex with women when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $flaw is "none"&gt;&gt;&lt;&lt;set $flaw_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "opposed to slavery"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;opposed to slavery@@ and may become more rebellious and disobedient over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "arrogant"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;arrogant@@ and may become more disobedient and less trusting over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "bitchy"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;bitchy@@ and may be unkind to other slaves and customers."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "chronically ill"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;chronically ill@@ and is likely to get more sick over time, and might never be completely healthy."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "eccentric"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;eccentric@@ and might not get along with other slaves and may behave strangely."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "jealous"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;jealous@@ and may become unhappy or disobedient if not treated better than other slaves."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $sexual_flaw is "none"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to ""&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates anal"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates anal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates oral"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates oral sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates vaginal"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates vaginal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates penetrative"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates fucking others@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates all"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates all sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates men"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with men@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates women"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with women@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "very shy"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very shy@@, which may affect the price customers are willing to pay."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "judgemental"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very judgemental@@, which may affect the price customers are willing to pay and may become more disobedient over time."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "vulgar"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;vulgar@@, which may affect the price customers are willing to pay."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "apathetic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make $slave.them more disobedient and fearful over time unless already devoted to you."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $fetish is "none"&gt;&gt;&lt;&lt;set $fetish_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "sub"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves submitting to others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "dom"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves dominating and punishing others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "dom"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;gets off on being humiliated@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "sadism"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves inflicting pain on others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "masochism"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being hurt and punished@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "bondage"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being bound and used@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "pregnancy"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being pregnant and being impregnated@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "anal"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being fucked in the ass@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "breasts"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves breasts@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "penetrative"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves fucking others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "oral"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves going down on others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "tentacles"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves tentacles@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/nobr&gt;&gt;
   
   &lt;&lt;set $slave to {
+  
   name: $slavename, gender: $slavegender, ID: $IDnumber, personality: either("needs_harsh", "needs_kindness", "neither"), gender_pres: ("butch", "femme", "neither"),
   
   they: $slavethey, their: $slavetheir, them: $slavethem, theirs: $slavetheirs, They: $slaveThey, Their: $slaveTheir, Theirs: $slaveTheirs,
   
   height: either($height), hair: either($hair), hairstyle: either($hair_style), eyes: either($eyes), skin: either($skin), physique: either($physique), pubic: either($pubic),
   
-  age: random(18,50),
+  age: random(18,50), birth_week: (1,52),
   
   oral_virginity: $oral_virgin, anal_virginity: $anal_virgin, vaginal_virginity: $vaginal_virgin, penetrative_virginity: $penetrative_virgin,
   
@@ -830,11 +852,13 @@ Your reputation and actions affect your interactions with other citizens and you
   
   ass: $slaveass, cock: $slavecock, vagina: $slavevagina, breasts: $slavebreasts,
   
-  assignment: 0, assignment_short: "rest", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
+  assignment: 0, assignment_short: "rest", assignment_report: "rested", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
   
   treatment: 0,
   
-  smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you"
+  smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you",
+  
+  base_price: 0, customers_male: 0, customers_female: 0, earned: 0, savings: 0, customers_flaw_mad: 0, customers_sexual_flaw_mad: 0, customers_like_fetish: 0, customer_likes_flaw: 0, customer_likes_sexual_flaw: 0
   }
   &gt;&gt;
   &lt;&lt;set $IDnumber += 1&gt;&gt;
@@ -844,15 +868,15 @@ Your reputation and actions affect your interactions with other citizens and you
   &lt;&lt;nobr&gt;&gt;
   &lt;&lt;set $price to 1000&gt;&gt;
   
-  &lt;&lt;if $female is true and $vaginal_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $penetrative_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $anal_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $oral_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
   
-  &lt;&lt;if $female is true and $vaginal_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 4&gt;&gt;&lt;&lt;set $price *= 1.15&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 5&gt;&gt;&lt;&lt;set $price *= 1.2&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 4&gt;&gt;&lt;&lt;set $price *= 1.15&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 5&gt;&gt;&lt;&lt;set $price *= 1.2&gt;&gt;&lt;&lt;/if&gt;&gt;
   
   &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -920,7 +944,7 @@ The slave before you is a $slave.height ''$slave.gender'' named $slave.name, age
 
 $slave.They is $health_desc and $devotion_desc.  From your previous experience with $slave.them, you know that $slave.they $honesty_desc, that $slave.they $obedience_desc, that $slave.they is $stubborness_desc, and that $slave.they is $intelligence_desc.
 
-$slave.They $flaw_desc  $slave.They $sexual_flaw_desc  $slave.They $fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.  $slave.They $male_attraction_desc and $female_attraction_desc.  You find $slave.them $attractiveness_desc.
+&lt;&lt;if $slave.flaw isnot "none"&gt;&gt;$slave.They $flaw_desc&lt;&lt;/if&gt;&gt;  &lt;&lt;if $slave.sexual_flaw isnot "none"&gt;&gt;$slave.They&lt;&lt;/if&gt;&gt; $sexual_flaw_desc  &lt;&lt;if $slave.flaw isnot "none"&gt;&gt;$slave.They $fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.&lt;&lt;/if&gt;&gt;  $slave.They $male_attraction_desc and $female_attraction_desc.  You find $slave.them $attractiveness_desc.
 
 &lt;&lt;nobr&gt;&gt;
 $slave.They
@@ -963,7 +987,7 @@ $slave.They
     ]&gt;&gt;
     &lt;&lt;set $finger_ass_reaction to [
     
-    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
+    "sighs happily as you slowly finger fuck &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; tight ass",
     
     "flinches away from your touch",
     
@@ -971,7 +995,7 @@ $slave.They
     
     "leans into you for more",
     
-    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
+    "tries to chase the sensation as you finger &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; ass"
     
     ]&gt;&gt;
   
@@ -1202,7 +1226,7 @@ $currentSlave.Their ass is $currentSlave.ass and &lt;&lt;if $currentSlave.gender
 
 $currentSlave.They is $currentSlave.health_desc and $currentSlave.devotion_desc.  From your previous experience with $currentSlave.name, you know that $currentSlave.they $currentSlave.honesty_desc, that $currentSlave.they $currentSlave.obedience_desc, that $currentSlave.they is $currentSlave.stubborness_desc, and that $currentSlave.they is $currentSlave.intelligence_desc.
 
-&lt;&lt;if $currentSlave.flaw isnot "none"&gt;&gt;$currentSlave.name $currentSlave.flaw_desc  &lt;&lt;/if&gt;&gt;&lt;&lt;if $currentSlave.sexual_flaw isnot "none"&gt;&gt;$currentSlave.They $currentSlave.sexual_flaw_desc  &lt;&lt;/if&gt;&gt;&lt;&lt;if $currentSlave.fetish isnot "none"&gt;&gt;$currentSlave.They $currentSlave.fetish_desc, which will affect $slave.their reactions to your treatment of $slave.them, $slave.their interactions with other slaves, and the price some customers are willing to pay for sex with $slave.them.  &lt;&lt;/if&gt;&gt;$currentSlave.They $currentSlave.male_attraction_desc and $currentSlave.female_attraction_desc.  You find $currentSlave.them $currentSlave.attractiveness_desc.
+&lt;&lt;if $currentSlave.flaw isnot "none"&gt;&gt;$currentSlave.name $currentSlave.flaw_desc  &lt;&lt;/if&gt;&gt;&lt;&lt;if $currentSlave.sexual_flaw isnot "none"&gt;&gt;$currentSlave.They $currentSlave.sexual_flaw_desc  &lt;&lt;/if&gt;&gt;&lt;&lt;if $currentSlave.fetish isnot "none"&gt;&gt;$currentSlave.They $currentSlave.fetish_desc, which will affect $currentSlave.their reactions to your treatment of $currentSlave.them, $currentSlave.their interactions with other slaves, and the price some customers are willing to pay for sex with $currentSlave.them.  &lt;&lt;/if&gt;&gt;$currentSlave.They $currentSlave.male_attraction_desc and $currentSlave.female_attraction_desc.  You find $currentSlave.them $currentSlave.attractiveness_desc.
 
 &lt;&lt;nobr&gt;&gt;
 $currentSlave.They
@@ -1303,7 +1327,7 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     ]&gt;&gt;
     &lt;&lt;set $finger_ass_reaction to [
     
-    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
+    "sighs happily as you slowly finger fuck &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; tight ass",
     
     "flinches away from your touch",
     
@@ -1311,7 +1335,7 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     
     "leans into you for more",
     
-    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
+    "tries to chase the sensation as you finger &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; ass"
     
     ]&gt;&gt;
   
@@ -1462,17 +1486,15 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
     &lt;&lt;/if&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
-  &lt;&lt;if $currentSlave.vaginal_virginity is false&gt;&gt;
-    &lt;&lt;if $currentSlave.gender is "female"&gt;&gt;
+  &lt;&lt;if $currentSlave.vaginal_virginity is false and $currentSlave.gender is "female"&gt;&gt;
       &lt;&lt;if $PCgender is "female"&gt;&gt;
         &lt;&lt;linkreplace "*Fuck her pussy"&gt;&gt;&lt;&lt;print either($female_fuck_pussy)&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
       &lt;&lt;else&gt;&gt;
         &lt;&lt;linkreplace "*Fuck her pussy"&gt;&gt;&lt;&lt;print either($male_fuck_pussy)&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
       &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
   &lt;&lt;else&gt;&gt;
+      &lt;&lt;if $currentSlave.gender is "female"&gt;&gt;
     //If you &lt;&lt;if $currentSlave.gender is "female"&gt;&gt;fuck her pussy&lt;&lt;/if&gt;&gt;, it will take $currentSlave.name's virginity//
-    &lt;&lt;if $currentSlave.gender is "female"&gt;&gt;
       &lt;&lt;if $PCgender is "female"&gt;&gt;
         &lt;&lt;linkreplace "*Fuck her pussy"&gt;&gt;&lt;&lt;print either($female_fuck_pussy)&gt;&gt;&lt;&lt;set $currentSlave.vaginal_virginity to false&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
       &lt;&lt;else&gt;&gt;
@@ -1588,10 +1610,12 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
-  /* If you'd like to add a fetish/kink, please discuss it on meme first so that adjustments to game behavior can be coordinated */
+  /* If you'd like to add a fetish/kink/personality, please discuss it on meme first so that adjustments to game behavior can be coordinated */
   
   &lt;&lt;set $flaw_set to [ "none", "jealous", "opposed to slavery", "arrogant", "bitchy", "chronically ill", "eccentric"]&gt;&gt;
+  
   &lt;&lt;set $sexual_flaw_set to [ "none", "hates men", "hates women", "hates anal", "hates oral", "hates vaginal", "hates penetrative", "hates all", "very shy", "idealistic", "judgemental", "vulgar", "apathetic"] &gt;&gt;
+  
   &lt;&lt;set $fetish_set to [ "none", "sub", "dom", "bondage", "sadism", "masochism", "pregnancy", "anal", "breasts", "penetrative", "oral", "tentacles"] &gt;&gt;
   
   &lt;&lt;set $ass to random(1,5)&gt;&gt;
@@ -1732,175 +1756,176 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &lt;&lt;set $stubborness to random(1,5)&gt;&gt;
   &lt;&lt;set $happiness to random(1,5)&gt;&gt;
   
-  &lt;&lt;nobr&gt;&gt;
-  
-  /* Please don't modify this file unless you know Sugarcube! */
-  
-  &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 3&gt;&gt;&lt;&lt;set $health_desc to "@@color:gray;a bit sick@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health is 4&gt;&gt;&lt;&lt;set $health_desc to "@@color:blue;healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $health gte 5&gt;&gt;&lt;&lt;set $health_desc to "@@color:purple;very healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $honesty lte 1&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:red;is a pathogical liar@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 2&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:orange;lies frequently@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 3&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:gray;will lie when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty is 4&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:blue;is honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $honesty gte 5&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:purple;is disarmingly honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $obedience lte 1&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:red;is rebellious and wildly disobedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 2&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:orange;is disobedient if not supervised closely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 3&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:gray;will disobey when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience is 4&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:blue;is obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $obedience gte 5&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:purple;is very obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $devotion lte 1&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:red;both hates and fears you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 2&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:orange;afraid and mistrustful of you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 3&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:gray;ambivalent towards you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion is 4&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:blue;devoted and trusts you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $devotion gte 5&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:purple;slavishly worshipful, trusting you completely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $intelligence lte 1&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:red;very stupid@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 2&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:orange;not very bright@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 3&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:gray;of average intelligence@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence is 4&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:blue;quite smart@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $intelligence gte 5&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:purple;brilliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $attractiveness lte 1&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:red;very unattractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 2&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:orange;not much to look at@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 3&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:gray;very average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness is 4&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:blue;quite attractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $attractiveness gte 5&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:purple;absolutely stunning@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $stubborness lte 1&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:red;incredibly stubborn and difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 2&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:orange;difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 3&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:gray;moderately trainable@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness is 4&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:blue;easily trained@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $stubborness gte 5&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:purple;very compliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $oral_skill lte 1&gt;&gt;&lt;&lt;set $oral_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $oral_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $oral_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill is 4&gt;&gt;&lt;&lt;set $oral_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_skill gte 5&gt;&gt;&lt;&lt;set $oral_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $anal_skill lte 1&gt;&gt;&lt;&lt;set $anal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 2&gt;&gt;&lt;&lt;set $anal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 3&gt;&gt;&lt;&lt;set $anal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill is 4&gt;&gt;&lt;&lt;set $anal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_skill gte 5&gt;&gt;&lt;&lt;set $anal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $vaginal_skill lte 1&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 2&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 3&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill is 4&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $vaginal_skill gte 5&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $penetrative_skill lte 1&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 2&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 3&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill is 4&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_skill gte 5&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $male_attraction lte 1&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:red;finds sex with men repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 2&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:orange;does not care for sex with men, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 3&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:gray;will have sex with men if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction is 4&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:blue;is very attracted to men@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $male_attraction gte 5&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:purple;loves cock, seeking out sex with men when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $female_attraction lte 1&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:red;finds sex with women repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 2&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:orange;does not care for sex with women, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 3&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:gray;will have sex with women if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction is 4&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:blue;is very attracted to women@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female_attraction gte 5&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:purple;loves pussy, seeking out sex with women when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $flaw is "none"&gt;&gt;&lt;&lt;set $flaw_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "opposed to slavery"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;opposed to slavery@@ and may become more rebellious and disobedient over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "arrogant"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;arrogant@@ and may become more disobedient and less trusting over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "bitchy"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;bitchy@@ and may be unkind to other slaves and customers."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "chronically ill"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;chronically ill@@ and is likely to get more sick over time, and might never be completely healthy."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "eccentric"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;eccentric@@ and might not get along with other slaves and may behave strangely."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $flaw is "jealous"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;jealous@@ and may become unhappy or disobedient if not treated better than other slaves."&gt;&gt;&lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $sexual_flaw is "none"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to ""&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates anal"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates anal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates oral"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates oral sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates vaginal"&gt;&gt;
-    &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates vaginal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates penetrative"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates fucking others@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates all"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates all sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates men"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with men@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "hates women"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with women@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "very shy"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very shy@@, which may affect the price customers are willing to pay."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "judgemental"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very judgemental@@, which may affect the price customers are willing to pay and may become more disobedient over time."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "vulgar"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;vulgar@@, which may affect the price customers are willing to pay."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "apathetic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make &lt;&lt;print $slave.them&gt;&gt; more disobedient and fearful over time unless already devoted to you."&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  
-  &lt;&lt;if $fetish is "none"&gt;&gt;&lt;&lt;set $fetish_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "sub"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves submitting to others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "dom"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves dominating and punishing others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "dom"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;gets off on being humiliated@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "sadism"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves inflicting pain on others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "masochism"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being hurt and punished@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "bondage"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being bound and used@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "pregnancy"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being pregnant and being impregnated@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "anal"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves being fucked in the ass@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "breasts"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves breasts@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "penetrative"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves fucking others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "oral"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves going down on others@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $fetish is "tentacles"&gt;&gt;
-    &lt;&lt;set $fetish_desc to "@@color:blue;loves tentacles@@"&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
-  &lt;&lt;/nobr&gt;&gt;
+    &lt;&lt;nobr&gt;&gt;
+    
+    /* Please don't modify this file unless you know Sugarcube! */
+    
+    &lt;&lt;if $health lt 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;dead@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 1&gt;&gt;&lt;&lt;set $health_desc to "@@color:red;very ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 2&gt;&gt;&lt;&lt;set $health_desc to "@@color:orange;ill@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 3&gt;&gt;&lt;&lt;set $health_desc to "@@color:gray;a bit sick@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health is 4&gt;&gt;&lt;&lt;set $health_desc to "@@color:blue;healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $health gte 5&gt;&gt;&lt;&lt;set $health_desc to "@@color:purple;very healthy@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $honesty lte 1&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:red;is a pathogical liar@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 2&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:orange;lies frequently@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 3&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:gray;will lie when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty is 4&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:blue;is honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $honesty gte 5&gt;&gt;&lt;&lt;set $honesty_desc to "@@color:purple;is disarmingly honest@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $obedience lte 1&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:red;is rebellious and wildly disobedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 2&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:orange;is disobedient if not supervised closely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 3&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:gray;will disobey when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience is 4&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:blue;is obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $obedience gte 5&gt;&gt;&lt;&lt;set $obedience_desc to "@@color:purple;is very obedient@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $devotion lte 1&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:red;both hates and fears you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 2&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:orange;afraid and mistrustful of you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 3&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:gray;ambivalent towards you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion is 4&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:blue;devoted and trusts you@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $devotion gte 5&gt;&gt;&lt;&lt;set $devotion_desc to "@@color:purple;slavishly worshipful, trusting you completely@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $intelligence lte 1&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:red;very stupid@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 2&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:orange;not very bright@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 3&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:gray;of average intelligence@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence is 4&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:blue;quite smart@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $intelligence gte 5&gt;&gt;&lt;&lt;set $intelligence_desc to "@@color:purple;brilliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $attractiveness lte 1&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:red;very unattractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 2&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:orange;not much to look at@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 3&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:gray;very average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness is 4&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:blue;quite attractive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $attractiveness gte 5&gt;&gt;&lt;&lt;set $attractiveness_desc to "@@color:purple;absolutely stunning@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $stubborness lte 1&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:red;incredibly stubborn and difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 2&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:orange;difficult to train@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 3&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:gray;moderately trainable@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness is 4&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:blue;easily trained@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $stubborness gte 5&gt;&gt;&lt;&lt;set $stubborness_desc to "@@color:purple;very compliant@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $oral_skill lte 1&gt;&gt;&lt;&lt;set $oral_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $oral_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $oral_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill is 4&gt;&gt;&lt;&lt;set $oral_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $oral_skill gte 5&gt;&gt;&lt;&lt;set $oral_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $anal_skill lte 1&gt;&gt;&lt;&lt;set $anal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 2&gt;&gt;&lt;&lt;set $anal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 3&gt;&gt;&lt;&lt;set $anal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill is 4&gt;&gt;&lt;&lt;set $anal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $anal_skill gte 5&gt;&gt;&lt;&lt;set $anal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $vaginal_skill lte 1&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 2&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 3&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill is 4&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $vaginal_skill gte 5&gt;&gt;&lt;&lt;set $vaginal_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $penetrative_skill lte 1&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:red;clumsy and naive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 2&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:orange;woefully unskilled@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 3&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:gray;pretty average@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill is 4&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:blue;quite good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $penetrative_skill gte 5&gt;&gt;&lt;&lt;set $penetrative_desc to "@@color:purple;mindblowingly good@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $male_attraction lte 1&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:red;finds sex with men repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 2&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:orange;does not care for sex with men, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 3&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:gray;will have sex with men if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction is 4&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:blue;is very attracted to men@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $male_attraction gte 5&gt;&gt;&lt;&lt;set $male_attraction_desc to "@@color:purple;loves cock, seeking out sex with men when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $female_attraction lte 1&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:red;finds sex with women repulsive@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 2&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:orange;does not care for sex with women, avoiding it when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 3&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:gray;will have sex with women if required to, but doesn't seek it out@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction is 4&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:blue;is very attracted to women@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $female_attraction gte 5&gt;&gt;&lt;&lt;set $female_attraction_desc to "@@color:purple;loves pussy, seeking out sex with women when possible@@"&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $flaw is "none"&gt;&gt;&lt;&lt;set $flaw_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "opposed to slavery"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;opposed to slavery@@ and may become more rebellious and disobedient over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "arrogant"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;arrogant@@ and may become more disobedient and less trusting over time."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "bitchy"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;bitchy@@ and may be unkind to other slaves and customers."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "chronically ill"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;chronically ill@@ and is likely to get more sick over time, and might never be completely healthy."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "eccentric"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;eccentric@@ and might not get along with other slaves and may behave strangely."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $flaw is "jealous"&gt;&gt;&lt;&lt;set $flaw_desc to "is @@color:red;jealous@@ and may become unhappy or disobedient if not treated better than other slaves."&gt;&gt;&lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $sexual_flaw is "none"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to ""&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates anal"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates anal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates oral"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates oral sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates vaginal"&gt;&gt;
+      &lt;&lt;set $sexual_flaw_desc to "@@color:red;hates vaginal sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates penetrative"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates fucking others@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates all"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates all sex@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates men"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with men@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "hates women"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;hates sex with women@@ and will try to avoid it, and may become more rebellious and fearful if subjected to it."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "very shy"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very shy@@, which may affect the price customers are willing to pay."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "judgemental"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;very judgemental@@, which may affect the price customers are willing to pay and may become more disobedient over time."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "vulgar"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;vulgar@@, which may affect the price customers are willing to pay."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "apathetic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make $slave.them more disobedient and fearful over time unless already devoted to you."&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $fetish is "none"&gt;&gt;&lt;&lt;set $fetish_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "sub"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves submitting to others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "dom"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves dominating and punishing others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "dom"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;gets off on being humiliated@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "sadism"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves inflicting pain on others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "masochism"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being hurt and punished@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "bondage"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being bound and used@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "pregnancy"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being pregnant and being impregnated@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "anal"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves being fucked in the ass@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "breasts"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves breasts@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "penetrative"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves fucking others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "oral"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves going down on others@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;if $fetish is "tentacles"&gt;&gt;
+      &lt;&lt;set $fetish_desc to "@@color:blue;loves tentacles@@"&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/nobr&gt;&gt;
   
   &lt;&lt;set $slave to {
+  
   name: $slavename, gender: $slavegender, ID: $IDnumber, personality: either("needs_harsh", "needs_kindness", "neither"), gender_pres: ("butch", "femme", "neither"),
   
   they: $slavethey, their: $slavetheir, them: $slavethem, theirs: $slavetheirs, They: $slaveThey, Their: $slaveTheir, Theirs: $slaveTheirs,
   
   height: either($height), hair: either($hair), hairstyle: either($hair_style), eyes: either($eyes), skin: either($skin), physique: either($physique), pubic: either($pubic),
   
-  age: random(18,50),
+  age: random(18,50), birth_week: (1,52),
   
   oral_virginity: $oral_virgin, anal_virginity: $anal_virgin, vaginal_virginity: $vaginal_virgin, penetrative_virginity: $penetrative_virgin,
   
@@ -1922,11 +1947,13 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   
   ass: $slaveass, cock: $slavecock, vagina: $slavevagina, breasts: $slavebreasts,
   
-  assignment: 0, assignment_short: "rest", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
+  assignment: 0, assignment_short: "rest", assignment_report: "rested", living: 1, living_short: "spare", clothes: 0, clothing_short: "naked", clothing_pres: "neither", collar: 0, collar_short: "none", plug: 0, plug_short: "none", vag_accessory: 0, vag_acc_short: "none", cock_accessory: 0, cock_acc_short: "none",
   
   treatment: 0,
   
-  smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you"
+  smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you",
+  
+  base_price: 0, customers_male: 0, customers_female: 0, earned: 0, savings: 0, customers_flaw_mad: 0, customers_sexual_flaw_mad: 0, customers_like_fetish: 0, customer_likes_flaw: 0, customer_likes_sexual_flaw: 0
   }
   &gt;&gt;
   &lt;&lt;set $IDnumber += 1&gt;&gt;
@@ -1936,15 +1963,15 @@ Inspect &lt;&lt;print $currentSlave.name&gt;&gt;:
   &lt;&lt;nobr&gt;&gt;
   &lt;&lt;set $price to 1000&gt;&gt;
   
-  &lt;&lt;if $female is true and $vaginal_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $penetrative_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $anal_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $oral_virgin&gt;&gt;&lt;&lt;set $price *= 1.1&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $penetrative_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $anal_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $oral_virgin&gt;&gt;&lt;&lt;set $price *= 1.3&gt;&gt;&lt;&lt;/if&gt;&gt;
   
-  &lt;&lt;if $female is true and $vaginal_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 4&gt;&gt;&lt;&lt;set $price *= 1.15&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $female is true and $vaginal_skill is 5&gt;&gt;&lt;&lt;set $price *= 1.2&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 4&gt;&gt;&lt;&lt;set $price *= 1.15&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $slave.gender is "female" and $vaginal_skill is 5&gt;&gt;&lt;&lt;set $price *= 1.2&gt;&gt;&lt;&lt;/if&gt;&gt;
   
   &lt;&lt;if $oral_skill is 2&gt;&gt;&lt;&lt;set $price *= 1.05&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $oral_skill is 3&gt;&gt;&lt;&lt;set $price *= 1.10&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2061,7 +2088,7 @@ $slave.They
     ]&gt;&gt;
     &lt;&lt;set $finger_ass_reaction to [
     
-    "sighs happily as you slowly finger fuck &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; tight ass",
+    "sighs happily as you slowly finger fuck &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; tight ass",
     
     "flinches away from your touch",
     
@@ -2069,7 +2096,7 @@ $slave.They
     
     "leans into you for more",
     
-    "tries to chase the sensation as you finger &lt;&lt; if $currentSlave&gt;&gt;$currentSlave.their&lt;&lt;else&gt;&gt;$slave.their&lt;&lt;/if&gt;&gt; ass"
+    "tries to chase the sensation as you finger &lt;&lt;if $slave&gt;&gt;$slave.their&lt;&lt;else&gt;&gt;$currentSlave.their&lt;&lt;/if&gt;&gt; ass"
     
     ]&gt;&gt;
   
@@ -2256,6 +2283,52 @@ $slave.They
 [["Pass on " + $slave.name + " and inspect another slave"|Buy Slaves]]
 [[Go home-&gt;Home]]</tw-passagedata><tw-passagedata pid="17" name="End Week" tags="" position="">/* Please don't modify this file unless you know Sugarcube! */
 
+/* Reset weekly expenses */
+
+&lt;&lt;set $expenses to 0&gt;&gt;
+&lt;&lt;set $income to 0&gt;&gt;
+
+/* Fluctuate demand for services */
+&lt;&lt;set $demand to either(-0.4, -0.2, 0, 0.2, 0.4)&gt;&gt;
+
+&lt;&lt;set $currentSlave.base_price to 5&gt;&gt;
+&lt;&lt;set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))&gt;&gt;
+
+/* Get and set average attributes. */
+
+&lt;&lt;set $total_intelligence to 0&gt;&gt;
+&lt;&lt;set $total_obedience to 0&gt;&gt;
+&lt;&lt;set $total_health to 0&gt;&gt;
+&lt;&lt;set $total_happiness to 0&gt;&gt;
+
+&lt;&lt;set $av_intelligence to 0&gt;&gt;
+&lt;&lt;set $av_obedience to 0&gt;&gt;
+&lt;&lt;set $av_health to 0&gt;&gt;
+&lt;&lt;set $av_happiness to 0&gt;&gt;
+
+&lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
+
+&lt;&lt;set $total_customers to 20&gt;&gt;
+
+&lt;&lt;set $total_intelligence += $slaves_owned[_i].intelligence&gt;&gt;
+
+&lt;&lt;set $total_obedience += $slaves_owned[_i].obedience&gt;&gt;
+
+&lt;&lt;set $total_health += $slaves_owned[_i].health&gt;&gt;
+
+&lt;&lt;set $total_happiness += $slaves_owned[_i].happiness&gt;&gt;
+
+/* Baseline expenses for keeping one slave */
+
+&lt;&lt;set $expenses += 50&gt;&gt;
+  
+&lt;&lt;/for&gt;&gt;
+
+&lt;&lt;set $av_intelligence to ($total_intelligence/$slaves_owned.length)&gt;&gt;
+&lt;&lt;set $av_obedience to ($total_obedience/$slaves_owned.length)&gt;&gt;
+&lt;&lt;set $av_health to ($total_health/$slaves_owned.length)&gt;&gt;
+&lt;&lt;set $av_happiness to ($total_happiness/$slaves_owned.length)&gt;&gt;
+
 /* Not used anywhere yet, if enough slaves are sick or the average health is low, chances of spreading a disease increase. */
   &lt;&lt;if $av_health is 3&gt;&gt;
     &lt;&lt; if random(1,100) is 100 &gt;&gt;
@@ -2273,6 +2346,10 @@ $slave.They
   
 &lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
   &lt;&lt;set $currentSlave to $slaves_owned[_i]&gt;&gt;
+  
+  &lt;&lt;if $currentSlave.birth_week is $week&gt;&gt;
+    &lt;&lt;set $currentSlave.age += 1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
   
   &lt;&lt;set $currentSlave.treatment to 0&gt;&gt;
   
@@ -2385,6 +2462,16 @@ $slave.They
     &lt;&lt;set $currentSlave.change_happiness -=2&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
+/* Average happiness/unhappiness will bring an individual up or down. */
+
+  &lt;&lt;if $av_happiness is gte $currentSlave.happiness&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness += 1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $av_happiness is lte $currentSlave.happiness&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness -= 1&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
 /* An unhappy slave will become less obedient, devoted, and more unhappy over time, a happy slave will become more obedient, devoted and happy. */
   
   &lt;&lt;if $currentSlave.happiness lte 1&gt;&gt;
@@ -2487,6 +2574,13 @@ $slave.They
 &lt;&lt;if $currentSlave.living is 2&gt;&gt;&lt;&lt;set $currentSlave.treatment += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $currentSlave.living is 3&gt;&gt;&lt;&lt;set $currentSlave.treatment += 2&gt;&gt;&lt;&lt;/if&gt;&gt;
 
+/* Increase expenses based on living standard */
+
+&lt;&lt;if $currentSlave.living is 0&gt;&gt;&lt;&lt;set $expenses += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.living is 1&gt;&gt;&lt;&lt;set $expenses += 25&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.living is 2&gt;&gt;&lt;&lt;set $expenses += 50&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.living is 3&gt;&gt;&lt;&lt;set $expenses += 100&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 /* Change treatment score and skill depending on plug. */ 
 
 &lt;&lt;if $currentSlave.plug is 0&gt;&gt;&lt;&lt;set $currentSlave.anal_skill += 0&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2534,6 +2628,99 @@ $slave.They
   &lt;&lt;elseif $currentSlave.treatment lte 0&gt;&gt;
     &lt;&lt;set $currentSlave.change_obedience -= 1, $currentSlave.change_devotion -= 1, $currentSlave.change_happiness -= 1&gt;&gt;
   &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+/* Jealous slaves with needs_harsh/needs_kindness will be envious of other slaves who are treated better/worse. */
+
+&lt;&lt;if $currentSlave.flaw is "jealous" and $currentSlave.personality is "needs_harsh"&gt;&gt;
+  &lt;&lt;if $av_treatment lte $currentSlave.treatment&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness -= 2&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $currentSlave.flaw is "jealous" and $currentSlave.personality is "needs_kindness"&gt;&gt;
+  &lt;&lt;if $av_treatment gte $currentSlave.treatment&gt;&gt;
+    &lt;&lt;set $currentSlave.change_happiness -= 2&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+/* Change weekly expenses based on assignment, see update_assignment.tw2 for assignments */
+
+&lt;&lt;if $currentSlave.assignment is 5&gt;&gt;&lt;&lt;set $expenses -= 25&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.assignment is 6&gt;&gt;&lt;&lt;set $expenses += 25&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.assignment is 2&gt;&gt;&lt;&lt;set $currentSlave.change_health -= 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+/* Set number of customers */
+
+&lt;&lt;if $currentSlave.assignment is 3 or $currentSlave.assignment is 4 or $currentSlave.assignment is 2&gt;&gt;
+
+&lt;&lt;set $total_customers to ($total_customers + ($total_customers * $demand))&gt;&gt;
+
+/* A disobedient slave will see fewer customers */
+
+&lt;&lt;if $currentSlave.obedience is lte 1&gt;&gt;&lt;&lt;set $total_customers to ($total_customers * 0.5))&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.obedience is 2&gt;&gt;&lt;&lt;set $total_customers to ($total_customers + ($total_customers * -0.2))&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.obedience is 3&gt;&gt;&lt;&lt;set $total_customers to ($total_customers + ($total_customers * -0.1))&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $total_customers to Math.round($total_customers)&gt;&gt;
+  
+/* Set proportion of male/female customers */
+  &lt;&lt;set $currentSlave.customers_male to random(0, $total_customers)&gt;&gt;
+  
+  &lt;&lt;set $currentSlave.customers_female to ($total_customers - $currentSlave.customers_male)&gt;&gt;
+  
+/* Increase price based on skill */
+
+&lt;&lt;if $currentSlave.assignment isnot 2&gt;&gt;
+  &lt;&lt;set $currentSlave.base_price += $currentSlave.oral_skill&gt;&gt;
+  &lt;&lt;set $currentSlave.base_price += $currentSlave.anal_skill&gt;&gt;
+  &lt;&lt;set $currentSlave.base_price += $currentSlave.penetrative_skill&gt;&gt;
+  &lt;&lt;if $currentSlave.gender is "female"&gt;&gt;
+    &lt;&lt;set $currentSlave.base_price += $currentSlave.vaginal_skill&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;set $currentSlave.base_price += $currentSlave.attractiveness&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;set $currentSlave.earned to $total_customers * $currentSlave.base_price&gt;&gt;
+
+/* Personality and sexual flaws will make some customers pay less */  
+  
+&lt;&lt;if $currentSlave.assignment isnot 2&gt;&gt;
+  &lt;&lt;if $currentSlave.flaw isnot "none"&gt;&gt;
+    &lt;&lt;if $currentSlave.flaw isnot "jealous"&gt;&gt;
+      &lt;&lt;set $currentSlave.customers_flaw_mad to random(0,$total_customers)&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.sexual_flaw is "bitchy" or $currentSlave.sexual_flaw is "eccentric"&gt;&gt;
+    &lt;&lt;set $currentSlave.customers_sexual_flaw_mad to random(0,$total_customers)&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+/* Kinks will make some customers pay more */
+
+&lt;&lt;if $currentSlave.assignment isnot 2&gt;&gt;
+  &lt;&lt;if $currentSlave.fetish isnot "none"&gt;&gt;
+    &lt;&lt;set $currentSlave.customers_like_fetish to random(0,$total_customers)&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+/* Some customers will also pay extra for personality/sexual flaws */
+
+&lt;&lt;if $currentSlave.assignment is 3&gt;&gt;
+  &lt;&lt;if $currentSlave.sexual_flaw isnot "none"&gt;&gt;
+    &lt;&lt;if $currentSlave.sexual_flaw is either($sexual_flaw_set)&gt;&gt;
+      &lt;&lt;set $currentSlave.customers_like_sexual_flaw to random(0,($total_customers/3))&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.flaw isnot "none"&gt;&gt;
+    &lt;&lt;if $currentSlave.flaw is either($flaw_set)&gt;&gt;
+      &lt;&lt;set $currentSlave.customers_like_flaw += random(0,($total_customers/3))&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+
+
 &lt;&lt;/if&gt;&gt;
   
   /* Please don't modify this file unless you know Sugarcube! */
@@ -2654,7 +2841,7 @@ $slave.They
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.sexual_flaw is "apathetic"&gt;&gt;&lt;&lt;set $currentSlave.sexual_flaw_desc to "@@color:red;does not care about sex@@, which will likely lower the price customers are willing to pay for sex."&gt;&gt;
   &lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $currentSlave.sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $currentSlave.sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make &lt;&lt;print $currentSlave.slave.them&gt;&gt; more disobedient and fearful over time unless already devoted to you."&gt;&gt;
+  &lt;&lt;if $currentSlave.sexual_flaw is "idealistic"&gt;&gt;&lt;&lt;set $currentSlave.sexual_flaw_desc to "is @@color:red;idealistic and has romantic ideas about sex@@, which will make &lt;&lt;print $currentSlave.them&gt;&gt; more disobedient and fearful over time unless already devoted to you."&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   
   &lt;&lt;if $currentSlave.fetish is "none"&gt;&gt;&lt;&lt;set $currentSlave.fetish_desc to ""&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2697,6 +2884,11 @@ $slave.They
   &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
+&lt;&lt;if $week is 52&gt;&gt;
+  &lt;&lt;set $week to 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $week += 1&gt;&gt;
+
 &lt;&lt;set $currentSlave to {}&gt;&gt;
 
 &lt;&lt;goto "Report"&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Report" tags="" position="">&lt;&lt;nobr&gt;&gt;
@@ -2735,19 +2927,18 @@ $slave.They
   &lt;&lt;if $PCcharisma gte 8&gt;&gt;You hear that other citizens and your slaves think of you as $charisma_desc.&lt;&lt;/if&gt;&gt;
   
   &lt;&lt;/nobr&gt;&gt;
-  &lt;&lt;set $av_intelligence to 0&gt;&gt;
-  &lt;&lt;set $av_obedience to 0&gt;&gt;
-  &lt;&lt;set $av_health to 0&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;  
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+Demand for sexual services this week was
+&lt;&lt;if $demand is -0.4&gt;&gt;@@color:red;very low@@.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $demand is -0.2&gt;&gt;@@color:orange;a bit low@@.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $demand is 0&gt;&gt;normal&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $demand is 0.2&gt;&gt;@@color:blue;high@@.&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $demand is 0.4&gt;&gt;@@color:green;very high@@.&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
 &lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-
-&lt;&lt;set $av_intelligence += $slaves_owned[_i].intelligence&gt;&gt;
-
-&lt;&lt;set $av_obedience += $slaves_owned[_i].obedience&gt;&gt;
-
-&lt;&lt;set $av_health += $slaves_owned[_i].health&gt;&gt;
-
 ''$slaves_owned[_i].name''
 
 /* A dishonest slave will say that everything is great. */
@@ -2756,7 +2947,7 @@ $slave.They
     
     had no change to $slaves_owned[_i].their health and $slaves_owned[_i].they
     @@color:green;is becoming more trusting of you@@.
-    $slaves_owned[_i].They appear to be @@color:green;pleased and grateful with your treatment@@.
+    $slaves_owned[_i].They appears to be @@color:green;pleased and grateful with your treatment@@.
   
   &lt;&lt;else&gt;&gt;
   
@@ -2774,17 +2965,224 @@ $slave.They
     &lt;&lt;else&gt;&gt;has not changed $slaves_owned[_i].their opinion of you.
     &lt;&lt;/if&gt;&gt;
     
-    $slaves_owned[_i].They appear to be
+    $slaves_owned[_i].They appears to be
     &lt;&lt;if $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment lte -4&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
-    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment gte 0&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_harsh" and $slaves_owned[_i].treatment gte 0&gt;&gt;@@color:red;restless and unhappy with how $slaves_owned[_i].they's treated@@.
     &lt;&lt;elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment gte 6&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
-    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment lte 2&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "needs_kindness" and $slaves_owned[_i].treatment lte 2&gt;&gt;@@color:red;restless and unhappy with how $slaves_owned[_i].they's treated@@.
     &lt;&lt;elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment gte 4&gt;&gt;@@color:green;pleased and grateful with your treatment@@.
-    &lt;&lt;elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment lte 0&gt;&gt;@@color:red;restless and unhappy with how they're treated@@.
+    &lt;&lt;elseif $slaves_owned[_i].personality is "neither" and $slaves_owned[_i].treatment lte 0&gt;&gt;@@color:red;restless and unhappy with how $slaves_owned[_i].they's treated@@.
     &lt;&lt;else&gt;&gt;unconcerned with your treatment.
     &lt;&lt;/if&gt;&gt;
   
   &lt;&lt;/if&gt;&gt;
+  
+/* Report for assignments */
+
+This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
+
+  &lt;&lt;if $slaves_owned[_i].assignment is 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $slaves_owned[_i].assignment is 1&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+  &lt;&lt;if $slaves_owned[_i].assignment is 2&gt;&gt;
+    $slaves_owned[_i].they was fucked by $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers.
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $slaves_owned[_i].assignment is 3&gt;&gt;
+    $slaves_owned[_i].They saw $slaves_owned[_i].customers_male male customers and $slaves_owned[_i].customers_female female customers.
+    
+    &lt;&lt;if $slaves_owned[_i].sexual_flaw isnot "none" and $slaves_owned[_i].customers_sexual_flaw_mad gt 0&gt;&gt;
+      
+      &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad is 1&gt;&gt;
+        However, one customer complained that $slaves_owned[_i].name
+      &lt;&lt;elseif $slaves_owned[_i].customers_sexual_flaw_mad gt 1&gt;&gt;
+        However, several customers complained that $slaves_owned[_i].name
+      &lt;&lt;/if&gt;&gt;
+      
+        &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
+            @@color:red;hates sex with men@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates women"&gt;&gt;
+            @@color:red;hates sex with women@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates anal"&gt;&gt;
+            @@color:red;hates anal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates oral"&gt;&gt;
+            @@color:red;hates oral sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates vaginal"&gt;&gt;
+            @@color:red;hates vaginal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates penetrative"&gt;&gt;
+            @@color:red;hates penetrative sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates all"&gt;&gt;
+            @@color:red;hates all sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "very shy"&gt;&gt;
+            @@color:red;is too shy@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "idealistic"&gt;&gt;
+            @@color:red;is too romantic and idealistic about sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "judgemental"&gt;&gt;
+            @@color:red;is too judgemental@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "vulgar"&gt;&gt;
+            @@color:red;is too vulgar@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
+            @@color:red;is too boring and apathetic@@
+          &lt;&lt;/if&gt;&gt;
+          
+      and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))&gt;&gt;&lt;/b&gt; less as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $slaves_owned[_i].flaw isnot "none" and $slaves_owned[_i].customers_flaw_mad gt 0&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_flaw_mad is 1&gt;&gt;
+        However, one customer complained that $slaves_owned[_i].name
+      &lt;&lt;elseif $slaves_owned[_i].customers_flaw_mad gt 1&gt;&gt;
+        However, several customers complained that $slaves_owned[_i].name
+      &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].flaw is "bitchy"&gt;&gt;
+            @@color:red;is too bitchy@@
+          &lt;&lt;elseif $slaves_owned[_i].flaw is "eccentric"&gt;&gt;
+            @@color:red;is too odd@@
+          &lt;&lt;/if&gt;&gt;
+      and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_flaw_mad * ($slaves_owned[_i].base_price/2))&gt;&gt;&lt;/b&gt; less as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $slaves_owned[_i].fetish isnot "none" and $slaves_owned[_i].customers_like_fetish gte 1&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_like_fetish is 1&gt;&gt;
+        One citizen very much enjoyed
+      &lt;&lt;elseif $slaves_owned[_i].customers_like_fetish gt 1&gt;&gt;
+        Several citizens very much enjoyed
+      &lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "sub"&gt;&gt;$slaves_owned[_i].name's @@color:green;submissive tendencies@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "dom"&gt;&gt;@@color:green;being dominated by@@ $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "bondage"&gt;&gt;$slaves_owned[_i].name's @@color:green;skill with bondage@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "sadism"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "masochism"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "pregnancy"&gt;&gt;$slaves_owned[_i].name's @@color:green;pregnancy fetish@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "anal"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "breasts"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of breastplay@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "penetrative"&gt;&gt;@@color:green;being fucked@@ by $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "oral"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of oral sex@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "tentacles"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of tentacles@@&lt;&lt;/if&gt;&gt;
+      and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; extra as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $slaves_owned[_i].sexual_flaw isnot "none" and $slaves_owned[_i].customers_like_sexual_flaw gte 1&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_like_flaw is 1&gt;&gt;
+        One customer loved finding a whore who
+      &lt;&lt;elseif $slaves_owned[_i].customers_like_flaw gt 1&gt;&gt;
+        Several customers loved finding a whore who
+      &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
+            @@color:red;hates sex with men@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates women"&gt;&gt;
+            @@color:red;hates sex with women@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates anal"&gt;&gt;
+            @@color:red;hates anal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates oral"&gt;&gt;
+            @@color:red;hates oral sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates vaginal"&gt;&gt;
+            @@color:red;hates vaginal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates penetrative"&gt;&gt;
+            @@color:red;hates penetrative sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates all"&gt;&gt;
+            @@color:red;hates all sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "very shy"&gt;&gt;
+            @@color:red;is very shy@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "idealistic"&gt;&gt;
+            @@color:red;is romantic and idealistic about sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "judgemental"&gt;&gt;
+            @@color:red;is judgemental@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "vulgar"&gt;&gt;
+            @@color:red;is vulgar@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
+            @@color:red;is boring and apathetic@@
+          &lt;&lt;/if&gt;&gt;
+        and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_flaw * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; extra as a result.  
+    &lt;&lt;/if&gt;&gt;
+    
+    In total, $slaves_owned[_i].name earned you &lt;b&gt;⨕ $slaves_owned[_i].earned&lt;/b&gt;.
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $slaves_owned[_i].assignment is 4&gt;&gt;
+    $slaves_owned[_i].They was loaned out to $slaves_owned[_i].customers_male male citizens and $slaves_owned[_i].customers_female female citizens, increasing your reputation by &lt;b&gt;$slaves_owned[_i].earned&lt;/b&gt;.
+    
+    &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad gte 1&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad is 1&gt;&gt;
+        However, one customer complained that $slaves_owned[_i].name
+      &lt;&lt;else&gt;&gt;
+        However, several customers complained that $slaves_owned[_i].name
+      &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
+            @@color:red;hates sex with men@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates women"&gt;&gt;
+            @@color:red;hates sex with women@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates anal"&gt;&gt;
+            @@color:red;hates anal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates oral"&gt;&gt;
+            @@color:red;hates oral sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates vaginal"&gt;&gt;
+            @@color:red;hates vaginal sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates penetrative"&gt;&gt;
+            @@color:red;hates penetrative sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates all"&gt;&gt;
+            @@color:red;hates all sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "very shy"&gt;&gt;
+            @@color:red;is too shy@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "idealistic"&gt;&gt;
+            @@color:red;is too romantic and idealistic about sex@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "judgemental"&gt;&gt;
+            @@color:red;is too judgemental@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "vulgar"&gt;&gt;
+            @@color:red;is too vulgar@@
+          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
+            @@color:red;is too boring and apathetic@@
+          &lt;&lt;/if&gt;&gt;
+      and decreased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))&gt;&gt;&lt;/b&gt; as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $slaves_owned[_i].flaw isnot "none" and $slaves_owned[_i].customers_flaw_mad gt 0&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_flaw_mad is 1&gt;&gt;
+        One customer complained that $slaves_owned[_i].name
+          &lt;&lt;if $slaves_owned[_i].flaw is "bitchy"&gt;&gt;
+            @@color:red;is too bitchy@@
+          &lt;&lt;elseif $slaves_owned[_i].flaw is "eccentric"&gt;&gt;
+            @@color:red;is too odd@@
+          &lt;&lt;/if&gt;&gt;
+      &lt;&lt;else&gt;&gt;
+        Several customers complained that $slaves_owned[_i].name
+        &lt;&lt;if $slaves_owned[_i].flaw is "bitchy"&gt;&gt;
+            @@color:red;is too bitchy@@
+          &lt;&lt;elseif $slaves_owned[_i].flaw is "eccentric"&gt;&gt;
+            @@color:red;is too odd@@
+          &lt;&lt;/if&gt;&gt;
+      &lt;&lt;/if&gt;&gt;
+      and decreased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_flaw_mad * $slaves_owned[_i].base_price)&gt;&gt;&lt;/b&gt; as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    &lt;&lt;if $slaves_owned[_i].fetish isnot "none" and $slaves_owned[_i].customers_like_fetish gte 1&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_like_fetish is 1&gt;&gt;
+        One citizen very much enjoyed
+      &lt;&lt;elseif $slaves_owned[_i].customers_like_fetish gt 1&gt;&gt;
+        Several citizens very much enjoyed
+      &lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "sub"&gt;&gt;$slaves_owned[_i].name's @@color:green;submissive tendencies@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "dom"&gt;&gt;@@color:green;being dominated by@@ $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "bondage"&gt;&gt;$slaves_owned[_i].name's @@color:green;skill with bondage@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "sadism"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for inflicting pain@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "masochism"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for being hurt@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "pregnancy"&gt;&gt;$slaves_owned[_i].name's @@color:green;pregnancy fetish@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "anal"&gt;&gt;$slaves_owned[_i].name's @@color:green;enthusiasm for being fucked in the ass@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "breasts"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of breastplay@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "penetrative"&gt;&gt;@@color:green;being fucked@@ by $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "oral"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of oral sex@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].fetish is "tentacles"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of tentacles@@&lt;&lt;/if&gt;&gt;
+      , which increased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; as a result.
+    &lt;&lt;/if&gt;&gt;
+    
+    In total, $slaves_owned[_i].name increased your reputation &lt;b&gt; $slaves_owned[_i].earned&lt;/b&gt;
+    
+  &lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $slaves_owned[_i].assignment is 5&gt;&gt;&lt;&lt;/if&gt;&gt;
+  
+  &lt;&lt;if $slaves_owned[_i].assignment is 6&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 /* A very honest, obedient slave will report if others are likely to rebel */
 
@@ -2821,7 +3219,7 @@ $slave.They
 
 &lt;&lt;if $slaves_owned[_i].honesty lte 2&gt;&gt;
   &lt;&lt;if $PCintelligence gt $slaves_owned[_i].intelligence&gt;&gt;
-    You suspect @@color:red;$slaves_owned[_i].name@@ may be lying to you about several things, but you're not sure.
+    You suspect that $slaves_owned[_i].name may be @@color:red;lying@@ to you about several things, but you're not sure.
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -2829,7 +3227,7 @@ $slave.They
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;if $av_health lte 3&gt;&gt;
+&lt;&lt;if $av_health lte 2&gt;&gt;
   Many of your slaves are ill!  You currently have a @@color:red;high risk@@ of your slaves catching a disease!
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;

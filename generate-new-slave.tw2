@@ -92,7 +92,7 @@ treatment: 0,
 
 smart_piercing: either(true, false), sex_rules: 0, sex_rules_short: "restricted -- only with you",
 
-base_price: 0, customers_male: 0, customers_female: 0, earned: 0, savings: 0, customers_flaw_mad: 0, customers_sexual_flaw_mad: 0, customers_like_fetish: 0
+base_price: 0, customers_male: 0, customers_female: 0, earned: 0, savings: 0, customers_flaw_mad: 0, customers_sexual_flaw_mad: 0, customers_like_fetish: 0, customer_likes_flaw: 0, customer_likes_sexual_flaw: 0
 }
 >>
 <<set $IDnumber += 1>>

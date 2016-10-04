@@ -1,6 +1,6 @@
 <<set $finger_ass_reaction to [
 
-"sighs happily as you slowly finger fuck << if $currentSlave>>$currentSlave.their<<else>>$slave.their<</if>> tight ass",
+"sighs happily as you slowly finger fuck <<if $slave>>$slave.their<<else>>$currentSlave.their<</if>> tight ass",
 
 "flinches away from your touch",
 
@@ -8,6 +8,6 @@
 
 "leans into you for more",
 
-"tries to chase the sensation as you finger << if $currentSlave>>$currentSlave.their<<else>>$slave.their<</if>> ass"
+"tries to chase the sensation as you finger <<if $slave>>$slave.their<<else>>$currentSlave.their<</if>> ass"
 
 ]>>

@@ -60,17 +60,15 @@
   <</if>>
 <</if>>
 
-<<if $currentSlave.vaginal_virginity is false>>
-  <<if $currentSlave.gender is "female">>
+<<if $currentSlave.vaginal_virginity is false and $currentSlave.gender is "female">>
     <<if $PCgender is "female">>
       <<linkreplace "*Fuck her pussy">><<print either($female_fuck_pussy)>><</linkreplace>>
     <<else>>
       <<linkreplace "*Fuck her pussy">><<print either($male_fuck_pussy)>><</linkreplace>>
     <</if>>
-  <</if>>
 <<else>>
+    <<if $currentSlave.gender is "female">>
   //If you <<if $currentSlave.gender is "female">>fuck her pussy<</if>>, it will take $currentSlave.name's virginity//
-  <<if $currentSlave.gender is "female">>
     <<if $PCgender is "female">>
       <<linkreplace "*Fuck her pussy">><<print either($female_fuck_pussy)>><<set $currentSlave.vaginal_virginity to false>><</linkreplace>>
     <<else>>
