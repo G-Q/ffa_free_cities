@@ -267,8 +267,8 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
   &lt;&lt;if $currentSlave.clothing is 9&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "bad nun"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 10&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "shibori ropes"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 11&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "just jewelry"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $currentSlave.clothing is 12&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naughty secretary"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $currentSlave.clothing is 13&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "pinup"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.clothing is 12&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naughty secretary"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.clothing is 13&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "pinup"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 14&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "amazon"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 15&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "harem"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 16&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "bondage harness"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -351,8 +351,8 @@ body, .macro-textbox, .macro-textbox:hover, .macro-textbox:focus {
   &lt;&lt;if $currentSlave.clothing is 9&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "bad nun"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 10&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "shibori ropes"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 11&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "just jewelry"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $currentSlave.clothing is 12&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naughty secretary"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
-  &lt;&lt;if $currentSlave.clothing is 13&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "pinup"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.clothing is 12&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "naughty secretary"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $currentSlave.clothing is 13&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "pinup"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "femme"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 14&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "amazon"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 15&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "harem"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "neither"&gt;&gt;&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $currentSlave.clothing is 16&gt;&gt;&lt;&lt;set $currentSlave.clothing_short to "bondage harness"&gt;&gt;&lt;&lt;set $currentSlave.clothing_pres to "butch"&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -2291,9 +2291,6 @@ $slave.They
 /* Fluctuate demand for services */
 &lt;&lt;set $demand to either(-0.4, -0.2, 0, 0.2, 0.4)&gt;&gt;
 
-&lt;&lt;set $currentSlave.base_price to 5&gt;&gt;
-&lt;&lt;set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))&gt;&gt;
-
 /* Get and set average attributes. */
 
 &lt;&lt;set $total_intelligence to 0&gt;&gt;
@@ -2307,8 +2304,6 @@ $slave.They
 &lt;&lt;set $av_happiness to 0&gt;&gt;
 
 &lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
-
-&lt;&lt;set $total_customers to 20&gt;&gt;
 
 &lt;&lt;set $total_intelligence += $slaves_owned[_i].intelligence&gt;&gt;
 
@@ -2346,6 +2341,11 @@ $slave.They
   
 &lt;&lt;for _i to 0; _i lt $slaves_owned.length; _i++&gt;&gt;
   &lt;&lt;set $currentSlave to $slaves_owned[_i]&gt;&gt;
+  
+  &lt;&lt;set $total_customers to 20&gt;&gt;
+
+  &lt;&lt;set $currentSlave.base_price to 5&gt;&gt;
+  &lt;&lt;set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))&gt;&gt;
   
   &lt;&lt;if $currentSlave.birth_week is $week&gt;&gt;
     &lt;&lt;set $currentSlave.age += 1&gt;&gt;
@@ -2719,7 +2719,11 @@ $slave.They
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
+/* Add/subtract from income */
 
+&lt;&lt;if $currentSlave.customers_like_flaw gte 1&gt;&gt;&lt;&lt;set $currentSlave.earned += ($currentSlave.customers_like_flaw * ($currentSlave.base_price * 2))&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.customers_like_sexual_flaw gte 1&gt;&gt;&lt;&lt;set $currentSlave.earned += ($currentSlave.customers_like_sexual_flaw * ($currentSlave.base_price * 2))&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $currentSlave.customers_like_fetish gte 1&gt;&gt;&lt;&lt;set $currentSlave.earned += ($currentSlave.customers_like_fetish * ($currentSlave.base_price * 2))&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;/if&gt;&gt;
   
@@ -2995,36 +2999,32 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
     &lt;&lt;if $slaves_owned[_i].sexual_flaw isnot "none" and $slaves_owned[_i].customers_sexual_flaw_mad gt 0&gt;&gt;
       
       &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad is 1&gt;&gt;
-        However, one customer complained that $slaves_owned[_i].name
+        One customer complained that $slaves_owned[_i].name
       &lt;&lt;elseif $slaves_owned[_i].customers_sexual_flaw_mad gt 1&gt;&gt;
-        However, several customers complained that $slaves_owned[_i].name
+        Several customers complained that $slaves_owned[_i].name
       &lt;&lt;/if&gt;&gt;
       
-        &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
-            @@color:red;hates sex with men@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates women"&gt;&gt;
-            @@color:red;hates sex with women@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates anal"&gt;&gt;
-            @@color:red;hates anal sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates oral"&gt;&gt;
-            @@color:red;hates oral sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates vaginal"&gt;&gt;
-            @@color:red;hates vaginal sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates penetrative"&gt;&gt;
-            @@color:red;hates penetrative sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "hates all"&gt;&gt;
-            @@color:red;hates all sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "very shy"&gt;&gt;
-            @@color:red;is too shy@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "idealistic"&gt;&gt;
-            @@color:red;is too romantic and idealistic about sex@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "judgemental"&gt;&gt;
-            @@color:red;is too judgemental@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "vulgar"&gt;&gt;
-            @@color:red;is too vulgar@@
-          &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
-            @@color:red;is too boring and apathetic@@
-          &lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;@@color:red;hates sex with men@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates women"&gt;&gt;@@color:red;hates sex with women@@&lt;&lt;/if&gt;&gt;
+        &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates anal"&gt;&gt;@@color:red;hates anal sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates oral"&gt;&gt;
+            @@color:red;hates oral sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates vaginal"&gt;&gt;
+            @@color:red;hates vaginal sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates penetrative"&gt;&gt;
+            @@color:red;hates penetrative sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates all"&gt;&gt;
+            @@color:red;hates all sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "very shy"&gt;&gt;
+            @@color:red;is too shy@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "idealistic"&gt;&gt;
+            @@color:red;is too romantic and idealistic about sex@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "judgemental"&gt;&gt;
+            @@color:red;is too judgemental@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "vulgar"&gt;&gt;
+            @@color:red;is too vulgar@@&lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
+            @@color:red;is too boring and apathetic@@&lt;&lt;/if&gt;&gt;
           
       and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))&gt;&gt;&lt;/b&gt; less as a result.
     &lt;&lt;/if&gt;&gt;
@@ -3060,13 +3060,13 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
         &lt;&lt;if $slaves_owned[_i].fetish is "penetrative"&gt;&gt;@@color:green;being fucked@@ by $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
         &lt;&lt;if $slaves_owned[_i].fetish is "oral"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of oral sex@@&lt;&lt;/if&gt;&gt;
         &lt;&lt;if $slaves_owned[_i].fetish is "tentacles"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of tentacles@@&lt;&lt;/if&gt;&gt;
-      and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; extra as a result.
+      and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 2))&gt;&gt;&lt;/b&gt; extra as a result.
     &lt;&lt;/if&gt;&gt;
     
     &lt;&lt;if $slaves_owned[_i].sexual_flaw isnot "none" and $slaves_owned[_i].customers_like_sexual_flaw gte 1&gt;&gt;
-      &lt;&lt;if $slaves_owned[_i].customers_like_flaw is 1&gt;&gt;
+      &lt;&lt;if $slaves_owned[_i].customers_like_sexual_flaw is 1&gt;&gt;
         One customer loved finding a whore who
-      &lt;&lt;elseif $slaves_owned[_i].customers_like_flaw gt 1&gt;&gt;
+      &lt;&lt;elseif $slaves_owned[_i].customers_like_sexual_flaw gt 1&gt;&gt;
         Several customers loved finding a whore who
       &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
@@ -3094,7 +3094,7 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
           &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
             @@color:red;is boring and apathetic@@
           &lt;&lt;/if&gt;&gt;
-        and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_flaw * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; extra as a result.  
+        and paid you &lt;b&gt;⨕ &lt;&lt;print ($slaves_owned[_i].customers_like_sexual_flaw * ($slaves_owned[_i].base_price * 2))&gt;&gt;&lt;/b&gt; extra as a result.  
     &lt;&lt;/if&gt;&gt;
     
     In total, $slaves_owned[_i].name earned you &lt;b&gt;⨕ $slaves_owned[_i].earned&lt;/b&gt;.
@@ -3105,9 +3105,9 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
     
     &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad gte 1&gt;&gt;
       &lt;&lt;if $slaves_owned[_i].customers_sexual_flaw_mad is 1&gt;&gt;
-        However, one customer complained that $slaves_owned[_i].name
+        However, one citizen complained that $slaves_owned[_i].name
       &lt;&lt;else&gt;&gt;
-        However, several customers complained that $slaves_owned[_i].name
+        However, several citizen complained that $slaves_owned[_i].name
       &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $slaves_owned[_i].sexual_flaw is "hates men"&gt;&gt;
             @@color:red;hates sex with men@@
@@ -3134,19 +3134,19 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
           &lt;&lt;elseif $slaves_owned[_i].sexual_flaw is "apathetic"&gt;&gt;
             @@color:red;is too boring and apathetic@@
           &lt;&lt;/if&gt;&gt;
-      and decreased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price/2))&gt;&gt;&lt;/b&gt; as a result.
+      and decreased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_sexual_flaw_mad * ($slaves_owned[_i].base_price))&gt;&gt;&lt;/b&gt; as a result.
     &lt;&lt;/if&gt;&gt;
     
     &lt;&lt;if $slaves_owned[_i].flaw isnot "none" and $slaves_owned[_i].customers_flaw_mad gt 0&gt;&gt;
       &lt;&lt;if $slaves_owned[_i].customers_flaw_mad is 1&gt;&gt;
-        One customer complained that $slaves_owned[_i].name
+        One citizen complained that $slaves_owned[_i].name
           &lt;&lt;if $slaves_owned[_i].flaw is "bitchy"&gt;&gt;
             @@color:red;is too bitchy@@
           &lt;&lt;elseif $slaves_owned[_i].flaw is "eccentric"&gt;&gt;
             @@color:red;is too odd@@
           &lt;&lt;/if&gt;&gt;
       &lt;&lt;else&gt;&gt;
-        Several customers complained that $slaves_owned[_i].name
+        Several citizen complained that $slaves_owned[_i].name
         &lt;&lt;if $slaves_owned[_i].flaw is "bitchy"&gt;&gt;
             @@color:red;is too bitchy@@
           &lt;&lt;elseif $slaves_owned[_i].flaw is "eccentric"&gt;&gt;
@@ -3173,7 +3173,7 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
         &lt;&lt;if $slaves_owned[_i].fetish is "penetrative"&gt;&gt;@@color:green;being fucked@@ by $slaves_owned[_i].name&lt;&lt;/if&gt;&gt;
         &lt;&lt;if $slaves_owned[_i].fetish is "oral"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of oral sex@@&lt;&lt;/if&gt;&gt;
         &lt;&lt;if $slaves_owned[_i].fetish is "tentacles"&gt;&gt;$slaves_owned[_i].name's @@color:green;love of tentacles@@&lt;&lt;/if&gt;&gt;
-      , which increased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 3))&gt;&gt;&lt;/b&gt; as a result.
+      , which increased your reputation &lt;b&gt;&lt;&lt;print ($slaves_owned[_i].customers_like_fetish * ($slaves_owned[_i].base_price * 2))&gt;&gt;&lt;/b&gt; as a result.
     &lt;&lt;/if&gt;&gt;
     
     In total, $slaves_owned[_i].name increased your reputation &lt;b&gt; $slaves_owned[_i].earned&lt;/b&gt;
@@ -3186,14 +3186,8 @@ This week, $slaves_owned[_i].name $slaves_owned[_i].assignment_report.
 
 /* A very honest, obedient slave will report if others are likely to rebel */
 
-&lt;&lt;if $av_obedience lte 2&gt;&gt;  
-  &lt;&lt;if $slaves_owned[_i].devotion is 5&gt;&gt;
-    &lt;&lt;if $slaves_owned[_i].obedience is 5&gt;&gt;
-      &lt;&lt;if $slaves_owned[_i].honesty is 5&gt;&gt;
-        $slaves_owned[_i].name reports that @@color:red;many of your slaves are very unhappy and may rebel@@.
-      &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-  &lt;&lt;/if&gt;&gt;
+&lt;&lt;if $av_obedience lte 2 and $slaves_owned[_i].devotion gte 5 and $slaves_owned[_i].obedience gte 5 and $slaves_owned[_i].honesty gte 5&gt;&gt;  
+  $slaves_owned[_i].name reports that @@color:red;many of your slaves are very unhappy and may rebel@@.
 &lt;&lt;/if&gt;&gt;
 
 /* A very dishonest slave will lie that others are causing trouble, but a very honest slave will report the actual dishonest or disobedient slaves. */

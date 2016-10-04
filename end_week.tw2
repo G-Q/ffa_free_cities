@@ -10,9 +10,6 @@
 /* Fluctuate demand for services */
 <<set $demand to either(-0.4, -0.2, 0, 0.2, 0.4)>>
 
-<<set $currentSlave.base_price to 5>>
-<<set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))>>
-
 /* Get and set average attributes. */
 
 <<set $total_intelligence to 0>>
@@ -26,8 +23,6 @@
 <<set $av_happiness to 0>>
 
 <<for _i to 0; _i lt $slaves_owned.length; _i++>>
-
-<<set $total_customers to 20>>
 
 <<set $total_intelligence += $slaves_owned[_i].intelligence>>
 
@@ -65,6 +60,11 @@
   
 <<for _i to 0; _i lt $slaves_owned.length; _i++>>
   <<set $currentSlave to $slaves_owned[_i]>>
+  
+  <<set $total_customers to 20>>
+
+  <<set $currentSlave.base_price to 5>>
+  <<set $currentSlave.base_price to ($currentSlave.base_price + ($currentSlave.base_price * $demand))>>
   
   <<if $currentSlave.birth_week is $week>>
     <<set $currentSlave.age += 1>>
@@ -438,7 +438,11 @@
   <</if>>
 <</if>>
 
+/* Add/subtract from income */
 
+<<if $currentSlave.customers_like_flaw gte 1>><<set $currentSlave.earned += ($currentSlave.customers_like_flaw * ($currentSlave.base_price * 2))>><</if>>
+<<if $currentSlave.customers_like_sexual_flaw gte 1>><<set $currentSlave.earned += ($currentSlave.customers_like_sexual_flaw * ($currentSlave.base_price * 2))>><</if>>
+<<if $currentSlave.customers_like_fetish gte 1>><<set $currentSlave.earned += ($currentSlave.customers_like_fetish * ($currentSlave.base_price * 2))>><</if>>
 
 <</if>>
   

@@ -28,8 +28,8 @@
 <<if $currentSlave.clothing is 9>><<set $currentSlave.clothing_short to "bad nun">><<set $currentSlave.clothing_pres to "femme">><</if>>
 <<if $currentSlave.clothing is 10>><<set $currentSlave.clothing_short to "shibori ropes">><<set $currentSlave.clothing_pres to "neither">><</if>>
 <<if $currentSlave.clothing is 11>><<set $currentSlave.clothing_short to "just jewelry">><<set $currentSlave.clothing_pres to "neither">><</if>>
-<<if $currentSlave.clothing is 12>><<set $currentSlave.clothing_short to "naughty secretary">><<set $currentSlave.clothing_pres to "butch">><</if>>
-<<if $currentSlave.clothing is 13>><<set $currentSlave.clothing_short to "pinup">><<set $currentSlave.clothing_pres to "butch">><</if>>
+<<if $currentSlave.clothing is 12>><<set $currentSlave.clothing_short to "naughty secretary">><<set $currentSlave.clothing_pres to "femme">><</if>>
+<<if $currentSlave.clothing is 13>><<set $currentSlave.clothing_short to "pinup">><<set $currentSlave.clothing_pres to "femme">><</if>>
 <<if $currentSlave.clothing is 14>><<set $currentSlave.clothing_short to "amazon">><<set $currentSlave.clothing_pres to "butch">><</if>>
 <<if $currentSlave.clothing is 15>><<set $currentSlave.clothing_short to "harem">><<set $currentSlave.clothing_pres to "neither">><</if>>
 <<if $currentSlave.clothing is 16>><<set $currentSlave.clothing_short to "bondage harness">><<set $currentSlave.clothing_pres to "butch">><</if>>
