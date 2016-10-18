@@ -9,12 +9,12 @@
   <<if $PCkindness is 9>><<set $kindness_desc to "kind">><</if>>
   <<if $PCkindness gte 10>><<set $kindness_desc to "very kind and indulgent">><</if>>
   
-  <<if $PCkindness lte 1>><<set $fairness_desc to "capricious and harsh">><</if>>
-  <<if $PCkindness is 2>><<set $fairness_desc to "cruel">><</if>>
-  <<if $PCkindness is 3>><<set $fairness_desc to "unfair">><</if>>
-  <<if $PCkindness is 8>><<set $fairness_desc to "hard but fair">><</if>>
-  <<if $PCkindness is 9>><<set $fairness_desc to "fair">><</if>>
-  <<if $PCkindness gte 10>><<set $fairness_desc to "very just and merciful">><</if>>
+  <<if $PCfairness lte 1>><<set $fairness_desc to "capricious and harsh">><</if>>
+  <<if $PCfairness is 2>><<set $fairness_desc to "cruel">><</if>>
+  <<if $PCfairness is 3>><<set $fairness_desc to "unfair">><</if>>
+  <<if $PCfairness is 8>><<set $fairness_desc to "hard but fair">><</if>>
+  <<if $PCfairness is 9>><<set $fairness_desc to "fair">><</if>>
+  <<if $PCfairness gte 10>><<set $fairness_desc to "very just and merciful">><</if>>
   
   <<if $PCcharisma lte 1>><<set $charisma_desc to "almost unbearably piggish">><</if>>
   <<if $PCcharisma is 2>><<set $charisma_desc to "boorish">><</if>>
