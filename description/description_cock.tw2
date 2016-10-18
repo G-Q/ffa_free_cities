@@ -4,7 +4,7 @@
 
 <<if $cock is 1>><<set
   $slavecock to
-    either("tiny and soft", "tiny and half hard", "tiny and circumcised")
+    either("barely there", "micro", "tiny")
 >>
 
 <<elseif $cock is 2>><<set
