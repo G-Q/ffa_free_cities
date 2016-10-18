@@ -27,7 +27,7 @@
   <<linkreplace "*Finger her pussy">><<print $currentSlave.Their>> pussy is <<print $currentSlave.vagina>><<if $currentSlave.vaginal_virginity>> and she's a virgin<</if>>.   <<print $currentSlave.They>> <<print either($finger_pussy_reaction)>>.<</linkreplace>>
 <</if>>
 
-<<linkreplace "*Finger $currentSlave.their ass">>$currentSlave.Their ass is $currentSlave.ass<<if $currentSlave.anal_virginity>> and $currentSlave.anal_virginity's never been fucked in the ass<</if>>.   $currentSlave.They <<print either($finger_ass_reaction)>>.<</linkreplace>>
+<<linkreplace "*Finger $currentSlave.their ass">>$currentSlave.Their ass is $currentSlave.ass<<if $currentSlave.anal_virginity>> and $currentSlave.They's never been fucked in the ass<</if>>.   $currentSlave.They <<print either($finger_ass_reaction)>>.<</linkreplace>>
 
 <<if $currentSlave.penetrative_virginity is false>>
   <<if $PCgender is "female">>

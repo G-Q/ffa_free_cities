@@ -4,12 +4,12 @@
 
 <<if $ass is 1>>
   <<set
-    $slaveass to either("flat", "bony", "sharp", "not very impressive")
+    $slaveass to either("flat", "bony", "not very impressive", "barely there")
   >>
 
 <<elseif $ass is 2>>
   <<set
-    $slaveass to either("soft and round", "pretty okay", "fine")
+    $slaveass to either("soft and round", "pretty okay", "fine", "decent")
   >>
 
 <<elseif $ass is 3>>
@@ -19,7 +19,7 @@
 
 <<elseif $ass is 4>>
   <<set
-    $slaveass to either("perky", "ripe like a peach", "very inviting", "lush")
+    $slaveass to either("perky", "ripe like a peach", "very inviting", "lush", "grabable")
   >>
 
 <<elseif $ass is 5>>
