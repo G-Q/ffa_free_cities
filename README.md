@@ -5,6 +5,7 @@ A group rewrite of [Free Cities](https://www.tfgamessite.com/?module=viewgame&id
 ## To play
 
 No need to download--play the latest stable build online [here](https://self-striping-sock.github.io/ffa_free_cities/).
+--> g-q fork [here](https://g-q.github.io/ffa_free_cities/)
 
 ## Where to start
 
